@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('images/HOME 2.png') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the full screen */
+    background-attachment: fixed; /* Keeps background stable while scrolling */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow-y: scroll; /* Ensures scrolling works */
+}
+
+/* NAVBAR FIX */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    margin-top: 80px; /* Adjusted spacing */
+}
+
+.content {
+    text-align: center;
+    max-width: 600px;
+}
+
+/* TEXT STYLING */
+h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.description {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* BOOK NOW BUTTON FIX */
+.btn {
+    display: inline-block;
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin-top: 130px;
+    padding: 12px 24px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative; /* Keeps it within the normal flow */
+    top: -20px; /* Moves it up without affecting other elements */
+}
+
+.btn:hover {
+    background: darkred;
+    transform: scale(1.1);
+}
+
+.hero-logo {
+    height: 100px; /* Increased size for the hero section */
+    display: block;
+    margin: 0 auto 10px; /* Centering and spacing */
+}
+
+/* MEDIA QUERIES */
+
+/* For screens smaller than 1024px (Tablets) */
+@media (max-width: 1024px) {
+    body {
+        background-size: cover;
+    }
+
+    .btn {
+        top: -10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
+
+/* For screens smaller than 768px (Large Phones & Small Tablets) */
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+        background-position: top center;
+    }
+
+    .btn {
+        top: -5px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .hero-logo {
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack nav links */
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+}
+
+/* For screens smaller than 480px (Mobile Phones) */
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        justify-content: flex-start; /* Adjust layout for mobile */
+        overflow-y: auto; /* Ensures scrolling works on mobile */
+    }
+
+    .btn {
+        top: 0;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .hero-logo {
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .content {
+        max-width: 90%;
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links if needed */
+    }
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* General Section Styling */
+.ted-info, .tedx-info, .tedx-mitwpu, .theme-section {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.ted-info:hover, .tedx-info:hover, .tedx-mitwpu:hover, .theme-section:hover {
+    transform: scale(1.02);
+}
+
+.ted-info h2, .tedx-info h2, .tedx-mitwpu h2, .theme-section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #ff2b06;
+}
+
+.ted-info p, .tedx-info p, .tedx-mitwpu p, .theme-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #eee;
+}
+
+/* List Styling for TEDx Special Features */
+.tedx-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.tedx-info ul li {
+    font-size: 18px;
+    color: #ddd;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s;
+}
+
+.tedx-info ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tedx-info ul li strong {
+    color: #ff2b06;
+}
+
+/* Past Event Section */
+.past-event {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 50px;
+    background: #111;
+    border-left: 6px solid #ff2b06;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(255, 43, 6, 0.6);
+    text-align: left;
+    color: #eee;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.past-event:hover {
+    transform: translateY(-5px);
+    background: #1a1a1a;
+}
+
+.past-event h2 {
+    font-size: 36px;
+    color: #ff2b06;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.past-event p {
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.past-event h3 {
+    font-size: 28px;
+    color: #ff2b06;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.past-event .speaker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures equal spacing */
+    gap: 30px; /* Increased gap for better spacing */
+    margin-bottom: 40px; 
+    transition: transform 0.3s;
+}
+
+.past-event .speaker:hover {
+    transform: scale(1.05);
+}
+
+.past-event .speaker:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.speaker img {
+    width: 120px; /* Slightly larger images */
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff2b06;
+}
+
+.speaker .speaker-info {
+    flex: 1;
+    font-size: 18px;
+    color: #ddd;
+    line-height: 1.7;
+    text-align: left; /* Ensures left alignment */
+    max-width: 600px;
+}
+
+.speaker .speaker-info strong {
+    display: block;
+    font-size: 18px;
+    color: #ff2b06;
+    margin-bottom: 8px;
+}
+
+.past-event .speaker:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.past-event .speaker-info {
+    flex: 1;
+    font-size: 17px;
+    color: #ddd;
+    line-height: 1.4; /* Reduced to make text more compact */
+    text-align: left;
+    max-width: 550px;
+    margin: 5px 20px; /* Remove excess spacing */
+}
+
+.past-event .speaker-info strong {
+    display: block;
+    font-size: 18px;
+    color: #ff2b06;
+    margin-bottom: 5px; /* Keep speaker name close to text */
+    text-align: left;
+}
+
+.past-event .speaker p {
+    margin: 3px 0; /* Reduce gap between lines */
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ted-info, .tedx-info, .tedx-mitwpu, .theme-section, .past-event {
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .ted-info h2, .tedx-info h2, .tedx-mitwpu h2, .theme-section h2, .past-event h2 {
+        font-size: 30px;
+    }
+
+    .past-event .speaker {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .past-event .speaker:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .speaker img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+.hero .content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.speaker img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.speaker:hover img {
+    transform: scale(1.1);
+}
+
