@@ -5,7 +5,6 @@
 }
 
 body {
-    background: url('images/HOME 2.png') no-repeat center center;
     background-size: cover; /* Ensures the image covers the full screen */
     background-attachment: fixed; /* Keeps background stable while scrolling */
     min-height: 100vh;
@@ -17,6 +16,34 @@ body {
     color: white;
     overflow-y: scroll; /* Ensures scrolling works */
 }
+
+/* Apply the background to the whole page */
+html {
+    background: url('images/HOME\ 2.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Ensure the body takes full height */
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure all sections allow the background to show */
+section {
+    min-height: 100vh; /* Each section takes the full viewport height */
+    background: transparent; /* Ensures no section overrides the background */
+    position: relative; /* Ensures content overlays the background */
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    html {
+        background-attachment: scroll;
+    }
+}
+
 
 /* NAVBAR FIX */
 header {
