@@ -1,8 +1,13 @@
 * {
+    font-family: "Roboto", sans-serif !important;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     background: url('images/HOME 2.png') no-repeat center center;
