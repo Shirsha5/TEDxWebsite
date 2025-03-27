@@ -22,13 +22,13 @@
             </div>
 
             <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" placeholder="Enter your age" required>
+                <label for="phone">Phone No.:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
             </div>
 
             <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age" required>
             </div>
 
             <div class="form-group">
@@ -44,11 +44,16 @@
             <div class="form-group">
                 <label>Are you an MIT WPU student?</label>
                 <div class="radio-group">
-                    <input type="radio" id="mitYes" name="mitStudent" value="Yes" required>
+                    <input type="radio" id="mitYes" name="mitStudent" value="Yes" required onclick="toggleCollegeField()">
                     <label for="mitYes">Yes</label>
-                    <input type="radio" id="mitNo" name="mitStudent" value="No">
+                    <input type="radio" id="mitNo" name="mitStudent" value="No" onclick="toggleCollegeField()">
                     <label for="mitNo">No</label>
                 </div>
+            </div>
+
+            <div class="form-group" id="collegeField" style="display: none;">
+                <label for="college">College Name:</label>
+                <input type="text" id="college" placeholder="Enter your college name">
             </div>
 
             <button type="submit">Register</button>
@@ -56,6 +61,12 @@
         <p id="responseMessage"></p>
     </div>
 
-    <script src="register.js"></script>
+    <script>
+        function toggleCollegeField() {
+            const mitNo = document.getElementById("mitNo");
+            const collegeField = document.getElementById("collegeField");
+            collegeField.style.display = mitNo.checked ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
