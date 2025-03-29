@@ -472,3 +472,71 @@ h1 {
 .speaker:hover img {
     transform: scale(1.1);
 }
+.team-crew {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.9); /* Dark theme */
+    color: white;
+}
+
+.team-crew h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.team-crew p {
+    font-size: 18px;
+    color: #ddd;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #ff4141; /* TEDx red color */
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+}
