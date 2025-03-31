@@ -6,33 +6,50 @@ body {
     color: white;
 }
 
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000; 
+}
+
 nav {
-    background: black;
-    padding: 10px;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
 }
 
 .nav-links {
     list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
-.nav-links a {
+.nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-}
-
-.nav-links .active {
-    border-bottom: 2px solid red; /* Highlights active page */
-}
-
+    
+} 
 .team-crew {
     text-align: center;
     padding: 50px 20px;
