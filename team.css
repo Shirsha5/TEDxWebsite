@@ -9,14 +9,14 @@ body {
 nav {
     background: black;
     padding: 10px;
-    text-align: right;
+    text-align: center;
 }
 
 .nav-links {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: right;
+    justify-content: center;
 }
 
 .nav-links li {
