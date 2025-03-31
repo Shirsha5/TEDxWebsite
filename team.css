@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +12,7 @@ body {
     color: white;
 }
 
+/* NAVBAR FIX */
 header {
     width: 100%;
     position: fixed;
@@ -16,14 +23,14 @@ header {
     justify-content: space-between;
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 nav {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .nav-left {
@@ -32,24 +39,65 @@ nav {
 }
 
 .logo {
-    height: 30px;
+    height: 40px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 25px;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    display: inline-block;
 }
 
 .nav-links li a {
-    color: white;
     text-decoration: none;
+    color: white;
     font-size: 18px;
-    
-} 
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff4141; /* Red hover effect */
+}
+
+/* Mobile Menu */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
 .team-crew {
     text-align: center;
     padding: 50px 20px;
