@@ -540,3 +540,7 @@ h1 {
         width: 80%;
     }
 }
+
+.logo-link {
+    display: inline-block;  /* Ensures it's not hidden */
+}
