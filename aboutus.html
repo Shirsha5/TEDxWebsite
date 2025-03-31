@@ -55,5 +55,13 @@
         <p>MIT World Peace University envisions a world shaped by tradition, innovation, and peace. TEDx fosters change through ideas that inspire, transform and change. Together, TEDxMITWPU brings these values to life–where knowledge meets wisdom, individuality meets impact, and diverse identities weave a shared future.</p>
         <p>Through thought-provoking talks and meaningful conversations, TEDxMITWPU ignites curiosity, self-discovery, and global change — one idea at a time.</p>
     </section>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+    
 </body>
 </html>
