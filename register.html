@@ -6,6 +6,8 @@
     <title>Register - TEDxMITWPU</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="footer.css">
+
 </head>
 <body>
     <div class="register-container">
@@ -68,5 +70,13 @@
             collegeField.style.display = mitNo.checked ? "block" : "none";
         }
     </script>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+    
 </body>
 </html>

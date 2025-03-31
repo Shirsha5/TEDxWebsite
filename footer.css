@@ -1,0 +1,80 @@
+footer {
+    background-color: #111;
+    color: white;
+    padding: 10px 0; /* Thinner footer */
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin-top: 40px; /* Space between "Meet the Team" & footer */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; /* Pushes content to edges */
+    
+    padding: 10px 30px;
+}
+
+/* Left: Logo & Description */
+.footer-left {
+    flex: 1; /* Takes available space */
+    text-align: left; /* Aligns text to the left */
+}
+
+.footer-left img {
+    width: 120px; /* Adjust for sleekness */
+    margin-bottom: 5px;
+}
+
+.footer-left p {
+    font-size: 14px; /* Readability */
+    margin-bottom: 10px;
+}
+
+/* Center: Navigation Links */
+.footer-links {
+    flex: 2; /* Center space for navigation */
+    text-align: center;
+}
+
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Spacing between links */
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f39c12;
+}
+
+/* Right: Google Map */
+.footer-map {
+    flex: 1; /* Takes available space */
+    text-align: right;
+}
+
+.footer-map iframe {
+    width: 350px; /* Bigger map */
+    height: 220px; /* Bigger height */
+    border-radius: 8px;
+}
+
+/* Bottom Copyright */
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 5px;
+    border-top: 1px solid #333;
+    padding-top: 5px;
+    width: 100%;
+}
