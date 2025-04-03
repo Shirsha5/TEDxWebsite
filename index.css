@@ -107,17 +107,18 @@ h1 {
 .btn {
     display: inline-block;
     transition: transform 0.3s ease, background 0.3s ease;
-    margin-top: 130px;
-    padding: 12px 24px;
+    margin-top: 175px; /* Increased from 130px to move it down */
+    padding: 16px 32px; /* Increased padding for a bigger button */
     background: red;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px; /* Slightly larger text */
     border-radius: 5px;
     transition: 0.3s;
-    position: relative; /* Keeps it within the normal flow */
-    top: -20px; /* Moves it up without affecting other elements */
+    position: relative;
+    top: 10px; /* Moves it down */
 }
+
 
 .btn:hover {
     background: darkred;
