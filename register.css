@@ -61,8 +61,44 @@ input, select {
 
 .radio-group {
     display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
+    gap: 20px; /* Space between radio options */
+    align-items: center;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Ensures a small gap between the radio button and text */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.radio-group input[type="radio"] {
+    /* appearance: none; */
+    width: 15px;
+    height: 15px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    accent-color: #333; /* Ensures native radio button uses a custom color */
+}
+
+.radio-group input[type="radio"]::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #333;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease-in-out;
+}
+
+.radio-group input[type="radio"]:checked::before {
+    transform: scale(1);
 }
 
 button {
