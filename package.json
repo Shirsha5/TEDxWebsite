@@ -1,0 +1,15 @@
+{
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "fs-extra": "^11.3.0",
+    "jspdf": "^3.0.1",
+    "nodemailer": "^6.10.0",
+    "playwright": "^1.51.1",
+    "puppeteer-core": "^24.6.0",
+    "qrcode": "^1.5.4"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your TEDxMITWPU Ticket</title>
+    <link rel="stylesheet" href="ticket.css" />
+</head>
+
+<body>
+
+    <div class="ticket created-by-anniedotexe">
+        <div class="left">
+            <div class="image">
+                <p class="admit-one"></p>
+            </div>
+            <div class="ticket-info">
+                <p class="date">
+                    <span>SATURDAY</span>
+                    <span class="june-29">APRIL 26TH</span>
+                    <span>2025</span>
+                </p>
+                <div class="show-name">
+                    <h1>TEDxMITWPU</h1>
+                    <p><%= name %></p>
+                </div>
+                <div class="time">
+                    <p>06:00 PM <span>TO</span> 10:00 PM</p>
+                </div>
+                <p class="location"><span>MIT WORLD PEACE UNIVERSITY</span></p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-info-container">
+                <div class="show-name">
+                    <h1>EVENT TICKET</h1>
+                </div>
+                <div class="time">
+                    <p>06:00 PM <span>TO</span> 10:00 PM</p>
+                    <p>Vivekanand Auditorium</p>
+                </div>
+                <div class="barcode">
+                    <img src="<%= qrDataUrl %>" alt="QR code">
+                </div>
+                <p class="ticket-number">
+                    #<%= serial %>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>
