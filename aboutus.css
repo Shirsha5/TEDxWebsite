@@ -22,69 +22,59 @@ body {
     overflow-y: scroll;
 }
 
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.9); /* Darker navbar */
-    z-index: 1000;
-}
+ header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+      }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-.nav-left {
-    display: flex;
-    align-items: center;
-}
+      .nav-left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-}
+      .logo {
+        width: 180px;
+        height: 60px;
+      }
 
-.logo {
-    height: 40px;
-}
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0 auto;
-    padding: 0;
-}
+      .nav-links li {
+        margin-left: 20px;
+      }
 
-.nav-links li {
-    display: inline;
-}
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #ff2b06;
-}
-
-.menu-btn {
-    font-size: 24px;
-    color: white;
-    display: none;
-}
+      .menu-btn {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+        z-index: 1100;
+      }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
