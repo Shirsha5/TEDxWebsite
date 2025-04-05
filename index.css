@@ -209,7 +209,7 @@ h1 {
     }
 
     .btn {
-        top: -10px;
+        top: 10px;
         padding: 10px 20px;
         font-size: 16px;
     }
@@ -231,9 +231,9 @@ h1 {
     }
 
     .btn {
-        top: -5px;
-        padding: 8px 16px;
-        font-size: 14px;
+        top: 15px;
+        padding: 15px 24px;
+        font-size: 24px;
     }
 
     .hero-logo {
@@ -264,6 +264,11 @@ h1 {
         padding: 10px 20px;
     }
 }
+@media (min-width: 454px) and (max-width: 479px) {
+    .btn {
+      top: -18px; /* Adjust this to control vertical shift */
+    }
+  }
 
 /* For screens smaller than 480px (Mobile Phones) */
 @media (max-width: 480px) {
@@ -278,9 +283,9 @@ h1 {
     }
 
     .btn {
-        top: 0;
-        padding: 6px 12px;
-        font-size: 12px;
+        top: -3px;
+        padding: 10px 20px;
+        font-size: 20px;
     }
 
     .hero-logo {
