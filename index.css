@@ -194,12 +194,12 @@ h1 {
 }
 
 .hero-logo {
-    height: 100px;
-    /* Increased size for the hero section */
+    width: 200px;         /* Increased width */
+    height: auto;         /* Maintain aspect ratio */
     display: block;
-    margin: 0 auto 8px;
-    /* Centering and spacing */
-}
+    margin: 0 auto 8px;   /* Center and add spacing */
+  }
+  
 
 /* MEDIA QUERIES */
 /* For screens smaller than 1024px (Tablets) */
