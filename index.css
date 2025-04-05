@@ -76,17 +76,19 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 18px;
-
 }
 
 .other-sections {
     position: relative;
-    /* background-color: black; */
+    width: 100vw; /* Full viewport width */
+    background-color: rgba(255, 255, 255, 0.1);
     text-align: center;
     padding: 40px;
     border-radius: 12px;
     overflow: hidden;
+    margin: 0; /* Ensures no default margin messes up */
 }
+
 
 .other-sections::before {
     content: "";
