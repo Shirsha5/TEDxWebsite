@@ -3,58 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+    <title>TEDx MITWPU</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="aboutus.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            position: relative;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+        .info-box h2 {
+            color: #ff2b06;
+            font-size: 26px;
+        }
+        .info-box p, .info-box ul {
+            color: white;
+            font-size: 18px;
+        }
+        .red-line {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('red-line.png') no-repeat center;
+            background-size: contain;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .right {
+            align-self: flex-end;
+        }
+        .left {
+            align-self: flex-start;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-left">
-            <a href="index.html" class="logo-link">
-            <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
-            </a>
+                <a href="index.html" class="logo-link">
+                    <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="team.html">Team</a></li>               
-                <li><a href="pastevent.html">Past Events</a></li>
-                <li><a href="#">Brochure</a></li>
+                <li><a href="pastevent.html">Past Event</a></li>
             </ul>
             <div class="menu-btn">☰</div>
         </nav>
-    </header>
+    </header>    
+    <div class="content">
+        <div class="red-line"></div>
+        <section class="info-box right">
+            <h2>What is <span>TED</span>?</h2>
+            <h3></h3>
+            <p>TED moves us - driving innovation, sparking curiosity, and reshaping perspectives. It’s more than a platform; it's a movement where ideas ignite change. A global community, TED welcomes all who seek to understand and inspire. Leading with “Ideas Change Everything”, TED fuels conversations that transform the world. A stage, a story, a spark - TED bridges thought and action in boundless ways. Where ideas converge, the future unfolds. </p>
+        </section>
+        <section class="info-box left">
+            <h2>What is <span>TEDx</span>?</h2>
+            <p>TEDx events bring TED's spirit to local communities, blending world-changing ideas with meaningful conversations. Independently organised but TED-inspired, each event creates a space where thinkers, doers, and changemakers connect.</p>
+        </section>
+        <section class="info-box right">
+            <h2>What makes <span>TEDx</span> special</h2>
+            <ul>
+                <li>Global Platform, Local Voice: Bringing TED's platform to our community.</li>
+                <li>Diverse & Impactful: Covering science, tech, art & social change. </li>
+                <li>Authentic & Open: Ideas, not promotion-shared freely.</li>
+                <li>Live & Recorded: Talks reach beyond the stage through TED's platform.</li>
+                <li>Engaging & Thought-provoking: A space for innovation, discussion & action.</li>
+            </ul>
+        </section>
+        <section class="info-box left">
+            <h2>What is <span>TEDxMITWPU</span>?</h2>
+            <p>MIT World Peace University envisions a world shaped by tradition, innovation, and peace. TEDx fosters change through ideas that inspire, transform and change. Together, TEDxMITWPU brings these values to life-where knowledge meets wisdom, individuality meets impact, and diverse identities weave a shared future.</p>
+            <p>Through thought-provoking talks and meaningful conversations, TEDxMITWPU ignites curiosity, self-discovery, and global change one idea at a time.</p>
+        </section>
+        <section class="info-box right">
+            <h2>About <span>MITWPU</span>?</h2>
+            <h3></h3>
+            <p>MIT World Peace University (MIT-WPU) is a premier institution dedicated to shaping future leaders by blending traditional Indian values with modern advancements. With a strong emphasis on academic excellence, innovation, and social impact, MIT-WPU nurtures individuals who strive for global peace, harmony, and progress. Through its interdisciplinary approach and commitment to holistic education, the university empowers students to think critically, lead with purpose, and contribute meaningfully to society</p>
+        </section>
+        <section class="info-box left">
+            <h2>Why <span>TEDxMITWPU</span>?</h2>
+            <ul>
+                <li>Global Reach, Local Voice</li>
+                <li>Tangible Impact </li>
+                <li>Last year, our talks reached 8M+ viewers on YouTube and garnered 1.4M+ views on social media. This year, we aim to weave an even stronger narrative, ensuring ideas resonate across borders.</li>
+                <li>From Threads to Tapestry</li>
+            </ul>
+        </section>
+    </div>
 
-    <section class="ted-info">
-        <h2>What is TED?</h2>
-        <p>TED moves us - driving innovation, sparking curiosity, and reshaping perspectives. It’s more than a platform; it's a movement where ideas ignite change. A global community, TED welcomes all who seek to understand and inspire. Leading with “Ideas Change Everything,” TED fuels conversations that transform the world. A stage, a story, a spark - TED bridges thought and action in boundless ways. Where ideas converge, the future unfolds.</p>
-    </section>
-
-    <section class="tedx-info">
-        <h2>TEDx: Locally Organised, Globally Inspired</h2>
-        <p>TEDx events bring TED’s spirit to local communities, blending world-changing ideas with meaningful conversations. Independently organised but TED-inspired, each event creates a space where thinkers, doers, and changemakers connect.</p>
-        <h3>WHAT MAKES TEDx SPECIAL?</h3>
-        <ul>
-            <li><strong>Global Platform, Local Voice:</strong> Bringing TED’s format to our community</li>
-            <li><strong>Diverse & Impactful:</strong> Covering science, tech, art & social change</li>
-            <li><strong>Authentic & Open:</strong> Ideas, not promotion–shared freely</li>
-            <li><strong>Live & Recorded:</strong> Talks reach beyond the stage through TED’s platforms</li>
-            <li><strong>Engaging & Thought-provoking:</strong> A space for innovation, discussion & action</li>
-        </ul>
-    </section>
-
-    <section class="tedx-mitwpu">
-        <h2>What is MITWPU?</h2>
-        <p>MIT World Peace University (MIT-WPU) is a premier institution dedicated to shaping future leaders by blending traditional Indian values with modern advancements. With a strong emphasis on academic excellence, innovation, and social impact, MIT-WPU nurtures individuals who strive for global peace, harmony, and progress.</p>
-        <p>Through its interdisciplinary approach and commitment to holistic education, the university empowers students to think critically, lead with purpose, and contribute meaningfully to society.</p>
-    </section>
-
-    <section class="tedx-mitwpu">
-        <h2>TEDxMITWPU - Building a Strong Identity</h2>
-        <p>MIT World Peace University envisions a world shaped by tradition, innovation, and peace. TEDx fosters change through ideas that inspire, transform and change. Together, TEDxMITWPU brings these values to life–where knowledge meets wisdom, individuality meets impact, and diverse identities weave a shared future.</p>
-        <p>Through thought-provoking talks and meaningful conversations, TEDxMITWPU ignites curiosity, self-discovery, and global change — one idea at a time.</p>
-    </section>
     <script>
         fetch("footer.html")
             .then(response => response.text())
