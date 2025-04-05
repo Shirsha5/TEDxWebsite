@@ -22,15 +22,19 @@
             align-items: center;
         }
         .info-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            margin: 20px;
-            border-radius: 10px;
-            width: 50%;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            position: relative;
-        }
+    background: rgba(255, 255, 255, 0.1); /* Translucent white */
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+    width: 50%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for frosted feel */
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
         .info-box h2 {
             color: #ff2b06;
             font-size: 26px;
