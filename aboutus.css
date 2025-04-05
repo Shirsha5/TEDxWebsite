@@ -343,3 +343,14 @@ nav {
         width: 100%;
     }
 }
+
+.about-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin: 100px 0 20px; /* Increased top margin to 100px */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
