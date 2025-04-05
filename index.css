@@ -8,20 +8,25 @@
     box-sizing: border-box;
 }
 
-
 body {
     /* background: url('images/HOME 2.png') no-repeat center center; */
-    background-size: cover; /* Ensures the image covers the full screen */
-    background-attachment: fixed; /* Keeps background stable while scrolling */
+    background-size: cover;
+    /* Ensures the image covers the full screen */
+    background-attachment: fixed;
+    /* Keeps background stable while scrolling */
     min-height: 100vh;
     width: 100%;
     display: flex;
+    background-color: #000000; 
+    /* Uncomment thisss */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
-    overflow-y: scroll; /* Ensures scrolling works */
-    scroll-behavior: smooth; /* For smooth scrolling */
+    color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    /* Ensures scrolling works */
+    scroll-behavior: smooth;
+    /* For smooth scrolling */
 }
 
 /* NAVBAR FIX */
@@ -35,7 +40,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 nav {
@@ -43,18 +48,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .nav-left {
     display: flex;
     align-items: center;
-    height: 100%; 
+    height: 100%;
 }
 
 .logo {
-    width: 180px;  /* Custom width */
-    height: 60px;  /* Custom height */
+    width: 180px;
+    /* Custom width */
+    height: 60px;
+    /* Custom height */
 }
 
 .nav-links {
@@ -70,34 +76,73 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    
-} 
+
+}
+
 .other-sections {
-    background: url('images/home_2.png') no-repeat center center/cover;
-    /* background-size: cover; */
-    /* max-width: 900px; */
-    /* margin: 50px auto; */
+    position: relative;
+    /* background-color: black; */
     text-align: center;
     padding: 40px;
     border-radius: 12px;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: -1;
+    overflow: hidden;
 }
+
+.other-sections::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('images/group.svg') no-repeat center;
+    background-size: 80%;
+    background-position: 300px 24.5%;
+
+    transform: scaleX(-1); /* Mirror horizontally */
+
+    z-index: 0;
+    opacity: 0.5;
+}
+
+/* Content inside this section */
+.other-sections > * {
+    position: relative;
+    z-index: 2;
+}
+
+.other-sections::after {
+    content: "";
+    position: fixed; /* 👈 Fixed to viewport */
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(187, 21, 28, 0.5), transparent 70%);
+    transform: translate(-50%, -50%);
+    filter: blur(382.8px);
+    z-index: 1; /* Between SVG and content */
+    pointer-events: none; /* Prevent interaction issues */
+}
+
+
 /* HERO SECTION */
 .hero {
     background: url('images/home_1.png') no-repeat center center/cover;
     text-align: center;
     position: relative;
-    width: 100%;               /* Use 100% instead of 100vw to prevent overflow */
-    height: 100vh;      /* Full vertical height */
-    display: flex;      /* Center content */
+    width: 100%;
+    /* Use 100% instead of 100vw to prevent overflow */
+    height: 100vh;
+    /* Full vertical height */
+    display: flex;
+    /* Center content */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* max-width: 90%; */
-    margin-top: 0px; /* Adjusted spacing */
+    margin-top: 0px;
+    /* Adjusted spacing */
 }
 
 .content {
@@ -119,7 +164,7 @@ h1 {
 }
 
 .description {
-    font-size: 18px;
+    font-size: 22px;
     color: #ddd;
 }
 
@@ -127,18 +172,21 @@ h1 {
 .btn {
     display: inline-block;
     transition: transform 0.3s ease, background 0.3s ease;
-    margin-top: 25px; /* Increased from 130px to move it down */
-    padding: 16px 32px; /* Increased padding for a bigger button */
+    margin-top: 25px;
+    /* Increased from 130px to move it down */
+    padding: 20px 34px;
+    /* Increased padding for a bigger button */
     background: red;
     color: white;
     text-decoration: none;
-    font-size: 20px; /* Slightly larger text */
+    font-size: 26px;
+    /* Slightly larger text */
     border-radius: 5px;
     transition: 0.3s;
     position: relative;
-    top: 50px; /* Moves it down */
+    top: 85px;
+    /* Moves it down */
 }
-
 
 .btn:hover {
     background: darkred;
@@ -146,13 +194,14 @@ h1 {
 }
 
 .hero-logo {
-    height: 100px; /* Increased size for the hero section */
+    height: 100px;
+    /* Increased size for the hero section */
     display: block;
-    margin: 0 auto 8px; /* Centering and spacing */
+    margin: 0 auto 8px;
+    /* Centering and spacing */
 }
 
 /* MEDIA QUERIES */
-
 /* For screens smaller than 1024px (Tablets) */
 @media (max-width: 1024px) {
     body {
@@ -200,7 +249,8 @@ h1 {
     }
 
     .nav-links {
-        flex-direction: column; /* Stack nav links */
+        flex-direction: column;
+        /* Stack nav links */
         align-items: center;
     }
 
@@ -221,8 +271,10 @@ h1 {
         background-size: cover;
         background-position: center;
         text-align: center;
-        justify-content: flex-start; /* Adjust layout for mobile */
-        overflow-y: auto; /* Ensures scrolling works on mobile */
+        justify-content: flex-start;
+        /* Adjust layout for mobile */
+        overflow-y: auto;
+        /* Ensures scrolling works on mobile */
     }
 
     .btn {
@@ -248,7 +300,8 @@ h1 {
     }
 
     .nav-links {
-        display: none; /* Hide nav links if needed */
+        display: none;
+        /* Hide nav links if needed */
     }
 }
 
@@ -282,32 +335,44 @@ h1 {
 }
 
 /* General Section Styling */
-.ted-info, .tedx-info, .tedx-mitwpu, .theme-section {
+.ted-info,
+.tedx-info,
+.tedx-mitwpu,
+.theme-section {
     /* background: url('images/home_2.png') no-repeat center center/cover; */
     max-width: 900px;
-    margin: 50px auto;
+    margin: 0px auto;
     text-align: center;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    position: relative; 
+    position: relative;
     z-index: 1;
 }
 
-.ted-info:hover, .tedx-info:hover, .tedx-mitwpu:hover, .theme-section:hover {
+.ted-info:hover,
+.tedx-info:hover,
+.tedx-mitwpu:hover,
+.theme-section:hover {
     transform: scale(1.02);
     z-index: 10;
 }
 
-.ted-info h2, .tedx-info h2, .tedx-mitwpu h2, .theme-section h2 {
+.ted-info h2,
+.tedx-info h2,
+.tedx-mitwpu h2,
+.theme-section h2 {
     font-size: 34px;
     margin-bottom: 20px;
     color: #ff2b06;
 }
 
-.ted-info p, .tedx-info p, .tedx-mitwpu p, .theme-section p {
+.ted-info p,
+.tedx-info p,
+.tedx-mitwpu p,
+.theme-section p {
     font-size: 18px;
     line-height: 1.7;
     color: #eee;
@@ -336,8 +401,6 @@ h1 {
     color: #ff2b06;
 }
 
-
-
 /* Past Event Section */
 .past-event {
     max-width: 1000px;
@@ -350,6 +413,10 @@ h1 {
     text-align: left;
     color: #eee;
     transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#typewriter {
+    font-size: 3rem; /* You can adjust the size as needed */
 }
 
 .past-event:hover {
@@ -381,9 +448,11 @@ h1 {
 .past-event .speaker {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures equal spacing */
-    gap: 30px; /* Increased gap for better spacing */
-    margin-bottom: 40px; 
+    justify-content: space-between;
+    /* Ensures equal spacing */
+    gap: 30px;
+    /* Increased gap for better spacing */
+    margin-bottom: 40px;
     transition: transform 0.3s;
 }
 
@@ -396,7 +465,8 @@ h1 {
 }
 
 .speaker img {
-    width: 120px; /* Slightly larger images */
+    width: 120px;
+    /* Slightly larger images */
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
@@ -408,7 +478,8 @@ h1 {
     font-size: 18px;
     color: #ddd;
     line-height: 1.7;
-    text-align: left; /* Ensures left alignment */
+    text-align: left;
+    /* Ensures left alignment */
     max-width: 600px;
 }
 
@@ -428,33 +499,46 @@ h1 {
     flex: 1;
     font-size: 17px;
     color: #ddd;
-    line-height: 1.4; /* Reduced to make text more compact */
+    line-height: 1.4;
+    /* Reduced to make text more compact */
     text-align: left;
     max-width: 550px;
-    margin: 5px 20px; /* Remove excess spacing */
+    margin: 5px 20px;
+    /* Remove excess spacing */
 }
 
 .past-event .speaker-info strong {
     display: block;
     font-size: 18px;
     color: #ff2b06;
-    margin-bottom: 5px; /* Keep speaker name close to text */
+    margin-bottom: 5px;
+    /* Keep speaker name close to text */
     text-align: left;
 }
 
 .past-event .speaker p {
-    margin: 3px 0; /* Reduce gap between lines */
+    margin: 3px 0;
+    /* Reduce gap between lines */
     text-align: left;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .ted-info, .tedx-info, .tedx-mitwpu, .theme-section, .past-event {
+
+    .ted-info,
+    .tedx-info,
+    .tedx-mitwpu,
+    .theme-section,
+    .past-event {
         padding: 25px;
         margin: 30px auto;
     }
 
-    .ted-info h2, .tedx-info h2, .tedx-mitwpu h2, .theme-section h2, .past-event h2 {
+    .ted-info h2,
+    .tedx-info h2,
+    .tedx-mitwpu h2,
+    .theme-section h2,
+    .past-event h2 {
         font-size: 30px;
     }
 
@@ -477,6 +561,7 @@ h1 {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1.5s ease-out forwards;
+    font-size: 2rem; /* 👈 Increase this value as needed */
 }
 
 @keyframes fadeIn {
@@ -484,6 +569,7 @@ h1 {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -503,10 +589,12 @@ h1 {
 .speaker:hover img {
     transform: scale(1.1);
 }
+
 .team-crew {
     text-align: center;
     padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.9); /* Dark theme */
+    /* background: rgba(0, 0, 0, 0.9); */
+    /* Dark theme */
     color: white;
 }
 
@@ -552,7 +640,8 @@ h1 {
 .team-member h3 {
     margin: 10px 0 5px;
     font-size: 20px;
-    color: #ff4141; /* TEDx red color */
+    color: #ff4141;
+    /* TEDx red color */
 }
 
 .team-member p {
@@ -573,7 +662,8 @@ h1 {
 }
 
 .logo-link {
-    display: inline-block;  /* Ensures it's not hidden */
+    display: inline-block;
+    /* Ensures it's not hidden */
 }
 
 
@@ -582,13 +672,15 @@ footer {
     width: 100%;
     background: #1a1a1a;
     color: #fff;
-    padding: 15px 0;  /* Reduced padding to make it thinner */
+    padding: 15px 0;
+    /* Reduced padding to make it thinner */
     font-size: 16px;
 }
 
 /* Adjusted Space Between "Meet the Team" and Footer */
 .team-crew {
-    margin-bottom: 80px; /* Slightly more space before the footer */
+    margin-bottom: 80px;
+    /* Slightly more space before the footer */
 }
 
 .footer-container {
@@ -606,7 +698,8 @@ footer {
 /* Left Column (Logo & Description) */
 .footer-col {
     flex: 1;
-    padding: 5px; /* Reduced padding for a thinner look */
+    padding: 5px;
+    /* Reduced padding for a thinner look */
 }
 
 .logo-col {
@@ -614,13 +707,16 @@ footer {
 }
 
 .footer-logo {
-    width: 150px; /* Slightly smaller logo */
+    width: 150px;
+    /* Slightly smaller logo */
     height: auto;
-    margin-bottom: 8px; /* Less space below logo */
+    margin-bottom: 8px;
+    /* Less space below logo */
 }
 
 .footer-desc {
-    font-size: 13px;  /* Slightly smaller text */
+    font-size: 13px;
+    /* Slightly smaller text */
     color: #bbb;
     max-width: 250px;
 }
@@ -639,7 +735,8 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 25px; /* Adjusted spacing */
+    gap: 25px;
+    /* Adjusted spacing */
 }
 
 .footer-links li {
@@ -649,7 +746,8 @@ footer {
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 17px; /* Adjusted font size */
+    font-size: 17px;
+    /* Adjusted font size */
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -664,7 +762,8 @@ footer {
 }
 
 .map-col iframe {
-    width: 400px; /* Slightly reduced map size */
+    width: 400px;
+    /* Slightly reduced map size */
     height: 250px;
     border-radius: 8px;
 }
