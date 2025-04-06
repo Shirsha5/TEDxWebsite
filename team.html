@@ -30,13 +30,15 @@
       }
 
       body {
-        background: url('images/HOME 2.png') no-repeat center center;
-        background-size: cover;
-        background-attachment: fixed;
+        background-color: #121212; /* Fallback color */
         min-height: 100vh;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         color: white;
-        font-family: 'Barlow', sans-serif;
+        overflow-y: scroll; /* Ensures scrolling works */
       }
 
       /* Header/Navbar Styles */
@@ -107,16 +109,19 @@
       }
 
       /* Team Section Styles */
-      .team-section {
+     .team-section {
         padding: 4rem 2rem;
         max-width: var(--max-width);
         margin: 0 auto;
+        background: url('images/our team.svg') scroll no-repeat top left; /* Background image */
+        background-size: contain; /* Ensures the image covers the section */
+        position: relative; /* Ensure proper positioning */
       }
 
       .team-title {
         font-family: 'Montserrat', sans-serif;
         font-size: 4rem;
-        text-align: center;
+        text-align: left;
         margin-bottom: 3rem;
         color: var(--light);
         text-transform: uppercase;
@@ -124,16 +129,6 @@
         position: relative;
       }
 
-      .team-title::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 4px;
-        background-color: var(--primary);
-      }
 
       .team-grid {
         display: grid;
