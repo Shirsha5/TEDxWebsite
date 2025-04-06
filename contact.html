@@ -151,22 +151,36 @@
                 </div>
 
                 <div class="translucent-box">
-                        <form class="form-box">
-                                <div class="form-row">
-                                        <div class="form-group">
-                                                <label for="name">Name</label>
-                                                <input type="text" id="name" placeholder="" />
-                                        </div>
-                                        <div class="form-group">
-                                                <label for="email">Email</label>
-                                                <input type="email" id="email" placeholder="" />
-                                        </div>
+                        <form class="form-box" action="https://formsubmit.co/tedx@mitwpu.edu.in" method="POST">
+                            <!-- HONEYPOT (prevents spam) -->
+                            <input type="text" name="_honey" style="display:none">
+                    
+                            <!-- Disable Captcha (optional) -->
+                            <input type="hidden" name="_captcha" value="false">
+                    
+                            <!-- Redirect after submission (optional) -->
+                            <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+                    
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required />
                                 </div>
-
-                                <label for="comment">Comment</label>
-                                <textarea rows="4" placeholder=""></textarea>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required />
+                                </div>
+                            </div>
+                    
+                            <label for="comment">Comment</label>
+                            <textarea id="comment" name="comment" rows="4" required></textarea>
+                    
+                            <button type="submit" style="margin-top: 15px; padding: 10px 20px; font-size: 1em; border: none; border-radius: 5px; background-color: #e62b1e; color: white; cursor: pointer;">
+                                Send
+                            </button>
                         </form>
-                </div>
+                    </div>
+                    
         </div>
 </body>
 <script>
