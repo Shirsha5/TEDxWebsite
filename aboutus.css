@@ -279,3 +279,130 @@ header {
         margin-right: 10px;
     }
 }
+
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px 0;
+    /* Reduced padding to make it thinner */
+    font-size: 16px;
+}
+
+/* Adjusted Space Between "Meet the Team" and Footer */
+.team-crew {
+    margin-bottom: 80px;
+    /* Slightly more space before the footer */
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Left Column (Logo & Description) */
+.footer-col {
+    flex: 1;
+    padding: 5px;
+    /* Reduced padding for a thinner look */
+}
+
+.logo-col {
+    text-align: left;
+}
+
+.footer-logo {
+    width: 150px;
+    /* Slightly smaller logo */
+    height: auto;
+    margin-bottom: 8px;
+    /* Less space below logo */
+}
+
+.footer-desc {
+    font-size: 13px;
+    /* Slightly smaller text */
+    color: #bbb;
+    max-width: 250px;
+}
+
+/* Middle Column (Navigation Links) */
+.links-col {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    /* Adjusted spacing */
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    /* Adjusted font size */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f44336;
+}
+
+/* Right Column (Google Map) */
+.map-col {
+    text-align: right;
+}
+
+.map-col iframe {
+    width: 400px;
+    /* Slightly reduced map size */
+    height: 250px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-col,
+    .links-col,
+    .map-col {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .map-col iframe {
+        width: 100%;
+        height: 220px;
+    }
+}
