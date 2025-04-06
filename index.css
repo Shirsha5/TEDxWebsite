@@ -775,6 +775,11 @@ h1 {
 
 /* Footer Styles */
 footer {
+    margin: 0px;
+    padding: 2px;
+    
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     background: #1a1a1a;
     color: #fff;
@@ -790,22 +795,28 @@ footer {
 }
 
 .footer-container {
+   
     width: 85%;
-    margin: auto;
+    margin: 0px;
+    padding: 6px;
+    
+    
 }
 
 .footer-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* top-aligned items */
     flex-wrap: wrap;
 }
+
 
 /* Left Column (Logo & Description) */
 .footer-col {
     flex: 1;
-    padding: 5px;
-    /* Reduced padding for a thinner look */
+    min-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .logo-col {
@@ -829,11 +840,10 @@ footer {
 
 /* Middle Column (Navigation Links) */
 .links-col {
-    text-align: center;
+    flex: 2;                   /* Give more width to this column */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
 }
 
 .footer-links {
@@ -841,23 +851,66 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: row;
     gap: 25px;
-    /* Adjusted spacing */
+    flex-wrap: nowrap;         /* Prevent wrapping */
 }
 
 .footer-links li {
-    display: inline;
+    display: inline-block;
+    white-space: nowrap;      
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
     font-size: 17px;
-    /* Adjusted font size */
     font-weight: 600;
     transition: color 0.3s ease;
+    white-space: nowrap;      
 }
 
+
+.footer-links a:hover {
+    color: #f44336;
+}
+.instagram-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+
+
+.instagram-text {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.instagram-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* In case fallback text shows */
+}
+
+.instagram-link .instagram-logo {
+    width: 24px;            
+    height: 24px;
+    margin-top: 5px;        
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instagram-link:hover .instagram-logo {
+    transform: scale(1.1);
+}
 .footer-links a:hover {
     color: #f44336;
 }

@@ -131,7 +131,7 @@
 
       .team-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         margin-top: 3rem;
       }
@@ -193,90 +193,9 @@
       }
 
       /* Footer Styles */
-      footer {
-        width: 100vw; /* Ensure the footer spans the full viewport width */
-        background: #1a1a1a;
-        color: #fff;
-        padding: 15px 0;
-        font-size: 16px;
-        margin-top: auto;
-        overflow-x: hidden; /* Prevent horizontal scroll caused by width */
-      }
+     
 
-      .footer-container {
-        width: 85%;
-        margin: auto;
-      }
-
-      .footer-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .footer-col {
-        flex: 1;
-        padding: 5px;
-      }
-
-      .logo-col {
-        text-align: left;
-      }
-
-      .footer-logo {
-        width: 150px;
-        height: auto;
-        margin-bottom: 8px;
-      }
-
-      .footer-desc {
-        font-size: 13px;
-        color: #bbb;
-        max-width: 250px;
-      }
-
-      .links-col {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-      }
-
-      .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        gap: 25px;
-      }
-
-      .footer-links li {
-        display: inline;
-      }
-
-      .footer-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: 600;
-        transition: color 0.3s ease;
-      }
-
-      .footer-links a:hover {
-        color: #f44336;
-      }
-
-      .map-col {
-        text-align: right;
-      }
-
-      .map-col iframe {
-        width: 400px;
-        height: 250px;
-        border-radius: 8px;
-      }
+    
 
       /* Responsive Design */
       @media (max-width: 768px) {
@@ -497,59 +416,17 @@
         </section>
       </main>
 
-<<<<<<< HEAD
-      <footer>
-        <div class="footer-container">
-            <div class="footer-row">
-                <!-- Left Column: Logo & Description -->
-                <div class="footer-col logo-col">
-                    <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="footer-logo">
-                    <p class="footer-desc">TEDxMITWPU brings inspiring ideas to life, fostering meaningful conversations.</p>
-                </div>
-    
-                <!-- Middle Column: Navigation Links -->
-                <div class="footer-col links-col">
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="pastevent.html">Past Events</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="guidelines.html">Guidelines</a></li>
-                        <li><a href="brochure.pdf">Brochure</a></li>
-                    </ul>
-                </div>
-=======
-      <!-- Footer -->
-     <footer>
-    <div class="footer-container">
-        <div class="footer-row">
-            <!-- Left Column: Logo & Description -->
-            <div class="footer-col logo-col">
-                <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="footer-logo">
-                <p class="footer-desc">TEDxMITWPU brings inspiring ideas to life, fostering meaningful conversations.</p>
-            </div>
 
-            <!-- Middle Column: Navigation Links -->
-            <div class="footer-col links-col">
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="pastevent.html">Past Events</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="guidelines.html">Guidelines</a></li>
-                    <li><a href="#">Brochure</a></li>
-                </ul>
->>>>>>> 02f4da61a2090a8699b397988711760f1ce2a64a
-            </div>
-        </div>
-    </div>
-</footer>
+
     </div>
 
     <script>
       // Mobile menu toggle
+      fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
       const menuBtn = document.querySelector(".menu-btn");
       const navLinks = document.querySelector(".nav-links");
 
