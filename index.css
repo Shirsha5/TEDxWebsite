@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     width: 100%;
     display: flex;
-    
+
     /* Uncomment thisss */
     flex-direction: column;
     align-items: center;
@@ -27,6 +27,92 @@ body {
     /* Ensures scrolling works */
     scroll-behavior: smooth;
     /* For smooth scrolling */
+}
+
+.translucent-banner {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    /* translucent */
+    backdrop-filter: blur(5px);
+    /* glassy effect */
+    padding: 20px 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.banner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.separator {
+    width: 2px;
+    background-color: #ff4b4b;
+    border-radius: 1px;
+    align-self: stretch;
+    /* ensures it stretches fully within flex */
+}
+
+.banner-item i {
+    color: red;
+    /* This gives the icon its red color */
+    font-size: 18px;
+    border: none;
+    /* Removes any unwanted borders */
+    outline: none;
+    /* Removes focus outlines */
+    box-shadow: none;
+    /* Just in case a shadow is causing the effect */
+}
+
+.banner-item span {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.countdown-labels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.countdown-labels span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ff2b06;
+}
+
+.banner-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
 }
 
 /* NAVBAR FIX */
@@ -80,15 +166,16 @@ nav {
 
 .other-sections {
     position: relative;
-    width: 100vw; /* Full viewport width */
+    width: 100vw;
+    /* Full viewport width */
     background-color: rgba(255, 255, 255, 0.1);
     text-align: center;
     padding: 40px;
     border-radius: 12px;
     overflow: hidden;
-    margin: 0; /* Ensures no default margin messes up */
+    margin: 0;
+    /* Ensures no default margin messes up */
 }
-
 
 .other-sections::before {
     content: "";
@@ -97,26 +184,27 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-
     background: url('images/group.svg') no-repeat center;
     background-size: 80%;
     background-position: 300px 24.5%;
 
-    transform: scaleX(-1); /* Mirror horizontally */
+    transform: scaleX(-1);
+    /* Mirror horizontally */
 
     z-index: 0;
     opacity: 0.5;
 }
 
 /* Content inside this section */
-.other-sections > * {
+.other-sections>* {
     position: relative;
     z-index: 2;
 }
 
 .other-sections::after {
     content: "";
-    position: fixed; /* 👈 Fixed to viewport */
+    position: fixed;
+    /* 👈 Fixed to viewport */
     top: 50%;
     left: 50%;
     width: 300px;
@@ -124,8 +212,10 @@ nav {
     background: radial-gradient(circle, rgba(187, 21, 28, 0.5), transparent 70%);
     transform: translate(-50%, -50%);
     filter: blur(382.8px);
-    z-index: 1; /* Between SVG and content */
-    pointer-events: none; /* Prevent interaction issues */
+    z-index: 1;
+    /* Between SVG and content */
+    pointer-events: none;
+    /* Prevent interaction issues */
 }
 
 
@@ -196,12 +286,15 @@ h1 {
 }
 
 .hero-logo {
-    width: 200px;         /* Increased width */
-    height: auto;         /* Maintain aspect ratio */
+    width: 200px;
+    /* Increased width */
+    height: auto;
+    /* Maintain aspect ratio */
     display: block;
-    margin: 0 auto 8px;   /* Center and add spacing */
-  }
-  
+    margin: 0 auto 8px;
+    /* Center and add spacing */
+}
+
 
 /* MEDIA QUERIES */
 /* For screens smaller than 1024px (Tablets) */
@@ -266,11 +359,13 @@ h1 {
         padding: 10px 20px;
     }
 }
+
 @media (min-width: 454px) and (max-width: 479px) {
     .btn {
-      top: -18px; /* Adjust this to control vertical shift */
+        top: -18px;
+        /* Adjust this to control vertical shift */
     }
-  }
+}
 
 /* For screens smaller than 480px (Mobile Phones) */
 @media (max-width: 480px) {
@@ -423,7 +518,8 @@ h1 {
 }
 
 #typewriter {
-    font-size: 3rem; /* You can adjust the size as needed */
+    font-size: 3rem;
+    /* You can adjust the size as needed */
 }
 
 .past-event:hover {
@@ -568,7 +664,8 @@ h1 {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1.5s ease-out forwards;
-    font-size: 2rem; /* 👈 Increase this value as needed */
+    font-size: 2rem;
+    /* 👈 Increase this value as needed */
 }
 
 @keyframes fadeIn {
