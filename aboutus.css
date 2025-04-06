@@ -11,8 +11,7 @@ body {
     background-image: url('images/About us .svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: auto;
     color: white;
     min-height: 100vh;
     overflow-x: hidden;

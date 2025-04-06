@@ -30,13 +30,15 @@
       }
 
       body {
-        background: url('images/HOME 2.png') no-repeat center center;
-        background-size: cover;
-        background-attachment: fixed;
+        background-color: #121212; /* Fallback color */
         min-height: 100vh;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: "Barlow-Regular", sans-serif;
         color: white;
-        font-family: 'Barlow', sans-serif;
       }
 
       /* Header/Navbar Styles */
@@ -49,7 +51,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.5);
         z-index: 1000;
       }
 
@@ -111,28 +113,20 @@
         padding: 4rem 2rem;
         max-width: var(--max-width);
         margin: 0 auto;
+        background: url('images/our team.svg') scroll no-repeat top left; /* Background image */
+        background-size: contain; /* Ensures the image covers the section */
+        position: relative; /* Ensure proper positioning */
       }
 
       .team-title {
         font-family: 'Montserrat', sans-serif;
         font-size: 4rem;
-        text-align: center;
+        text-align: left;
         margin-bottom: 3rem;
         color: var(--light);
         text-transform: uppercase;
         letter-spacing: 3px;
         position: relative;
-      }
-
-      .team-title::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 4px;
-        background-color: var(--primary);
       }
 
       .team-grid {
@@ -200,12 +194,13 @@
 
       /* Footer Styles */
       footer {
-        width: 100%;
+        width: 100vw; /* Ensure the footer spans the full viewport width */
         background: #1a1a1a;
         color: #fff;
         padding: 15px 0;
         font-size: 16px;
         margin-top: auto;
+        overflow-x: hidden; /* Prevent horizontal scroll caused by width */
       }
 
       .footer-container {
@@ -502,6 +497,7 @@
         </section>
       </main>
 
+<<<<<<< HEAD
       <footer>
         <div class="footer-container">
             <div class="footer-row">
@@ -523,9 +519,33 @@
                         <li><a href="brochure.pdf">Brochure</a></li>
                     </ul>
                 </div>
+=======
+      <!-- Footer -->
+     <footer>
+    <div class="footer-container">
+        <div class="footer-row">
+            <!-- Left Column: Logo & Description -->
+            <div class="footer-col logo-col">
+                <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="footer-logo">
+                <p class="footer-desc">TEDxMITWPU brings inspiring ideas to life, fostering meaningful conversations.</p>
+            </div>
+
+            <!-- Middle Column: Navigation Links -->
+            <div class="footer-col links-col">
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="pastevent.html">Past Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="guidelines.html">Guidelines</a></li>
+                    <li><a href="#">Brochure</a></li>
+                </ul>
+>>>>>>> 02f4da61a2090a8699b397988711760f1ce2a64a
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
     </div>
 
     <script>
