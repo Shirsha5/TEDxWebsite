@@ -29,7 +29,7 @@ body {
   
 /* Responsive container */
 .register-container {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.85); /* See-through white */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
