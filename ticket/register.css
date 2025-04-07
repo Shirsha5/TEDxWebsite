@@ -1,5 +1,5 @@
 body {
-    background: url('/images/home_1.png') no-repeat center center;
+    background: url('./images/home_1.png') no-repeat center center;
     background-size: cover; /* Ensures the image covers the full screen */
     background-attachment: fixed; /* Keeps background stable while scrolling */
     font-family: 'Roboto', sans-serif;
