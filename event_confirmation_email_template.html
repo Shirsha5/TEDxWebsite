@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Confirmation Email</title>
+</head>
+<body style="margin: 0; padding: 24px; font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f44336;">
+  <div style="max-width: 600px; margin: auto; background: #fff; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); overflow: hidden;">
+
+    <!-- Header -->
+    <div style="background: #000; padding: 20px; text-align: center;">
+      <img src="https://drive.google.com/uc?export=view&id=1iSDmYWaFJQNaAIzEZj2MRf7ZJ1k5Oh8u" alt="TEDxMITWPU" style="max-width: 200px; border-radius: 6px;" />
+    </div>
+
+    <!-- Body Content -->
+    <div style="padding: 30px;">
+      <p style="font-size: 18px; margin: 0 0 16px;"><strong>Hi {{name}},</strong></p>
+
+      <p style="margin: 0 0 16px;">
+        Thank you for registering for <strong style="color: #f44336;">{{event_name}} – {{event_tagline}}</strong>.
+      </p>
+
+      <p style="margin: 0 0 24px;">
+        Your booking is <strong>confirmed</strong>! 🎉 Here are your details:
+      </p>
+
+      <h3 style="margin-bottom: 10px; color: #f44336;">🧾 Receipt Details</h3>
+      <ul style="list-style: none; padding-left: 0; margin: 0 0 24px;">
+        <li><strong>Order ID:</strong> {{order_id}}</li>
+        <li><strong>Booking Date:</strong> {{booking_date}}</li>
+        <li><strong>Ticket Type:</strong> {{ticket_type}}</li>
+        <li><strong>Amount Paid:</strong> ₹{{amount_paid}}</li>
+        <li><strong>Processing Fee:</strong> ₹{{processing_fee}}</li>
+        <li><strong>Total Paid:</strong> ₹{{total_paid}}</li>
+      </ul>
+
+      <h3 style="margin-bottom: 10px; color: #f44336;">📍 Event Details</h3>
+      <ul style="list-style: none; padding-left: 0; margin: 0 0 24px;">
+        <li><strong>Organizer:</strong> {{organizer_name}}</li>
+        <li><strong>Venue:</strong> {{venue}}</li>
+        <li><strong>Event Name:</strong> {{full_event_name}}</li>
+      </ul>
+
+      <p style="margin: 0 0 24px;">If you have any questions, feel free to reach out to us. We're excited to see you at the event!</p>
+
+      <p style="margin: 0;">
+        Warm regards,<br />
+        <strong style="color: #f44336;">Team {{organizer_name}}</strong><br />
+        <a href="mailto:{{organizer_email}}" style="color: #000;">{{organizer_email}}</a><br />
+        <a href="{{social_links}}" style="color: #f44336;">Follow us on Instagram</a>
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div style="background: #f44336; color: #fff; text-align: center; padding: 16px; font-size: 14px;">
+      © {{organizer_name}} | All rights reserved
+    </div>
+
+  </div>
+</body>
+</html>

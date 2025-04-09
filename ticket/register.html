@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register - TEDxMITWPU</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="register.css" />
 </head>
 
@@ -14,30 +15,25 @@
     <form id="registrationForm">
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        <input type="text" id="name" name="name" required />
       </div>
-
       <div class="form-group">
         <label for="college">College Name / Institute Name:</label>
-        <input type="text" id="college" name="college" placeholder="Enter your college or institute name" required />
+        <input type="text" id="college" name="college" required />
       </div>
-
       <div class="form-group">
         <label for="city">City:</label>
-        <input type="text" id="city" name="city" placeholder="Enter your city" required />
+        <input type="text" id="city" name="city" required />
       </div>
-
       <div class="form-group">
         <label for="phone">Mobile No.:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" required />
+        <input type="tel" id="phone" name="phone" required />
       </div>
-
       <div class="form-group">
         <label for="email">Email ID:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email ID" required />
+        <input type="email" id="email" name="email" required />
       </div>
-
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label for="ticket">Ticket Amount:</label>
         <select id="ticket" name="ticket" required>
           <option value="" disabled selected>Select ticket type</option>
@@ -45,16 +41,24 @@
           <option value="3 Ticket - ₹1335">3 Ticket - ₹1335</option>
           <option value="5 Ticket - ₹2102">5 Ticket - ₹2102</option>
         </select>
-      </div> -->
-
-      <!-- Submit button -->
+      </div>
       <button type="submit" class="pay-btn">Register</button>
     </form>
     <p id="responseMessage"></p>
   </div>
 
-  <!-- JS to handle form submission -->
+  <!-- Load EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
   <script>
+    // Initialize EmailJS
+    (function () {
+      emailjs.init({
+        publicKey: "KmPeO7iywmQV_k8Qo",
+      }); // Replace with your public key
+    })();
+
+    // Handle form submission
     document.getElementById("registrationForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -66,14 +70,45 @@
       const ticket = document.getElementById("ticket").value;
 
       if (name && college && city && phone && email && ticket) {
-        document.getElementById("responseMessage").textContent = "Registration successful! Redirecting to payment...";
-        setTimeout(() => {
-          window.open("https://secure.paytmpayments.com/link/paymentForm/56367/LL_769711432", "_blank");
-        }, 1500);
+        const templateParams = {
+          to_email: email, // This is required!
+          name: name,
+          // image: "https://drive.google.com/uc?export=view&id=1iSDmYWaFJQNaAIzEZj2MRf7ZJ1k5Oh8u",
+          event_name: "TEDxMITWPU",
+          event_tagline: "Ideas Worth Spreading",
+          order_id: "TXN" + Date.now(),
+          booking_date: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+          ticket_type: ticket,
+          amount_paid: ticket.includes("495") ? "495" : ticket.includes("1335") ? "1335" : "2102",
+          processing_fee: "0", // Update if applicable
+          total_paid: ticket.includes("495") ? "495" : ticket.includes("1335") ? "1335" : "2102",
+          organizer_name: "TEDxMITWPU Team",
+          venue: "MIT World Peace University, Pune",
+          full_event_name: "TEDxMITWPU – Ideas Worth Spreading",
+          organizer_email: "contact@tedxmitwpu.com",
+          social_links: "https://instagram.com/tedxmitwpu"
+        };
+        console.log("Sending to:", email);
+
+
+        emailjs.send('service_26utx5m', 'template_2t8tw6b', templateParams, {
+          to_email: email,
+        })
+          .then(function (response) {
+            document.getElementById("responseMessage").textContent = "✅ Email sent. Redirecting to payment...";
+            setTimeout(() => {
+              window.open("https://secure.paytmpayments.com/link/paymentForm/56367/LL_769711432", "_blank");
+            }, 1500);
+          }, function (error) {
+            console.error("EmailJS Error:", error);
+            document.getElementById("responseMessage").textContent = "❌ Email not sent. Please try again later.";
+          });
+
       } else {
-        document.getElementById("responseMessage").textContent = "Please fill in all fields before registering.";
+        document.getElementById("responseMessage").textContent = "Please fill in all fields.";
       }
     });
   </script>
 </body>
+
 </html>
