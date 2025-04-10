@@ -951,3 +951,80 @@ footer {
         height: 220px;
     }
 }
+
+.tedx-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+    padding: 60px 80px;
+    background-color: #000;
+  }
+  
+  .left-box,
+  .right-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .left-box {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* reduce vertical space between card and button */
+    align-items: flex-end; /* aligns the button to the right */
+  }
+  
+  .right-box {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .card {
+    background-color: #121212;
+    color: #fff;
+    padding: 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(255, 69, 0, 0.15);
+    flex: 1;
+    margin-bottom: 0; /* optional reset */
+  }
+  
+  
+  .card h2 {
+    color: #ff4500;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;         /* reset if needed */
+    padding-top: 0;        /* optional: tighten spacing */
+    transform: translateY(-55px); /* 👈 this is the key */
+  }  
+  
+  .btn {
+    background-color: #ff4500;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #e03e00;
+  }
+  
