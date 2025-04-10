@@ -976,6 +976,7 @@ footer {
     flex-direction: column;
     gap: 12px; /* reduce vertical space between card and button */
     align-items: flex-end; /* aligns the button to the right */
+     background-color: #000;
   }
   
   .right-box {
