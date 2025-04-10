@@ -141,58 +141,142 @@ header {
 }
 
 /* FOOTER */
-.modern-footer {
-    background-color: #131314;
-    padding: 40px 20px;
+footer {
+    margin: 0px;
+    padding: 2px;
+    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #1a1a1a;
     color: #fff;
+    padding: 15px 0;
+    /* Reduced padding to make it thinner */
+    font-size: 16px;
+}
+
+/* Adjusted Space Between "Meet the Team" and Footer */
+.team-crew {
+    margin-bottom: 80px;
+    /* Slightly more space before the footer */
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: auto;
+   
+    width: 85%;
+    margin: 0px;
+    padding: 6px;
+    
+    
 }
 
 .footer-row {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 40px;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* top-aligned items */
+    flex-wrap: wrap;
+}
+
+
+/* Left Column (Logo & Description) */
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.logo-col {
+    text-align: left;
 }
 
 .footer-logo {
-    width: 140px;
+    width: 150px;
+    /* Slightly smaller logo */
+    height: auto;
+    margin-bottom: 8px;
+    /* Less space below logo */
+}
+
+.footer-desc {
+    font-size: 13px;
+    /* Slightly smaller text */
+    color: #bbb;
+    max-width: 250px;
+}
+
+/* Middle Column (Navigation Links) */
+.links-col {
+    flex: 2;                   /* Give more width to this column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: nowrap;         /* Prevent wrapping */
+}
+
+.footer-links li {
+    display: inline-block;
+    white-space: nowrap;      
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    white-space: nowrap;      
+}
+
+
+.footer-links a:hover {
+    color: #f44336;
+}
+.instagram-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+
+
+.instagram-text {
+    font-size: 16px;
+    color: #fff;
     margin-bottom: 10px;
 }
 
-.logo-section p {
-    color: #ccc;
-    font-size: 14px;
-}
-
-.nav-section ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-section a {
-    color: #fff;
+.instagram-link {
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* In case fallback text shows */
 }
 
-.nav-section a:hover {
-    color: #ff2b06;
+.instagram-link .instagram-logo {
+    width: 24px;            
+    height: 24px;
+    margin-top: 5px;        
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.map-section iframe {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    border: none;
-}
+.instagram-link:hover .instagram-logo {
+    transform: scale(1.1);}
 
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
@@ -405,3 +489,72 @@ footer {
         height: 220px;
     }
 }
+.intro-container{
+    display: flex;
+      flex-direction: column;
+    
+      gap: 5rem;
+      margin: 2rem 0;
+}
+.intro-card{
+    display: flex;
+      gap: 5rem;
+      align-items: center;
+}
+.intro-card.reverse{
+    flex-direction: row-reverse;
+}
+.intro-info{
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+      border-radius: 1.75rem;
+      padding: 3rem;
+      backdrop-filter: blur(1.1125rem);
+      box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+                  -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+}
+.intro-name{
+    color: #ff2b06;
+      font-family: "Montserrat-SemiBold", sans-serif;
+      font-size: 2rem;
+      line-height: 1.5;
+      letter-spacing: 0.1875rem;
+      margin-bottom: 1.5rem;
+      border-bottom: #bbb solid 0.125rem;
+}
+.intro-name div{
+    color: #ffffff;
+}
+.intro-image{
+    flex: 1;
+      max-width: 36rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1.9375rem;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(1.1125rem);
+}
+.intro-image img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem;
+    max-height: 32rem;
+}
+
+/* .image-caption{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: left;
+    color: #fff;
+    background: linear-gradient(to top, #ff2b06, transparent);
+    padding: 10px;
+    border-bottom-left-radius: 1.9375rem;
+    border-bottom-right-radius: 1.9375rem;
+
+} */
