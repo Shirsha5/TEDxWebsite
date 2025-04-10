@@ -1,66 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEDx MITWPU</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            background-color: #121212;
-            color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
             margin: 0;
             padding: 0;
+            background-color: black;
+            background-image: url('images/guidelines.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-        .content {
-            position: relative;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 2.5em;
         }
-        .info-box {
-    background: rgba(255, 255, 255, 0.1); /* Translucent white */
-    padding: 30px;
-    margin: 20px;
-    border-radius: 15px;
-    width: 50%;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for frosted feel */
-    position: relative;
-    transition: all 0.3s ease-in-out;
+        
+/* FOOTER */
+.modern-footer {
+    background-color: #131314;
+    padding: 40px 20px;
+    color: #fff;
 }
 
-        .info-box h2 {
-            color: #ff2b06;
-            font-size: 26px;
-        }
-        .info-box p, .info-box ul {
-            color: white;
-            font-size: 18px;
-        }
-        .red-line {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url('red-line.png') no-repeat center;
-            background-size: contain;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-        .right {
-            align-self: flex-end;
-        }
-        .left {
-            align-self: flex-start;
-        }
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+.logo-section p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.nav-section ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-section a:hover {
+    color: #ff2b06;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        background: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+        z-index: 999;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 1001;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .info-box {
+        width: 90%;
+        align-self: center !important;
+    }
+
+    .footer-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nav-section ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .map-section iframe {
+        height: 220px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-heading {
+        font-size: 2rem;
+        margin-top: 80px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .info-box {
+        width: 90%;
+        padding: 20px 15px;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 15px auto;
+    }
+
+    .info-box h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        width: 100px;
+    }
+
+    .footer-col {
+        padding: 10px 0;
+    }
+
+    .menu-btn {
+        margin-right: 10px;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px 0;
+    /* Reduced padding to make it thinner */
+    font-size: 16px;
+}
+
+/* Adjusted Space Between "Meet the Team" and Footer */
+.team-crew {
+    margin-bottom: 80px;
+    /* Slightly more space before the footer */
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Left Column (Logo & Description) */
+.footer-col {
+    flex: 1;
+    padding: 5px;
+    /* Reduced padding for a thinner look */
+}
+
+.logo-col {
+    text-align: left;
+}
+
+.footer-logo {
+    width: 150px;
+    /* Slightly smaller logo */
+    height: auto;
+    margin-bottom: 8px;
+    /* Less space below logo */
+}
+
+.footer-desc {
+    font-size: 13px;
+    /* Slightly smaller text */
+    color: #bbb;
+    max-width: 250px;
+}
+
+/* Middle Column (Navigation Links) */
+.links-col {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    /* Adjusted spacing */
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    /* Adjusted font size */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f44336;
+}
+
+/* Right Column (Google Map) */
+.map-col {
+    text-align: right;
+}
+
+.map-col iframe {
+    width: 400px;
+    /* Slightly reduced map size */
+    height: 250px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-col,
+    .links-col,
+    .map-col {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .map-col iframe {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+/* Red Line Background Wrapper */
+.guidelines-box {
+    position: relative;
+    padding: 50px 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Red line SVG styled like background */
+.red-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/Guidelines.svg') no-repeat center;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -72,7 +338,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="team.html">Team</a></li>               
+                <li><a href="team.html">Team</a></li>
                 <li><a href="pastevent.html">Past Events</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="guidelines.html">Guidelines</a></li>
@@ -80,58 +346,99 @@
             </ul>
             <div class="menu-btn">☰</div>
         </nav>
-    </header>    
-    <h1 class="about-heading">ABOUT US</h1>
+    </header>
+    <h1>Guidelines</h1>
 
-    <div class="content">
+    <div class="guidelines-box">
         <div class="red-line"></div>
-        <section class="info-box right">
-            <h2>What is <span>TED</span>?</h2>
-            <h3></h3>
-            <p>TED moves us - driving innovation, sparking curiosity, and reshaping perspectives. It’s more than a platform; it's a movement where ideas ignite change. A global community, TED welcomes all who seek to understand and inspire. Leading with “Ideas Change Everything”, TED fuels conversations that transform the world. A stage, a story, a spark - TED bridges thought and action in boundless ways. Where ideas converge, the future unfolds. </p>
-        </section>
-        <section class="info-box left">
-            <h2>What is <span>TEDx</span>?</h2>
-            <p>TEDx events bring TED's spirit to local communities, blending world-changing ideas with meaningful conversations. Independently organised but TED-inspired, each event creates a space where thinkers, doers, and changemakers connect.</p>
-        </section>
-        <section class="info-box right">
-            <h2>What makes <span>TEDx</span> special</h2>
-            <ul>
-                <li>Global Platform, Local Voice: Bringing TED's platform to our community.</li>
-                <li>Diverse & Impactful: Covering science, tech, art & social change. </li>
-                <li>Authentic & Open: Ideas, not promotion-shared freely.</li>
-                <li>Live & Recorded: Talks reach beyond the stage through TED's platform.</li>
-                <li>Engaging & Thought-provoking: A space for innovation, discussion & action.</li>
-            </ul>
-        </section>
-        <section class="info-box left">
-            <h2>What is <span>TEDxMITWPU</span>?</h2>
-            <p>MIT World Peace University envisions a world shaped by tradition, innovation, and peace. TEDx fosters change through ideas that inspire, transform and change. Together, TEDxMITWPU brings these values to life-where knowledge meets wisdom, individuality meets impact, and diverse identities weave a shared future.</p>
-            <p>Through thought-provoking talks and meaningful conversations, TEDxMITWPU ignites curiosity, self-discovery, and global change one idea at a time.</p>
-        </section>
-        <section class="info-box right">
-            <h2>About <span>MITWPU</span>?</h2>
-            <h3></h3>
-            <p>MIT World Peace University (MIT-WPU) is a premier institution dedicated to shaping future leaders by blending traditional Indian values with modern advancements. With a strong emphasis on academic excellence, innovation, and social impact, MIT-WPU nurtures individuals who strive for global peace, harmony, and progress. Through its interdisciplinary approach and commitment to holistic education, the university empowers students to think critically, lead with purpose, and contribute meaningfully to society</p>
-        </section>
-        <section class="info-box left">
-            <h2>Why <span>TEDxMITWPU</span>?</h2>
-            <ul>
-                <li>Global Reach, Local Voice</li>
-                <li>Tangible Impact </li>
-                <li>Last year, our talks reached 8M+ viewers on YouTube and garnered 1.4M+ views on social media. This year, we aim to weave an even stronger narrative, ensuring ideas resonate across borders.</li>
-                <li>From Threads to Tapestry</li>
-            </ul>
-        </section>
+        <h2 style="color: red; font-weight: bold; margin-bottom: 20px; margin-top: 15px;">1. Organization Guidelines
+        </h2>
+        <p style="color: white;">
+        <ol style="color: white; padding-left: 20px; line-height: 1.7;">
+            <li style="margin-bottom: 15px;">
+                <b>Licensing:</b> To organize a TEDx event, you must obtain a free license from TED. This license is
+                granted to individuals, not organizations, and is contingent upon adherence to TEDx principles. 
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Event Naming:</b> TEDx event names should reflect the community they engage. For location-based
+                events, the name should represent a city, town, or area where the organizer resides. For school or
+                university-based events, the name should include the institution’s official title.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Non-Profit Nature:</b> TEDx events are required to be non-profit. Organizers may use admission fees
+                or commercial sponsorships to cover costs, but generating profit is not permitted. 
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Branding and Logos:</b> Organizers must use their event’s approved, full TEDx event name in all
+                branding materials. The use of TED or TEDx logos without the event’s specific name is prohibited.  
+            </li>
+        </ol>
+        </p>
+
+        <h2 style="color: red; font-weight: bold; margin-bottom: 20px; margin-top: 50px;">2. Speaker and Content
+            Curation Guidelines</h2>
+        <ol style="color: white; padding-left: 20px; line-height: 1.7;">
+            <li style="margin-bottom: 15px;">
+                <b>Content Integrity:</b> Speakers are expected to provide accurate information based on credible
+                sources. TED emphasizes the importance of accuracy and transparency in all presentations.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Commercial Agendas:</b> Speakers should not promote their products, books, or businesses.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Political Agendas:</b> Talks should not advocate for specific political parties or candidates.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Religious Proselytizing:</b> While speakers can discuss their beliefs, converting the audience to a
+                particular faith is not allowed.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Pseudoscience:</b> Presentations must be based on scientifically credible information and avoid
+                pseudoscientific claims.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Fact-Checking:</b> Organizers are responsible for fact-checking talks to ensure the accuracy and
+                credibility of the content presented.
+            </li>
+        </ol>
+
+        <h2 style="color: red; font-weight: bold; margin-bottom: 20px; margin-top: 50px;">3. Sponsorship Guidelines</h2>
+        <ol style="color: white; padding-left: 20px; line-height: 1.7;">
+            <li style="margin-bottom: 15px;">
+                <b>Sponsor Recognition:</b> Sponsors can be acknowledged on one static slide that adheres to TEDx's prescribed template. No animation, multiple slides, or rolling credits are allowed in videos.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Stage Branding:</b> No logos, other than the TEDx event's official logo, are allowed on stage. This ensures the focus remains on the ideas presented.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Editorial Independence:</b> Sponsors must not have editorial control over the event's content or speaker selection.
+            </li>
+        </ol>
+
+        <h2 style="color: red; font-weight: bold; margin-bottom: 20px; margin-top: 50px;">4. Rules for Audience
+            </h2>
+        <ol style="color: white; padding-left: 20px; line-height: 1.7;">
+            <li style="margin-bottom: 15px;">
+                While the official TEDx guidelines do not specify detailed rules for the audience, attendees are generally expected to:
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b>Engage Respectfully:</b> Participate in the event with an open mind and respect for the speakers and fellow audience members.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b> Avoid Disruptions:</b> Refrain from any behaviour that could disrupt the presentations or the overall event experience.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <b> Adhere to Event Policies:</b> Follow any specific guidelines set by the event organizers, such as policies on recording or photography.
+            </li>
+        </ol>
     </div>
     
-      
 </body>
-<script>
-            fetch("footer.html")
+    <script>
+                fetch("footer.html")
             .then(response => response.text())
             .then(data => {
                 document.body.insertAdjacentHTML("beforeend", data);
             });
-</script>
+    </script>
 </html>
