@@ -232,7 +232,6 @@ nav {
 .hero {
     background-image: url('images/home_1.png');
     background-size: cover;
-    background-repeat: no-repeat;
     background-attachment: scroll; /* Ensures it's not fixed */
     background-position: center;
 
@@ -966,6 +965,7 @@ footer {
     background-image: url(images/group.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1147,6 +1147,7 @@ footer {
     justify-content: center;
     align-items: center;
     background: #000000;
+    
   }
   
   .video-container {
@@ -1158,6 +1159,7 @@ footer {
     background-color: #121212;
     border-radius: 12px;
     box-shadow: 0 4px 20px #121212;
+    
   }
   
   .video-container img {
