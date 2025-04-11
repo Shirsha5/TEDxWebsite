@@ -295,6 +295,15 @@ footer {
         height: 220px;
     }
 }
+.nav-link.active {
+    color: red;
+    font-weight: bold;
+    border-bottom: 2px solid red; /* Optional underline */
+  }
+  .nav-links li a:hover {
+    color: #ff2b06;
+
+  }
     </style>
 </head>
 
@@ -307,13 +316,13 @@ footer {
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="pastevent.html">Past Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="guidelines.html">Guidelines</a></li>
-                <li><a href="brochure.pdf">Brochure</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="aboutus.html"class="nav-link">About Us</a></li>
+                <li><a href="team.html"class="nav-link">Team</a></li>
+                <li><a href="pastevent.html"class="nav-link">Past Events</a></li>
+                <li><a href="contact.html"class="nav-link">Contact Us</a></li>
+                <li><a href="guidelines.html"class="nav-link">Guidelines</a></li>
+                <li><a href="brochure.pdf"class="nav-link">Brochure</a></li>
             </ul>
             <div class="menu-btn">☰</div>
         </nav>
@@ -411,5 +420,13 @@ footer {
             .then(data => {
                 document.body.insertAdjacentHTML("beforeend", data);
             });
+        const links = document.querySelectorAll('.nav-link');
+        const currentPage = location.pathname.split("/").pop();
+
+        links.forEach(link => {
+          if(link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
     </script>
 </html>

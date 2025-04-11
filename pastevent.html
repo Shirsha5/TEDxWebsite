@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEDxMITWPU | Past Edition</title>
-  <style>
-    /* Reset and Base Styles */
-    :root {
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEDxMITWPU | Past Edition</title>
+    <style>
+      /* Reset and Base Styles */
+      :root {
         --primary: #ff2b06;
         --secondary: #19191a;
         --light: #ffffff;
@@ -20,47 +20,49 @@
         --card-radius: 2rem;
         --transition: all 0.3s ease;
       }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      border: none;
-      text-decoration: none;
-      background: none;
-      -webkit-font-smoothing: antialiased;
-    }
-    
-    body {
-      background: black;
-      background-image: url('images/Past\ edition\ with\ thread.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: white;
-      font-family: "Barlow-Regular", sans-serif;
-      line-height: 1.6;
-    }
-    
-    menu, ol, ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    /* Layout Container */
-    .main-container {
-      max-width: 120rem;
-      margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-    }
-    
-    /* Navbar Styles */
-    header {
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        background: black;
+        background-image: url("images/Past\ edition\ with\ thread.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        font-family: "Barlow-Regular", sans-serif;
+        line-height: 1.6;
+      }
+
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Layout Container */
+      .main-container {
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+      }
+
+      /* Navbar Styles */
+      header {
         width: 100%;
         position: fixed;
         top: 0;
@@ -69,654 +71,734 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(0, 0, 0, 0.5); /* Adjust transparency for better visibility */
+        background: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Adjust transparency for better visibility */
         z-index: 1000;
       }
 
-    nav {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      height: 100%;
-    }
-
-    .logo {
-      width: 180px;
-      height: 60px;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-    }
-
-    .nav-links li {
-      margin-left: 20px;
-    }
-
-    .nav-links li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .menu-btn {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: white;
-      z-index: 1100;
-    }
-
-    @media (max-width: 768px) {
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: rgba(0, 0, 0, 0.9);
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
       }
 
-      .nav-links.active {
+      .nav-left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .logo {
+        width: 180px;
+        height: 60px;
+      }
+
+      .nav-links {
+        list-style: none;
         display: flex;
       }
 
       .nav-links li {
-        margin: 10px 0;
+        margin-left: 20px;
       }
-    }
 
-    /* Hero Section */
-    .hero-section {
-      margin-top: 8rem;
-      display: flex;
-      gap: 3rem;
-      padding: 2rem 0;
-    }
-    
-    .hero-content {
-      flex: 1;
-      background: rgba(233, 233, 233, 0.03);
-      border-radius: 2.125rem;
-      padding: 3rem;
-      backdrop-filter: blur(1.1125rem);
-      box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                  -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-    }
-    
-    .hero-title {
-      color: #ff2b06;
-      font-family: "Montserrat-Bold", sans-serif;
-      font-size: 4rem;
-      line-height: 1.2;
-      letter-spacing: 0.1875rem;
-      margin-bottom: 1rem;
-    }
-    
-    .hero-subtitle {
-      color: white;
-      font-family: "Montserrat-Bold", sans-serif;
-      font-size: 5rem;
-      line-height: 1.2;
-      letter-spacing: 0.1875rem;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-    }
-    
-    .hero-description {
-      font-size: 1.75rem;
-      line-height: 1.5;
-      letter-spacing: 0.0625rem;
-    }
-    
-    .hero-image {
-      flex: 1;
-      background: rgba(233, 233, 233, 0.03);
-      border-radius: 2.125rem;
-      padding: 2rem;
-      display: flex;
-      max-height: auto;
-      max-width: 40rem;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(1.1125rem);
-      box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                  -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-    }
-    
-    .hero-image img {
-      border-radius: 2.1875rem;
-      max-height: 38.5625rem;
-    }
-    
-    /* Section Titles */
-    .section-title {
-      color: #e7e7e7;
-      font-family: "Montserrat-Bold", sans-serif;
-      font-size: 5.5rem;
-      letter-spacing: 0.1875rem;
-      text-transform: uppercase;
-      margin: 6rem 0 3rem;
-      text-align: left;
-    }
-    
-    /* Speaker Cards */
-    .speakers-container {
-      display: flex;
-      flex-direction: column;
-    
-      gap: 5rem;
-      margin: 2rem 0;
-    }
-    
-    .speaker-card {
-      display: flex;
-      gap: 5rem;
-      align-items: center;
-    }
-    
-    .speaker-card.reverse {
-      flex-direction: row-reverse;
-    }
-    
-    .speaker-info {
-      flex: 1;
-      background: rgba(233, 233, 233, 0.03);
-      border-radius: 1.75rem;
-      padding: 3rem;
-      backdrop-filter: blur(1.1125rem);
-      box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                  -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-    }
-    
-    .speaker-name {
-      color: #ff2b06;
-      font-family: "Montserrat-SemiBold", sans-serif;
-      font-size: 2rem;
-      line-height: 1.5;
-      letter-spacing: 0.1875rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .speaker-bio {
-      font-size: 1.75rem;
-      line-height: 1.7;
-      letter-spacing: 0.0625rem;
-    }
-    
-    .speaker-bio li {
-      margin-bottom: 1rem;
-      position: relative;
-      padding-left: 2rem;
-    }
-    
-    .speaker-bio li:before {
-      content: "•";
-      color: #ff2b06;
-      position: absolute;
-      left: 0;
-      font-size: 1.5rem;
-    }
-    
-    .speaker-image {
-      flex: 1;
-      max-width: 36rem;
-      background: rgba(233, 233, 233, 0.03);
-      border-radius: 1.9375rem;
-      padding: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(1.1125rem);
-    }
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .nav-links li a:hover {
+    color: #ff2b06;
+ 
+  }
+      .nav-link.active {
+        color: red;
+        font-weight: bold;
+        border-bottom: 2px solid red; /* Optional underline */
+      }
 
-    .speaker-image1 {
-      flex: 1;
-      max-width: 36rem;
-      background: rgba(233, 233, 233, 0.03);
-      border-radius: 1.9375rem;
-      padding: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(1.1125rem);
-      box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                  -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-    }
-    
-    .speaker-image img {
-      border-radius: 1rem;
-      max-height: 32rem;
-    }
-    
-    /* Footer Styles */
-    footer {
-      width: 100%;
-      background: #1a1a1a;
-      color: #fff;
-      padding: 15px 0;
-      font-size: 16px;
-      margin-top: auto;
-    }
+      .menu-btn {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+        z-index: 1100;
+      }
 
-    .footer-container {
-      width: 85%;
-      margin: auto;
-    }
+      @media (max-width: 768px) {
+        .menu-btn {
+          display: block;
+        }
 
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          background: rgba(0, 0, 0, 0.9);
+          width: 200px;
+          padding: 10px;
+          border-radius: 5px;
+          align-items: center;
+        }
 
-    .footer-col {
-      flex: 1;
-      padding: 5px;
-    }
+        .nav-links.active {
+          display: flex;
+        }
 
-    .logo-col {
-      text-align: left;
-    }
+        .nav-links li {
+          margin: 10px 0;
+        }
+      }
 
-    .footer-logo {
-      width: 150px;
-      height: auto;
-      margin-bottom: 8px;
-    }
+      /* Hero Section */
+      .hero-section {
+        margin-top: 8rem;
+        display: flex;
+        gap: 3rem;
+        padding: 2rem 0;
+      }
 
-    .footer-desc {
-      font-size: 13px;
-      color: #bbb;
-      max-width: 250px;
-    }
+      .hero-content {
+        flex: 1;
+        background: rgba(233, 233, 233, 0.03);
+        border-radius: 2.125rem;
+        padding: 3rem;
+        backdrop-filter: blur(1.1125rem);
+        box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+          -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+      }
 
-    .links-col {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-    }
+      .hero-title {
+        color: #ff2b06;
+        font-family: "Montserrat-Bold", sans-serif;
+        font-size: 4rem;
+        line-height: 1.2;
+        letter-spacing: 0.1875rem;
+        margin-bottom: 1rem;
+      }
 
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 25px;
-    }
+      .hero-subtitle {
+        color: white;
+        font-family: "Montserrat-Bold", sans-serif;
+        font-size: 5rem;
+        line-height: 1.2;
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
 
-    .footer-links li {
-      display: inline;
-    }
+      .hero-description {
+        font-size: 1.75rem;
+        line-height: 1.5;
+        letter-spacing: 0.0625rem;
+      }
 
-    .footer-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+      .hero-image {
+        flex: 1;
+        background: rgba(233, 233, 233, 0.03);
+        border-radius: 2.125rem;
+        padding: 2rem;
+        display: flex;
+        max-height: auto;
+        max-width: 40rem;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(1.1125rem);
+        box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+          -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+      }
 
-    .footer-links a:hover {
-      color: #f44336;
-    }
+      .hero-image img {
+        border-radius: 2.1875rem;
+        max-height: 38.5625rem;
+      }
 
-    .map-col {
-      text-align: right;
-    }
+      /* Section Titles */
+      .section-title {
+        color: #e7e7e7;
+        font-family: "Montserrat-Bold", sans-serif;
+        font-size: 5.5rem;
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        margin: 6rem 0 3rem;
+        text-align: left;
+      }
 
-    .map-col iframe {
-      width: 400px;
-      height: 250px;
-      border-radius: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .footer-row {
+      /* Speaker Cards */
+      .speakers-container {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+
+        gap: 5rem;
+        margin: 2rem 0;
       }
 
-      .logo-col,
-      .links-col,
-      .map-col {
+      .speaker-card {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+      }
+
+      .speaker-card.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .speaker-info {
+        flex: 1;
+        background: rgba(233, 233, 233, 0.03);
+        border-radius: 1.75rem;
+        padding: 3rem;
+        backdrop-filter: blur(1.1125rem);
+        box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+          -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+      }
+
+      .speaker-name {
+        color: #ff2b06;
+        font-family: "Montserrat-SemiBold", sans-serif;
+        font-size: 2rem;
+        line-height: 1.5;
+        letter-spacing: 0.1875rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .speaker-bio {
+        font-size: 1.75rem;
+        line-height: 1.7;
+        letter-spacing: 0.0625rem;
+      }
+
+      .speaker-bio li {
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      .speaker-bio li:before {
+        content: "•";
+        color: #ff2b06;
+        position: absolute;
+        left: 0;
+        font-size: 1.5rem;
+      }
+
+      .speaker-image {
+        flex: 1;
+        max-width: 36rem;
+        background: rgba(233, 233, 233, 0.03);
+        border-radius: 1.9375rem;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(1.1125rem);
+      }
+
+      .speaker-image1 {
+        flex: 1;
+        max-width: 36rem;
+        background: rgba(233, 233, 233, 0.03);
+        border-radius: 1.9375rem;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(1.1125rem);
+        box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+          -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+      }
+
+      .speaker-image img {
+        border-radius: 1rem;
+        max-height: 32rem;
+      }
+
+      /* Footer Styles */
+      footer {
+        width: 100%;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 15px 0;
+        font-size: 16px;
+        margin-top: auto;
+      }
+
+      .footer-container {
+        width: 85%;
+        margin: auto;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-col {
+        flex: 1;
+        padding: 5px;
+      }
+
+      .logo-col {
+        text-align: left;
+      }
+
+      .footer-logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 8px;
+      }
+
+      .footer-desc {
+        font-size: 13px;
+        color: #bbb;
+        max-width: 250px;
+      }
+
+      .links-col {
         text-align: center;
-        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
       }
 
       .footer-links {
-        flex-direction: column;
-        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 25px;
+      }
+
+      .footer-links li {
+        display: inline;
+      }
+
+      .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: #f44336;
+      }
+
+      .map-col {
+        text-align: right;
       }
 
       .map-col iframe {
-        width: 100%;
-        height: 220px;
+        width: 400px;
+        height: 250px;
+        border-radius: 8px;
       }
-    }
 
-    /* Decorative Elements */
-    .decorative-vector {
-      position: absolute;
-      z-index: -1;
-      opacity: 0.7;
-    }
-    
-    .vector-1 {
-      top: 95rem;
-      left: 25%;
-    }
-    
-    .vector-2 {
-      top: 145rem;
-      right: 20%;
-    }
-    
-    /* Responsive Adjustments */
-    @media (max-width: 1024px) {
-      .hero-section, .speaker-card {
-        flex-direction: column;
-      }
-      
-      .hero-title {
-        font-size: 3rem;
-      }
-      
-      .hero-subtitle {
-        font-size: 3.5rem;
-      }
-      
-      .section-title {
-        font-size: 4rem;
-      }
-      
-      .nav-menu {
-        gap: 1rem;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .footer-content {
-        flex-direction: column;
-        gap: 3rem;
-      }
-      
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      
-      .hero-subtitle {
-        font-size: 3rem;
-      }
-      
-      .section-title {
-        font-size: 3rem;
-      }
-      
-      .speaker-name {
-        font-size: 1.7rem;
-      }
-      
-      .speaker-bio {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <nav>
-      <div class="nav-left">
-        <a href="index.html" class="logo-link">
-          <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
-        </a>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="pastevent.html">Past Events</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="guidelines.html">Guidelines</a></li>
-        <li><a href="brochure.pdf">Brochure</a></li>
-      </ul>
-      <div class="menu-btn" id="hamburger">☰</div>
-    </nav>
-  </header>
+      @media (max-width: 768px) {
+        .footer-row {
+          flex-direction: column;
+          text-align: center;
+        }
 
-  <div class="main-container">
-    <h2 class="section-title">Past Edition</h2>
-    
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1 class="hero-title">TEDxMITWPU 2023</h1>
-        <h2 class="hero-subtitle">Flip the Switch</h2>
-        <div class="hero-description">
-          <p>Theme: An epiphany, a moment of transformation– "Flip The Switch" was about embracing change, taking risks, and rewriting one's path.</p>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="images/tedx-flip-the-switch-10.png" alt="TEDx Flip the Switch">
-      </div>
-    </section>
+        .logo-col,
+        .links-col,
+        .map-col {
+          text-align: center;
+          margin-bottom: 15px;
+        }
 
-    <!-- Past Speakers Section -->
-    <h2 class="section-title">Past Speakers</h2>
-  
-    <div class="speakers-container">
-      <!-- Speaker 1 -->
-      <div class="speaker-card">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Ashish Chanchlani (Youtuber & Content creator)</h3>
-          <ul class="speaker-bio">
-            <li>Spoke about his evolution from a teacher to a digital education leader.</li>
-            <li>Showcased how embracing online platforms transformed learning.</li>
-            <li>Inspired students to take charge of their education.</li>
-          </ul>
+        .footer-links {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .map-col iframe {
+          width: 100%;
+          height: 220px;
+        }
+      }
+
+      /* Decorative Elements */
+      .decorative-vector {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.7;
+      }
+
+      .vector-1 {
+        top: 95rem;
+        left: 25%;
+      }
+
+      .vector-2 {
+        top: 145rem;
+        right: 20%;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 1024px) {
+        .hero-section,
+        .speaker-card {
+          flex-direction: column;
+        }
+
+        .hero-title {
+          font-size: 3rem;
+        }
+
+        .hero-subtitle {
+          font-size: 3.5rem;
+        }
+
+        .section-title {
+          font-size: 4rem;
+        }
+
+        .nav-menu {
+          gap: 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-content {
+          flex-direction: column;
+          gap: 3rem;
+        }
+
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 3rem;
+        }
+
+        .section-title {
+          font-size: 3rem;
+        }
+
+        .speaker-name {
+          font-size: 1.7rem;
+        }
+
+        .speaker-bio {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="nav-left">
+          <a href="index.html" class="logo-link">
+            <img
+              src="images/tedxlogowhite.png"
+              alt="TEDxMITWPU Logo"
+              class="logo"
+            />
+          </a>
         </div>
-        <div class="speaker-image">
-          <img src="images/Ashish.png" alt="Ashish Chanchlani">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+          <li><a href="guidelines.html" class="nav-link">Guidelines</a></li>
+          <li><a href="brochure.pdf" class="nav-link">Brochure</a></li>
+        </ul>
+        <div class="menu-btn">☰</div>
+      </nav>
+    </header>
+
+    <div class="main-container">
+      <h2 class="section-title">Past Edition</h2>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">TEDxMITWPU 2023</h1>
+          <h2 class="hero-subtitle">Flip the Switch</h2>
+          <div class="hero-description">
+            <p>
+              Theme: An epiphany, a moment of transformation– "Flip The Switch"
+              was about embracing change, taking risks, and rewriting one's
+              path.
+            </p>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="images/tedx-flip-the-switch-10.png"
+            alt="TEDx Flip the Switch"
+          />
+        </div>
+      </section>
+
+      <!-- Past Speakers Section -->
+      <h2 class="section-title">Past Speakers</h2>
+
+      <div class="speakers-container">
+        <!-- Speaker 1 -->
+        <div class="speaker-card">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Ashish Chanchlani (Youtuber & Content creator)
+            </h3>
+            <ul class="speaker-bio">
+              <li>
+                Spoke about his evolution from a teacher to a digital education
+                leader.
+              </li>
+              <li>
+                Showcased how embracing online platforms transformed learning.
+              </li>
+              <li>Inspired students to take charge of their education.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/Ashish.png" alt="Ashish Chanchlani" />
+          </div>
+        </div>
+
+        <!-- Speaker 2 -->
+        <div class="speaker-card reverse">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Guar Gopal Das (Motivational speaker & Monk)
+            </h3>
+            <ul class="speaker-bio">
+              <li>
+                Discussed governance, education, and societal transformation.
+              </li>
+              <li>Emphasized the role of knowledge in shaping policy.</li>
+              <li>Urged young minds to participate in civic change.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/gaurgopaldas.png" alt="Guar Gopal Das" />
+          </div>
+        </div>
+
+        <!-- Speaker 3 -->
+        <div class="speaker-card">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Ashish Choudhary (Commerce Baba) (Educator & Influencer)
+            </h3>
+            <ul class="speaker-bio">
+              <li>
+                Spoke about his evolution from a teacher to a digital education
+                leader.
+              </li>
+              <li>
+                Showcased how embracing online platforms transformed learning.
+              </li>
+              <li>Inspired students to take charge of their education.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/AshishCh.png" alt="Ashish Choudhary" />
+          </div>
+        </div>
+
+        <!-- Speaker 4 -->
+        <div class="speaker-card reverse">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Dr Vijender Singh Chauhan (Expert in Polity & Governance)
+            </h3>
+            <ul class="speaker-bio">
+              <li>
+                Discussed governance, education, and societal transformation.
+              </li>
+              <li>Emphasized the role of knowledge in shaping policy.</li>
+              <li>Urged young minds to participate in civic change.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/drvirendra.png" alt="Dr Vijender Singh Chauhan" />
+          </div>
+        </div>
+
+        <!-- Speaker 5 -->
+        <div class="speaker-card">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Pratishtha Thakur Haritwal (Taxation Officer, Ex-IT Professional)
+            </h3>
+            <ul class="speaker-bio">
+              <li>Spoke about her career shift from IT to public service.</li>
+              <li>
+                Discussed personal reinvention and following one's calling.
+              </li>
+              <li>Showed how resilience leads to meaningful impact.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/prat.png" alt="Pratishtha Thakur Haritwal" />
+          </div>
+        </div>
+
+        <!-- Speaker 6 -->
+        <div class="speaker-card reverse">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Malik Gilani (Entrepreneur, Digital Services & Media)
+            </h3>
+            <ul class="speaker-bio">
+              <li>
+                Shared insights on building businesses in the digital era.
+              </li>
+              <li>
+                Encouraged taking risks and adapting to technological shifts.
+              </li>
+              <li>
+                Showcased the impact of digital transformation on industries.
+              </li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/malik.png" alt="Malik Gilani" />
+          </div>
+        </div>
+
+        <!-- Speaker 7 -->
+        <div class="speaker-card">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Ratan Lal Dangi, IPS (Inspector General of Police, Raipur)
+            </h3>
+            <ul class="speaker-bio">
+              <li>Reflected on social initiatives and mentoring youth.</li>
+              <li>
+                Highlighted the importance of leadership in public service.
+              </li>
+              <li>
+                Inspired change-makers to take responsibility for society.
+              </li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/ratanlal.png" alt="Ratan Lal Dangi" />
+          </div>
+        </div>
+
+        <!-- Speaker 8 -->
+        <div class="speaker-card reverse">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Yash Lahoti (Founder, Women's CricZone & Women's Sportszone)
+            </h3>
+            <ul class="speaker-bio">
+              <li>Advocated for better representation of women in sports.</li>
+              <li>Showcased how the media can shape narratives.</li>
+              <li>Encouraged breaking barriers in male-dominated fields.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/yash.png" alt="Yash Lahoti" />
+          </div>
+        </div>
+
+        <!-- Speaker 9 -->
+        <div class="speaker-card">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Ajitesh Gupta (Actor & Theater Performer)
+            </h3>
+            <ul class="speaker-bio">
+              <li>Shared his journey in theatre and storytelling.</li>
+              <li>
+                Highlighted the power of expression in personal transformation.
+              </li>
+              <li>Encouraged embracing uncertainty to create impact.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/ajites.png" alt="Ajitesh Gupta" />
+          </div>
         </div>
       </div>
-      
-      <!-- Speaker 2 -->
-      <div class="speaker-card reverse">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Guar Gopal Das (Motivational speaker & Monk)</h3>
-          <ul class="speaker-bio">
-            <li>Discussed governance, education, and societal transformation.</li>
-            <li>Emphasized the role of knowledge in shaping policy.</li>
-            <li>Urged young minds to participate in civic change.</li>
-          </ul>
+
+      <!-- Past Performers Section -->
+      <h2 class="section-title">Past Performers</h2>
+
+      <div class="speakers-container">
+        <!-- Performer 1 -->
+        <div class="speaker-card reverse">
+          <div class="speaker-info">
+            <h3 class="speaker-name">
+              Shashank Vishwakarma (Finger-Tutting Artist)
+            </h3>
+            <ul class="speaker-bio">
+              <li>Demonstrated how creativity fuels self-discovery.</li>
+              <li>Showed how unconventional art forms can inspire change.</li>
+              <li>Encouraged perseverance in passion-driven careers.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/shashank.png" alt="Shashank Vishwakarma" />
+          </div>
         </div>
-        <div class="speaker-image">
-          <img src="images/gaurgopaldas.png" alt="Guar Gopal Das">
-        </div>
-      </div>
-      
-      <!-- Speaker 3 -->
-      <div class="speaker-card">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Ashish Choudhary (Commerce Baba) (Educator & Influencer)</h3>
-          <ul class="speaker-bio">
-            <li>Spoke about his evolution from a teacher to a digital education leader.</li>
-            <li>Showcased how embracing online platforms transformed learning.</li>
-            <li>Inspired students to take charge of their education.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/AshishCh.png" alt="Ashish Choudhary">
-        </div>
-      </div>
-      
-      <!-- Speaker 4 -->
-      <div class="speaker-card reverse">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Dr Vijender Singh Chauhan (Expert in Polity & Governance)</h3>
-          <ul class="speaker-bio">
-            <li>Discussed governance, education, and societal transformation.</li>
-            <li>Emphasized the role of knowledge in shaping policy.</li>
-            <li>Urged young minds to participate in civic change.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/drvirendra.png" alt="Dr Vijender Singh Chauhan">
-        </div>
-      </div>
-      
-      <!-- Speaker 5 -->
-      <div class="speaker-card">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Pratishtha Thakur Haritwal (Taxation Officer, Ex-IT Professional)</h3>
-          <ul class="speaker-bio">
-            <li>Spoke about her career shift from IT to public service.</li>
-            <li>Discussed personal reinvention and following one's calling.</li>
-            <li>Showed how resilience leads to meaningful impact.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/prat.png" alt="Pratishtha Thakur Haritwal">
-        </div>
-      </div>
-      
-      <!-- Speaker 6 -->
-      <div class="speaker-card reverse">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Malik Gilani (Entrepreneur, Digital Services & Media)</h3>
-          <ul class="speaker-bio">
-            <li>Shared insights on building businesses in the digital era.</li>
-            <li>Encouraged taking risks and adapting to technological shifts.</li>
-            <li>Showcased the impact of digital transformation on industries.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/malik.png" alt="Malik Gilani">
-        </div>
-      </div>
-      
-      <!-- Speaker 7 -->
-      <div class="speaker-card">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Ratan Lal Dangi, IPS (Inspector General of Police, Raipur)</h3>
-          <ul class="speaker-bio">
-            <li>Reflected on social initiatives and mentoring youth.</li>
-            <li>Highlighted the importance of leadership in public service.</li>
-            <li>Inspired change-makers to take responsibility for society.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/ratanlal.png" alt="Ratan Lal Dangi">
-        </div>
-      </div>
-      
-      <!-- Speaker 8 -->
-      <div class="speaker-card reverse">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Yash Lahoti (Founder, Women's CricZone & Women's Sportszone)</h3>
-          <ul class="speaker-bio">
-            <li>Advocated for better representation of women in sports.</li>
-            <li>Showcased how the media can shape narratives.</li>
-            <li>Encouraged breaking barriers in male-dominated fields.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/yash.png" alt="Yash Lahoti">
-        </div>
-      </div>
-      
-      <!-- Speaker 9 -->
-      <div class="speaker-card">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Ajitesh Gupta (Actor & Theater Performer)</h3>
-          <ul class="speaker-bio">
-            <li>Shared his journey in theatre and storytelling.</li>
-            <li>Highlighted the power of expression in personal transformation.</li>
-            <li>Encouraged embracing uncertainty to create impact.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/ajites.png" alt="Ajitesh Gupta">
+
+        <!-- Performer 2 -->
+        <div class="speaker-card">
+          <div class="speaker-info">
+            <h3 class="speaker-name">Palash Live (Musical Performance)</h3>
+            <ul class="speaker-bio">
+              <li>Blended music with the theme of transformation.</li>
+              <li>Created an immersive experience of energy and change.</li>
+              <li>Reinforced the power of artistic expression.</li>
+            </ul>
+          </div>
+          <div class="speaker-image">
+            <img src="images/palash.png" alt="Palash Live" />
+          </div>
         </div>
       </div>
     </div>
-    
 
-    <!-- Past Performers Section -->
-    <h2 class="section-title">Past Performers</h2>
-    
-    <div class="speakers-container">
-      <!-- Performer 1 -->
-      <div class="speaker-card reverse">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Shashank Vishwakarma (Finger-Tutting Artist)</h3>
-          <ul class="speaker-bio">
-            <li>Demonstrated how creativity fuels self-discovery.</li>
-            <li>Showed how unconventional art forms can inspire change.</li>
-            <li>Encouraged perseverance in passion-driven careers.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/shashank.png" alt="Shashank Vishwakarma">
-        </div>
-      </div>
-      
-      <!-- Performer 2 -->
-      <div class="speaker-card">
-        <div class="speaker-info">
-          <h3 class="speaker-name">Palash Live (Musical Performance)</h3>
-          <ul class="speaker-bio">
-            <li>Blended music with the theme of transformation.</li>
-            <li>Created an immersive experience of energy and change.</li>
-            <li>Reinforced the power of artistic expression.</li>
-          </ul>
-        </div>
-        <div class="speaker-image">
-          <img src="images/palash.png" alt="Palash Live">
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Footer -->
 
-  <!-- Footer -->
- 
+    <!-- Decorative Vectors -->
+    <img class="decorative-vector vector-1" src="vector0.svg" alt="" />
+    <img class="decorative-vector vector-2" src="vector1.svg" alt="" />
 
-  <!-- Decorative Vectors -->
-  <img class="decorative-vector vector-1" src="vector0.svg" alt="">
-  <img class="decorative-vector vector-2" src="vector1.svg" alt="">
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.body.insertAdjacentHTML("beforeend", data);
+        });
+      // Mobile menu toggle
+      const menuBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
 
-  <script>
-            fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("beforeend", data);
-            });
-    // Mobile menu toggle
-    const menuBtn = document.querySelector(".menu-btn");
-    const navLinks = document.querySelector(".nav-links");
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+      const links = document.querySelectorAll(".nav-link");
+      const currentPage = location.pathname.split("/").pop();
 
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
-</body>
+      links.forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+  </body>
 </html>

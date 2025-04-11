@@ -1,193 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEDx MITWPU</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="aboutus.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        background-image: url("images/contact.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
 
-<head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TEDx MITWPU</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="aboutus.css">
-        <link rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-                body {
-                        font-family: 'Roboto', sans-serif;
-                        color: #ffffff;
-                        margin: 0;
-                        padding: 0;
-                        background-color: black;
-                        background-image: url('images/contact.svg');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover;
-                        background-attachment: fixed;
-                        min-height: 100vh;
-                        overflow-x: hidden;
-                }
+      h1 {
+        text-align: center;
+        margin-top: 100px;
+        font-size: 2.5em;
+      }
 
-                h1 {
-                        text-align: center;
-                        margin-top: 100px;
-                        font-size: 2.5em;
-                }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        /* spacing between iframe and each box */
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
 
-                .container {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 30px;
-                        /* spacing between iframe and each box */
-                        margin-top: 40px;
-                        margin-bottom: 60px;
-                }
+      iframe {
+        border: 0;
+        width: 80%;
+        max-width: 1200px;
+        height: 400px;
+      }
 
-                iframe {
-                        border: 0;
-                        width: 80%;
-                        max-width: 1200px;
-                        height: 400px;
-                }
+      .translucent-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        width: 80%;
+        max-width: 1200px;
+        border-radius: 10px;
+        color: white;
+        box-sizing: border-box;
+        line-height: 1.8em;
+        /* adds vertical spacing */
+        font-size: 1.1em;
+      }
 
-                .translucent-box {
-                        background-color: rgba(255, 255, 255, 0.1);
-                        padding: 25px;
-                        width: 80%;
-                        max-width: 1200px;
-                        border-radius: 10px;
-                        color: white;
-                        box-sizing: border-box;
-                        line-height: 1.8em;
-                        /* adds vertical spacing */
-                        font-size: 1.1em;
-                }
+      .form-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
 
+      .form-row {
+        display: flex;
+        gap: 10px;
+      }
 
+      .form-row input {
+        margin-top: 7px;
+        flex: 1;
+      }
 
+      .form-row > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
 
-                .form-box {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 15px;
-                }
+      .form-row {
+        display: flex;
+        gap: 20px;
+      }
 
-                .form-row {
-                        display: flex;
-                        gap: 10px;
-                }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
 
-                .form-row input {
-                        margin-top: 7px;
-                        flex: 1;
-                }
+      .form-box input,
+      .form-box textarea {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
 
-                .form-row>div {
-                        display: flex;
-                        flex-direction: column;
-                        flex: 1;
-                }
+      .form-box input::placeholder,
+      .form-box textarea::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .nav-link.active {
+        color: red;
+        font-weight: bold;
+        border-bottom: 2px solid red; /* Optional underline */
+      }
+      .nav-links li a:hover {
+    color: #ff2b06;
 
-                .form-row {
-                        display: flex;
-                        gap: 20px;
-                }
+  }
+    </style>
+  </head>
 
-                .form-group {
-                        display: flex;
-                        flex-direction: column;
-                        flex: 1;
-                }
-
-                .form-box input,
-                .form-box textarea {
-                        background-color: transparent;
-                        border: 1px solid white;
-                        color: white;
-                        padding: 10px;
-                        font-size: 1em;
-                        border-radius: 5px;
-                        box-sizing: border-box;
-                }
-
-                .form-box input::placeholder,
-                .form-box textarea::placeholder {
-                        color: rgba(255, 255, 255, 0.6);
-                }
-        </style>
-</head>
-
-<body>
-        <header>
-                <nav>
-                        <div class="nav-left">
-                                <a href="index.html" class="logo-link">
-                                        <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
-                                </a>
-                        </div>
-                        <ul class="nav-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="aboutus.html">About Us</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="pastevent.html">Past Events</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="guidelines.html">Guidelines</a></li>
-                                <li><a href="brochure.pdf">Brochure</a></li>
-                        </ul>
-                        <div class="menu-btn">☰</div>
-                </nav>
-        </header>
-        <h1>Contact Us</h1>
-
-        <div class="container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2465831890463!2d73.81511119999999!3d18.5177559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfb9e53a05f9%3A0x2be5e8da02be693e!2sMIT%20World%20Peace%20University%20(MIT-WPU)!5e0!3m2!1sen!2sin!4v1743435254352!5m2!1sen!2sin"
-                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                        title="MIT-WPU Location Map">
-                </iframe>
-
-                <div class="translucent-box">
-                        <p>For further enquiries, Contact - Mr. XYZ / Ms. XYZ</p>
-                        <p>MITWPU, Kothrud, Pune, 411015</p>
-                        <p>0000000000</p>
-                        <p>tedx@mitwpu.edu.in</p>
-                </div>
-
-                <div class="translucent-box">
-                        <form class="form-box" action="https://formsubmit.co/ceb5803951ff9358ba5019b2b4cd029c" method="POST">
-                            <!-- HONEYPOT (prevents spam) -->
-                            <input type="text" name="_honey" style="display:none">
-                    
-                            <!-- Disable Captcha (optional) -->
-                            <input type="hidden" name="_captcha" value="false">
-                    
-                            <!-- Redirect after submission (optional) -->
-                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html        ">
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required />
-                                </div>
-                            </div>
-                    
-                            <label for="comment">Comment</label>
-                            <textarea id="comment" name="comment" rows="4" required></textarea>
-                    
-                            <button type="submit" style="margin-top: 15px; padding: 10px 20px; font-size: 1em; border: none; border-radius: 5px; background-color: #e62b1e; color: white; cursor: pointer;">
-                                Send
-                            </button>
-                        </form>
-                    </div>
-                    
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <a href="index.html" class="logo-link">
+            <img
+              src="images/tedxlogowhite.png"
+              alt="TEDxMITWPU Logo"
+              class="logo"
+            />
+          </a>
         </div>
-</body>
-<script>
-                fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("beforeend", data);
-            });
-</script>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+          <li><a href="guidelines.html" class="nav-link">Guidelines</a></li>
+          <li><a href="brochure.pdf" class="nav-link">Brochure</a></li>
+        </ul>
+        <div class="menu-btn">☰</div>
+      </nav>
+    </header>
+    <h1>Contact Us</h1>
+
+    <div class="container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2465831890463!2d73.81511119999999!3d18.5177559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfb9e53a05f9%3A0x2be5e8da02be693e!2sMIT%20World%20Peace%20University%20(MIT-WPU)!5e0!3m2!1sen!2sin!4v1743435254352!5m2!1sen!2sin"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="MIT-WPU Location Map"
+      >
+      </iframe>
+
+      <div class="translucent-box">
+        <p>For further enquiries, Contact - Mr. XYZ / Ms. XYZ</p>
+        <p>MITWPU, Kothrud, Pune, 411015</p>
+        <p>0000000000</p>
+        <p>tedx@mitwpu.edu.in</p>
+      </div>
+
+      <div class="translucent-box">
+        <form
+          class="form-box"
+          action="https://formsubmit.co/ceb5803951ff9358ba5019b2b4cd029c"
+          method="POST"
+        >
+          <!-- HONEYPOT (prevents spam) -->
+          <input type="text" name="_honey" style="display: none" />
+
+          <!-- Disable Captcha (optional) -->
+          <input type="hidden" name="_captcha" value="false" />
+
+          <!-- Redirect after submission (optional) -->
+          <input
+            type="hidden"
+            name="_next"
+            value="http://127.0.0.1:5500/thankyou.html        "
+          />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <label for="comment">Comment</label>
+          <textarea id="comment" name="comment" rows="4" required></textarea>
+
+          <button
+            type="submit"
+            style="
+              margin-top: 15px;
+              padding: 10px 20px;
+              font-size: 1em;
+              border: none;
+              border-radius: 5px;
+              background-color: #e62b1e;
+              color: white;
+              cursor: pointer;
+            "
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.body.insertAdjacentHTML("beforeend", data);
+      });
+    
+    const links = document.querySelectorAll(".nav-link");
+    const currentPage = location.pathname.split("/").pop();
+
+    links.forEach((link) => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  </script>
 </html>

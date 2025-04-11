@@ -1,13 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEDxMITWPU - Our Team</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Barlow:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
       :root {
         --primary: #ff2b06;
@@ -87,6 +93,15 @@
         text-decoration: none;
         font-size: 18px;
       }
+      .nav-links li a:hover {
+    color: #ff2b06;
+
+  }
+      .nav-link.active {
+        color: red;
+        font-weight: bold;
+        border-bottom: 2px solid red; /* Optional underline */
+      }
 
       .menu-btn {
         display: none;
@@ -113,13 +128,13 @@
         padding: 4rem 2rem;
         max-width: var(--max-width);
         margin: 0 auto;
-        background: url('images/our team.svg') scroll no-repeat top left; /* Background image */
+        background: url("images/our team.svg") scroll no-repeat top left; /* Background image */
         background-size: contain; /* Ensures the image covers the section */
         position: relative; /* Ensure proper positioning */
       }
 
       .team-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 4rem;
         text-align: left;
         margin-bottom: 3rem;
@@ -180,7 +195,7 @@
       }
 
       .member-name {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 1.5rem;
         color: var(--light);
         margin-bottom: 0.5rem;
@@ -193,9 +208,6 @@
       }
 
       /* Footer Styles */
-     
-
-    
 
       /* Responsive Design */
       @media (max-width: 768px) {
@@ -277,18 +289,32 @@
 
       /* Animation */
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .animate {
         animation: fadeIn 0.8s ease forwards;
       }
 
-      .delay-1 { animation-delay: 0.2s; }
-      .delay-2 { animation-delay: 0.4s; }
-      .delay-3 { animation-delay: 0.6s; }
-      .delay-4 { animation-delay: 0.8s; }
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
+      .delay-4 {
+        animation-delay: 0.8s;
+      }
     </style>
   </head>
   <body>
@@ -297,19 +323,23 @@
       <nav>
         <div class="nav-left">
           <a href="index.html" class="logo-link">
-            <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
+            <img
+              src="images/tedxlogowhite.png"
+              alt="TEDxMITWPU Logo"
+              class="logo"
+            />
           </a>
         </div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="team.html">Team</a></li>               
-                <li><a href="pastevent.html">Past Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="guidelines.html">Guidelines</a></li>
-                <li><a href="brochure.pdf">Brochure</a></li>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+          <li><a href="guidelines.html" class="nav-link">Guidelines</a></li>
+          <li><a href="brochure.pdf" class="nav-link">Brochure</a></li>
         </ul>
-        <div class="menu-btn" id="hamburger">☰</div>
+        <div class="menu-btn">☰</div>
       </nav>
     </header>
 
@@ -321,92 +351,135 @@
           <div class="team-grid">
             <!-- Team Member 1 -->
             <article class="team-card animate delay-1">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850" alt="Team Member" class="member-image" />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 2 -->
-            <article class="team-card animate delay-2">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850" alt="Team Member" class="member-image" />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 3 -->
-            <article class="team-card animate delay-3">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850" alt="Team Member" class="member-image" />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 4 -->
-            <article class="team-card animate delay-1">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850" alt="Team Member" class="member-image" />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 5 -->
-            <article class="team-card animate delay-2">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850" alt="Team Member" class="member-image" />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 6 -->
-            <article class="team-card animate delay-3">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850" alt="Team Member" class="member-image" />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 7 -->
-            <article class="team-card animate delay-1">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850" alt="Team Member" class="member-image" />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 8 -->
-            <article class="team-card animate delay-2">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850" alt="Team Member" class="member-image" />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 9 -->
-            <article class="team-card animate delay-3">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef" alt="Team Member" class="member-image" />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+                alt="Team Member"
+                class="member-image"
+              />
               <div class="card-divider"></div>
               <h2 class="member-name">Name: XYZ</h2>
               <p class="member-role">Role</p>
             </article>
 
-            <br>
-            
-            
+            <!-- Team Member 2 -->
+            <article class="team-card animate delay-2">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
+
+            <!-- Team Member 3 -->
+            <article class="team-card animate delay-3">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
+
+            <!-- Team Member 4 -->
+            <article class="team-card animate delay-1">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
+
+            <!-- Team Member 5 -->
+            <article class="team-card animate delay-2">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
+
+            <!-- Team Member 6 -->
+            <article class="team-card animate delay-3">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
+
+            <!-- Team Member 7 -->
+            <article class="team-card animate delay-1">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
+
+            <!-- Team Member 8 -->
+            <article class="team-card animate delay-2">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
+
+            <!-- Team Member 9 -->
+            <article class="team-card animate delay-3">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
+
+            <br />
+
             <!-- Container for the last two cards to center them -->
             <div class="last-two-cards">
               <!-- Team Member 10 -->
               <article class="team-card animate delay-1">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef" alt="Team Member" class="member-image" />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
+                  alt="Team Member"
+                  class="member-image"
+                />
                 <div class="card-divider"></div>
                 <h2 class="member-name">Name: XYZ</h2>
                 <p class="member-role">Role</p>
               </article>
-              
+
               <!-- Team Member 11 -->
               <article class="team-card animate delay-2">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef" alt="Team Member" class="member-image" />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
+                  alt="Team Member"
+                  class="member-image"
+                />
                 <div class="card-divider"></div>
                 <h2 class="member-name">Name: XYZ</h2>
                 <p class="member-role">Role</p>
@@ -415,18 +488,15 @@
           </div>
         </section>
       </main>
-
-
-
     </div>
 
     <script>
       // Mobile menu toggle
       fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("beforeend", data);
-            });
+        .then((response) => response.text())
+        .then((data) => {
+          document.body.insertAdjacentHTML("beforeend", data);
+        });
       const menuBtn = document.querySelector(".menu-btn");
       const navLinks = document.querySelector(".nav-links");
 
@@ -435,20 +505,31 @@
       });
 
       // Animation on scroll
-      const animateElements = document.querySelectorAll('.animate');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fadeIn');
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-      
-      animateElements.forEach(element => {
+      const animateElements = document.querySelectorAll(".animate");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fadeIn");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      animateElements.forEach((element) => {
         observer.observe(element);
+      });
+      const links = document.querySelectorAll(".nav-link");
+      const currentPage = location.pathname.split("/").pop();
+
+      links.forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
       });
     </script>
   </body>
