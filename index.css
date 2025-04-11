@@ -182,7 +182,6 @@ nav {
 }
 .nav-links li a:hover {
     color: #ff2b06;
-
 }
 .nav-link.active {
     color: red;
