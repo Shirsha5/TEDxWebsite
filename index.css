@@ -1141,11 +1141,13 @@ footer {
   
   .video-placeholder {
     width: 100%;
+    margin: 0px;
     padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000000;
+   
+
     
   }
   
