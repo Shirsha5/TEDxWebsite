@@ -9,13 +9,13 @@
 }
 
 body {
-    /* background: url('images/HOME 2.png') no-repeat center center; */
+    /* background: url('images/HOME2.png') no-repeat center center; */
     background-size: cover;
     /* Ensures the image covers the full screen */
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     /* Keeps background stable while scrolling */
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
 
     /* Uncomment thisss */
@@ -30,7 +30,7 @@ body {
 }
 .translucent-banner {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.1); /* darker translucent black */
+    background-color: rgba(255,255,255,0.1); /* darker translucent black */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     padding: 30px 40px;
@@ -40,13 +40,17 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: none;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+
 }
 
 
 
 .banner-content {
+    
     display: flex;
     justify-content: space-around;
     width: 90%;
@@ -63,6 +67,7 @@ body {
     border: none;
     font-weight: 500;
     justify-content: center;
+    color: #e03e00;
 }
 
 .separator {
@@ -86,7 +91,7 @@ body {
 }
 
 .banner-item span {
-    color: #000000;
+    /* color: #000000; */
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 5px;
@@ -96,7 +101,9 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
+#countdown-timer{
+    color: white;
+}
 .countdown-labels {
     display: flex;
     justify-content: center;
@@ -223,20 +230,23 @@ nav {
 
 /* HERO SECTION */
 .hero {
-    background: url('images/home_1.png') no-repeat center center/cover;
-    text-align: center;
-    position: relative;
+    background-image: url('images/home_1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Ensures it's not fixed */
+    background-position: center;
+
     width: 100%;
-    /* Use 100% instead of 100vw to prevent overflow */
     height: 100vh;
-    /* Full vertical height */
+
     display: flex;
-    /* Center content */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 0px;
-    /* Adjusted spacing */
+
+    text-align: center;
+    margin-top: 0;
+    position: relative;
 }
 
 .content {
@@ -275,10 +285,10 @@ h1 {
     text-decoration: none;
     font-size: 26px;
     /* Slightly larger text */
-    border-radius: 5px;
+    border-radius: 25px;
     transition: 0.3s;
     position: relative;
-    top: 47px;
+    top: 55px;
     /* Moves it down */
 }
 
@@ -682,11 +692,11 @@ h1 {
     }
 }
 
-.hero {
+/* .hero {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-}
+} */
 
 .speaker img {
     transition: transform 0.3s ease-in-out;
@@ -953,6 +963,9 @@ footer {
 }
 
 .tedx-container {
+    background-image: url(images/group.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -971,12 +984,14 @@ footer {
   
   .left-box {
     flex: 1;
-    min-width: 300px;
+    width: 150px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     gap: 12px; /* reduce vertical space between card and button */
     align-items: flex-end; /* aligns the button to the right */
-     background-color: #000;
+    
+    backdrop-filter: blur(1.1125rem); 
   }
   
   .right-box {
@@ -985,13 +1000,18 @@ footer {
   }
   
   .card {
-    background-color: #121212;
     color: #fff;
     padding: 24px 28px;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(255, 69, 0, 0.15);
     flex: 1;
     margin-bottom: 0; /* optional reset */
+    background: rgba(233, 233, 233, 0.03);
+    border-radius: 1.75rem;
+    padding: 3rem;
+    backdrop-filter: blur(1.1125rem);
+    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
   }
   
   
@@ -1007,14 +1027,16 @@ footer {
   }
   
   .btn-container {
+    
     display: flex;
     justify-content: flex-end;
     margin-top: 0;         /* reset if needed */
     padding-top: 0;        /* optional: tighten spacing */
-    transform: translateY(-55px); /* 👈 this is the key */
+    transform: translateY(-85px);
+    
   }  
   
-  .btn {
+ .btn {
     background-color: #ff4500;
     border: none;
     color: white;
@@ -1023,9 +1045,144 @@ footer {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+   
+    
   }
   
   .btn:hover {
     background-color: #e03e00;
+  }
+  .speakers-container {
+    display: flex;
+    flex-direction: column;
+  
+    gap: 5rem;
+    margin: 2rem 0;
+  }
+  
+  .speaker-card {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+  
+  .speaker-card.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .speaker-info {
+    flex: 1;
+    background: rgba(233, 233, 233, 0.03);
+    border-radius: 1.75rem;
+    padding: 3rem;
+    backdrop-filter: blur(1.1125rem);
+    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+  }
+  
+  .speaker-name {
+    color: #ff2b06;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.1875rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .speaker-bio {
+    font-size: 1.75rem;
+    line-height: 1.7;
+    letter-spacing: 0.0625rem;
+  }
+  
+  .speaker-bio li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  .speaker-bio li:before {
+    content: "•";
+    color: #ff2b06;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+  }
+  
+  .speaker-image {
+    flex: 1;
+    max-width: 36rem;
+    background: rgba(233, 233, 233, 0.03);
+    border-radius: 1.9375rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1.1125rem);
+  }
+
+  .speaker-image1 {
+    flex: 1;
+    max-width: 36rem;
+    background: rgba(233, 233, 233, 0.03);
+    border-radius: 1.9375rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1.1125rem);
+    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+  }
+  
+  .speaker-image img {
+    border-radius: 1rem;
+    max-height: 32rem;
+  }
+  
+  .video-placeholder {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #121212;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px #121212;
+  }
+  
+  .video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    background: #121212;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
   }
   
