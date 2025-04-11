@@ -122,6 +122,7 @@
         border-bottom: 2px solid red; /* Optional underline */
       }
 
+<<<<<<< HEAD
       .menu-btn {
         display: none;
         font-size: 1.5rem;
@@ -410,6 +411,111 @@
           flex-direction: column;
           text-align: center;
         }
+=======
+    .speaker-image1 {
+      flex: 1;
+      max-width: 36rem;
+      background: rgba(233, 233, 233, 0.03);
+      border-radius: 1.9375rem;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(1.1125rem);
+      box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+                  -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+    }
+    
+    .speaker-image img {
+      border-radius: 1rem;
+      max-height: 32rem;
+    }
+    
+    /* Decorative Elements */
+    .decorative-vector {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.7;
+    }
+    
+    .vector-1 {
+      top: 95rem;
+      left: 25%;
+    }
+    
+    .vector-2 {
+      top: 145rem;
+      right: 20%;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+      .hero-section, .speaker-card {
+        flex-direction: column;
+      }
+      
+      .hero-title {
+        font-size: 3rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 3.5rem;
+      }
+      
+      .section-title {
+        font-size: 4rem;
+      }
+      
+      .nav-menu {
+        gap: 1rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 3rem;
+      }
+      
+      .section-title {
+        font-size: 3rem;
+      }
+      
+      .speaker-name {
+        font-size: 1.7rem;
+      }
+      
+      .speaker-bio {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="logo-link">
+          <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="pastevent.html">Past Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="guidelines.html">Guidelines</a></li>
+        <li><a href="brochure.pdf">Brochure</a></li>
+      </ul>
+      <div class="menu-btn" id="hamburger">☰</div>
+    </nav>
+  </header>
+>>>>>>> c36e7a7c5c67cc79e2df394c8171927d543ec6e3
 
         .logo-col,
         .links-col,

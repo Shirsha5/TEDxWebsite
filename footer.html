@@ -1,141 +1,131 @@
 <style>
     footer {
-    margin: 0px;
-    padding: 2px;
-    
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background: #1a1a1a;
-    color: #fff;
-    padding: 15px 0;
-    /* Reduced padding to make it thinner */
-    font-size: 16px;
-}
+        margin: 0px;
+        padding: 2px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 15px 0;
+        font-size: 16px;
+    }
 
-/* Adjusted Space Between "Meet the Team" and Footer */
-.team-crew {
-    margin-bottom: 80px;
-    /* Slightly more space before the footer */
-}
+    .team-crew {
+        margin-bottom: 80px;
+    }
 
-.footer-container {
-   
-    width: 85%;
-    margin: 0px;
-    padding: 6px;
-    
-    
-}
+    .footer-container {
+        width: 85%;
+        margin: 0px;
+        padding: 6px;
+    }
 
-.footer-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* top-aligned items */
-    flex-wrap: wrap;
-}
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
 
+    .footer-col {
+        flex: flex;
+        min-width: 200px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
 
-/* Left Column (Logo & Description) */
-.footer-col {
-    flex: 1;
-    min-width: 200px;
-    padding: 10px;
-    box-sizing: border-box;
-}
+    .logo-col {
+        text-align: left;
+    }
 
-.logo-col {
-    text-align: left;
-}
+    .footer-logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 8px;
+    }
 
-.footer-logo {
-    width: 150px;
-    /* Slightly smaller logo */
-    height: auto;
-    margin-bottom: 8px;
-    /* Less space below logo */
-}
+    .footer-desc {
+        font-size: 13px;
+        color: #bbb;
+        max-width: 250px;
+    }
 
-.footer-desc {
-    font-size: 13px;
-    /* Slightly smaller text */
-    color: #bbb;
-    max-width: 250px;
-}
+    .links-col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-/* Middle Column (Navigation Links) */
-.links-col {
-    flex: 2;                   /* Give more width to this column */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        flex-wrap: nowrap;
+        margin-left: 300px;
+    }
 
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    flex-wrap: nowrap;         /* Prevent wrapping */
-}
+    .footer-links li {
+        display: inline-block;
+        white-space: nowrap;
+    }
 
-.footer-links li {
-    display: inline-block;
-    white-space: nowrap;      
-}
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+    }
 
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    white-space: nowrap;      
-}
+    .footer-links a:hover {
+        color: #f44336;
+    }
 
+    .instagram-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4px;
+    }
 
-.footer-links a:hover {
-    color: #f44336;
-}
-.instagram-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;     
-    justify-content: center;
-    gap: 4px;
-    margin-top: 4px;
-}
+    .instagram-text {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
 
+    .instagram-icons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .instagram-link {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+    }
 
-.instagram-text {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 10px;
-}
+    .instagram-logo {
+        width: 24px;
+        height: 24px;
+        margin-top: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.instagram-link {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff; /* In case fallback text shows */
-}
-
-.instagram-link .instagram-logo {
-    width: 24px;            
-    height: 24px;
-    margin-top: 5px;        
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.instagram-link:hover .instagram-logo {
-    transform: scale(1.1);
-}
+    .instagram-link:hover .instagram-logo {
+        transform: scale(1.1);
+    }
 </style>
 
 <footer>
@@ -146,14 +136,21 @@
                 <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="footer-logo">
                 <p class="footer-desc">TEDxMITWPU brings inspiring ideas to life, fostering meaningful conversations.</p>
             </div>
+
+            <!-- Middle Column: Social Icons -->
             <div class="footer-col instagram-col">
                 <p class="instagram-text">Follow Us On</p>
-                <a href="https://www.instagram.com/TedxMITWPU" target="_blank" class="instagram-link">
-                    <img src="images/instagram-icon.png" alt="Instagram" class="instagram-logo">
-                </a>
+                <div class="instagram-icons">
+                    <a href="https://www.instagram.com/TedxMITWPU" target="_blank" class="instagram-link">
+                        <img src="images/instagram-icon.png" alt="Instagram" class="instagram-logo">
+                    </a>
+                    <a href="https://www.linkedin.com/company/tedxmitwpu" target="_blank" class="instagram-link">
+                        <img src="images/linkedin3.webp" alt="LinkedIn" class="instagram-logo">
+                    </a>
+                </div>
             </div>
-            
-            <!-- Middle Column: Navigation Links -->
+
+            <!-- Right Column: Navigation Links -->
             <div class="footer-col links-col">
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
@@ -165,8 +162,6 @@
                     <li><a href="#">Brochure</a></li>
                 </ul>
             </div>
-            <!-- Instagram Column -->
-
         </div>
     </div>
 </footer>
