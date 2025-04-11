@@ -216,38 +216,7 @@
       </section>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-row">
-                <!-- Left Column: Logo & Description -->
-                <div class="footer-col logo-col">
-                    <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="footer-logo">
-                    <p class="footer-desc">TEDxMITWPU brings inspiring ideas to life, fostering meaningful conversations.</p>
-                </div>
-                <div class="footer-col instagram-col">
-                    <p class="instagram-text">Follow Us On</p>
-                    <a href="https://www.instagram.com/TedxMITWPU" target="_blank" class="instagram-link">
-                        <img src="images/instagram-icon.png" alt="Instagram" class="instagram-logo">
-                    </a>
-                </div>
-                
-                <!-- Middle Column: Navigation Links -->
-                <div class="footer-col links-col">
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="pastevent.html">Past Events</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="guidelines.html">Guidelines</a></li>
-                        <li><a href="#">Brochure</a></li>
-                    </ul>
-                </div>
-                <!-- Instagram Column -->
-    
-            </div>
-        </div>
-    </footer>
+     
 
     <script>
       // Mobile menu toggle
@@ -259,6 +228,11 @@
               ? "none"
               : "flex";
         });
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
     </script>
   </body>
 </html>
