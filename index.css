@@ -961,8 +961,10 @@ footer {
 }
 
 .tedx-container {
+    margin: 0px;
+    padding: 0px;
     background-image: url(images/group.svg);
-    background-size: fill;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
     display: flex;
@@ -1188,3 +1190,37 @@ footer {
     transition: background 0.3s ease;
   }
   
+.theme-card{
+    width:55%;
+    color: #fff;
+    padding: 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(255, 69, 0, 0.15);
+    flex: 1;
+    margin-bottom: 0; /* optional reset */
+    background: rgba(233, 233, 233, 0.03);
+    border-radius: 1.75rem;
+    padding: 3rem;
+    backdrop-filter: blur(1.1125rem);
+    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+  }
+
+  .theme{
+    display: flex;
+    flex-direction: column;
+    color: #bbb;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    gap: 7px;
+    margin: 0px auto;
+  }
+  .theme div{
+
+    color: #ff4500;
+  }
+  .theme-card p{
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
