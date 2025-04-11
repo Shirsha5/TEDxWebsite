@@ -963,9 +963,9 @@ footer {
 
 .tedx-container {
     background-image: url(images/group.svg);
-    background-size: cover;
+    background-size: fill;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
