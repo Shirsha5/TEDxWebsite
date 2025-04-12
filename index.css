@@ -1130,3 +1130,62 @@ footer {
 .speakers-container{
   padding-bottom: 12px;
 }
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #121212;
+  z-index: 1000;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  width: 180px;
+  height: 60px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+.nav-links li a:hover {
+  color: #ff2b06;
+}
+.nav-link.active {
+  color: red;
+  font-weight: bold;
+  border-bottom: 2px solid red; /* Optional underline */
+}
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  z-index: 1100;
+}
