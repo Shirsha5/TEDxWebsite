@@ -771,6 +771,18 @@
     .speaker-card {
       flex-direction: column;
     }
+    
+  
+    .btn2-container {
+      position: relative;
+      top: bottom;
+      
+    }
+  
+    .btn2-container .btn {
+      width: 80%; /* Or adjust to preferred size */
+      text-align: center;
+    }
   }
   
   @media (max-width: 480px) {
@@ -1057,4 +1069,44 @@
     height: 100%;
     border: none;
     border-radius: 12px;
+}
+
+/* By default, show desktop button and hide mobile button */
+.desktop-btn {
+  display: flex;
+  margin-top: 20px;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+/* On mobile: show mobile button, hide desktop button, adjust spacing */
+@media (max-width: 768px) {
+  .desktop-btn {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .mobile-btn .btn {
+    width: 80%;
+    max-width: 300px;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .left-box,
+  .right-box {
+    margin: 0 auto; /* Center the boxes on mobile */
+    padding: 8px; /* consistent gap between cards inside the boxes */
+  }
+
+
+  .card {
+    margin: 0 
+  }
 }
