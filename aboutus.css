@@ -112,7 +112,7 @@ header {
 
 .info-box h2 {
     color: #ff2b06;
-    font-size: 26px;
+    font-size: 38px;
     margin-bottom: 10px;
 }
 
@@ -259,7 +259,8 @@ footer {
 
 
 .instagram-text {
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 600;
     color: #fff;
     margin-bottom: 10px;
 }
@@ -409,7 +410,7 @@ footer {
 }
 .intro-info{
     flex: 1;
-
+    font-size: 27px;
     background: rgba(255, 255, 255, 0.1);
       border-radius: 1.75rem;
       padding: 3rem;
@@ -420,13 +421,15 @@ footer {
 .intro-name{
     color: #ff2b06;
      
-      font-size: 2rem;
+      font-size: 38px;
       line-height: 1.5;
       letter-spacing: 0.1875rem;
       margin-bottom: 1.5rem;
       border-bottom: #bbb solid 0.125rem;
 }
 .intro-name div{
+    font-size: 33px;
+    font-weight: bold;
     color: #ffffff;
 }
 .intro-image{
@@ -755,7 +758,10 @@ footer {
         height: auto;
     }
 }
-
+.intro-container{
+    padding-left: 32px;
+    padding-right: 32px;
+}
 
 footer {
     margin: 0px;
