@@ -299,11 +299,6 @@
 
     <script src="index.js"></script>
     <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("beforeend", data);
-            });
 
         function updateCountdown() {
             const eventDate = new Date("2025-04-26T00:00:00");
