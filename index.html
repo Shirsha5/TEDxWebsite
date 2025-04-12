@@ -299,7 +299,12 @@
 
     <script src="index.js"></script>
     <script>
-
+       fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.body.insertAdjacentHTML("beforeend", data);
+        });
+        
         function updateCountdown() {
             const eventDate = new Date("2025-04-26T00:00:00");
             const now = new Date();
@@ -318,37 +323,10 @@
             document.getElementById("countdown-timer").innerText =
                 `${String(days).padStart(2, '0')} : ${String(hrs).padStart(2, '0')} : ${String(mins).padStart(2, '0')} : ${String(secs).padStart(2, '0')}`;
         }
-
         // Initial call and update every second
         updateCountdown();
         setInterval(updateCountdown, 1000);
-        const links = document.querySelectorAll('.nav-link');
-        const currentPage = location.pathname.split("/").pop();
-
-        links.forEach(link => {
-          if(link.getAttribute("href") === currentPage) {
-            link.classList.add("active");
-          }
-        });
-        const menuBtn = document.querySelector(".menu-btn");
-      const navLinks = document.querySelector(".nav-links");
-      
-      menuBtn.addEventListener("click", function() {
-        if (navLinks.style.display === "flex") {
-          navLinks.style.display = "none";
-        } else {
-          navLinks.style.display = "flex";
-        }
-      });
-      
-      // Handle window resize to reset mobile menu state
-      window.addEventListener("resize", function() {
-        if (window.innerWidth > 768) {
-          navLinks.style.display = "flex";
-        } else {
-          navLinks.style.display = "none";
-        }
-      });
+       
     </script>
 
 
