@@ -318,33 +318,151 @@
       .delay-4 {
         animation-delay: 0.8s;
       }
+      @media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between; /* Makes logo on left, button on right */
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #121212;
+    padding-bottom: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links li a {
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .nav-links li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red; /* underline color */
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between; /* Makes logo on left, button on right */
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #121212;
+    padding-bottom: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links li a {
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .nav-links li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red; /* underline color */
+  }
+}
     </style>
   </head>
   <body>
     <!-- Header -->
     <header>
       <nav>
-        <div class="nav-left">
-          <a href="index.html" class="logo-link">
-            <img
-              src="images/tedxlogowhite.png"
-              alt="TEDxMITWPU Logo"
-              class="logo"
-            />
-          </a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="aboutus.html" class="nav-link">About Us</a></li>
-          <li><a href="team.html" class="nav-link">Team</a></li>
-          <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
-          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-          <li><a href="guidelines.html" class="nav-link">Guidelines</a></li>
-          <li><a href="brochure.pdf" class="nav-link">Brochure</a></li>
-        </ul>
-        <div class="menu-btn">☰</div>
+          <div class="nav-left">
+              <a href="index.html" class="logo-link">
+                  <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
+              </a>
+          </div>
+          <ul class="nav-links">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="aboutus.html"class="nav-link">About Us</a></li>
+              <li><a href="team.html"class="nav-link">Team</a></li>
+              <li><a href="pastevent.html"class="nav-link">Past Events</a></li>
+              <li><a href="contact.html"class="nav-link">Contact Us</a></li>
+              <li><a href="guidelines.html"class="nav-link">Guidelines</a></li>
+              <li><a href="brochure.pdf"class="nav-link">Brochure</a></li>
+          </ul>
+          <div class="menu-btn">☰</div>
       </nav>
-    </header>
+  </header>
 
     <!-- Main Content -->
     <div class="page-container">
@@ -496,12 +614,7 @@
             });
                 document.body.insertAdjacentHTML("beforeend", data);
       // Mobile menu toggle
-      const menuBtn = document.querySelector(".menu-btn");
-      const navLinks = document.querySelector(".nav-links");
-
-      menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
+      
 
       // Animation on scroll
       const animateElements = document.querySelectorAll(".animate");
@@ -524,14 +637,31 @@
       });
       
       // Set active nav link
-      const links = document.querySelectorAll(".nav-link");
-      const currentPage = location.pathname.split("/").pop();
+      const links = document.querySelectorAll('.nav-link');
+        const currentPage = location.pathname.split("/").pop();
 
-      links.forEach((link) => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add("active");
-        }
-      });
+        links.forEach(link => {
+          if(link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+        
+        
+  const menuBtn = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove("active");
+      navLinks.style.display = "flex";
+    } else {
+      navLinks.style.display = "";
+    }
+  });
     </script>
   </body>
 </html>

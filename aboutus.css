@@ -600,11 +600,16 @@ footer {
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
     
-    .about-heading {
-        font-size: 2.5rem;
-        margin-top: 80px;
-        width: 100%;
-    }
+    
+        .about-heading {
+            font-size: 2.5rem;
+            margin-top: 120px;
+            padding: 0 15px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+      
     
     .intro-container {
         padding: 0 15px; /* Add some padding on the sides */
