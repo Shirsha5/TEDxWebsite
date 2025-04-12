@@ -284,90 +284,7 @@ footer {
 .instagram-link:hover .instagram-logo {
     transform: scale(1.1);}
 
-/* RESPONSIVE DESIGN */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        display: none;
-        background: rgba(0, 0, 0, 0.95);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 15px;
-        z-index: 999;
-    }
 
-    .menu-btn {
-        display: block;
-        z-index: 1001;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .info-box {
-        width: 90%;
-        align-self: center !important;
-    }
-
-    .footer-row {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .nav-section ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .map-section iframe {
-        height: 220px;
-    }
-
-    .logo {
-        height: 30px;
-    }
-
-    header {
-        padding: 10px 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .about-heading {
-        font-size: 2rem;
-        margin-top: 80px;
-        padding: 0 10px;
-        text-align: center;
-    }
-
-    .info-box {
-        width: 90%;
-        padding: 20px 15px;
-        font-size: 16px;
-        line-height: 1.6;
-        margin: 15px auto;
-    }
-
-    .info-box h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    .footer-logo {
-        width: 100px;
-    }
-
-    .footer-col {
-        padding: 10px 0;
-    }
-
-    .menu-btn {
-        margin-right: 10px;
-    }
-}
 
 
 /* Footer Styles */
@@ -472,29 +389,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .footer-row {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .logo-col,
-    .links-col,
-    .map-col {
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .map-col iframe {
-        width: 100%;
-        height: 220px;
-    }
-}
 .intro-container{
     display: flex;
       flex-direction: column;
@@ -566,3 +461,298 @@ footer {
     border-bottom-right-radius: 1.9375rem;
 
 } */
+ /* Add this to your existing CSS file */
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .info-box {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .info-box {
+        width: 90%;
+    }
+    
+    /* Make all boxes centered regardless of left/right class */
+    .left, .right {
+        align-self: center;
+    }
+    
+    /* Intro cards responsive styling */
+    .intro-card {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .intro-card.reverse {
+        flex-direction: column;
+    }
+    
+    .intro-info, .intro-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .intro-image img {
+        max-height: 25rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-heading {
+        font-size: 2.5rem;
+        margin-top: 80px;
+    }
+    
+    .intro-info {
+        padding: 2rem;
+    }
+    
+    .intro-name {
+        font-size: 1.5rem;
+    }
+    
+    /* Navbar responsive */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #121212;
+        padding: 20px 0;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .menu-btn {
+        display: block;
+    }
+    
+    /* Footer responsive */
+    .footer-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .logo-col {
+        text-align: center;
+    }
+    
+    .footer-desc {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .links-col {
+        order: 3;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .info-box {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .about-heading {
+        font-size: 2rem;
+    }
+    
+    .info-box h2 {
+        font-size: 22px;
+    }
+    
+    .info-box p, .info-box ul, .intro-content p {
+        font-size: 16px;
+    }
+    
+    .intro-container {
+        gap: 3rem;
+    }
+}
+/* Add these updated mobile styles to your existing CSS file */
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    
+    .about-heading {
+        font-size: 2.5rem;
+        margin-top: 80px;
+        width: 100%;
+    }
+    
+    .intro-container {
+        padding: 0 15px; /* Add some padding on the sides */
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .intro-card {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .intro-info {
+        padding: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .intro-image {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .intro-name {
+        font-size: 1.5rem;
+    }
+    
+    .content {
+        width: 100%;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+    
+    .info-box {
+        width: 100%;
+        padding: 20px;
+        margin: 15px 0;
+        box-sizing: border-box;
+    }
+    
+    /* Navbar responsive adjustment */
+    header {
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #121212;
+        padding: 20px 0;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .menu-btn {
+        display: block;
+    }
+    
+    /* Footer responsive */
+    footer {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .footer-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-col {
+        width: 100%;
+        text-align: center;
+        padding: 5px 15px;
+        box-sizing: border-box;
+    }
+    
+    .logo-col {
+        text-align: center;
+    }
+    
+    .footer-desc {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .links-col {
+        order: 3;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-heading {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+    
+    .info-box {
+        padding: 15px;
+    }
+    
+    .info-box h2 {
+        font-size: 20px;
+    }
+    
+    .info-box p, .info-box ul, .intro-content p {
+        font-size: 16px;
+    }
+    
+    .intro-container {
+        gap: 2rem;
+    }
+    
+    .intro-info {
+        padding: 1rem;
+    }
+    
+    /* Fix for horizontal scroll on very small screens */
+    .intro-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Fix for potential scrolling issues */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}

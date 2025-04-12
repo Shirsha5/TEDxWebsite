@@ -1,1186 +1,249 @@
-* {
+/* Base Styles and Variables */
+:root {
+    --tedx-red: #ff2b06;
+    --dark-bg: #121212;
+    --card-bg: rgba(233, 233, 233, 0.03);
+  }
+  
+  * {
     font-family: "Roboto", sans-serif !important;
-}
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-}
-body {
-    /* background: url('images/HOME2.png') no-repeat center center; */
+  }
+  
+  body {
     background-size: cover;
-    /* Ensures the image covers the full screen */
-    /* background-attachment: fixed; */
-    /* Keeps background stable while scrolling */
     min-height: 100vh;
     width: 100vw;
     display: flex;
-
-    /* Uncomment thisss */
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: rgb(255, 255, 255);
+    overflow-x: hidden;
     overflow-y: scroll;
-    /* Ensures scrolling works */
     scroll-behavior: smooth;
-    /* For smooth scrolling */
-}
-.translucent-banner {
-    width: 100%;
-    background-color: rgb(255, 255, 255); /* darker translucent black */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: 30px 40px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border-radius: 12px; */
-    border: none;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    position: relative;
-    top: 0;
-
-}
-
-
-
-.banner-content {
-    
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    max-width: 1200px;
-    text-align: center;
-}
-
-.banner-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    border: none;
-    font-weight: 500;
-    justify-content: center;
-    color: #e03e00;
-}
-
-.separator {
-    width: 2px;
-    background-color: #ff4b4b;
-    border-radius: 1px;
-    align-self: stretch;
-    /* ensures it stretches fully within flex */
-}
-
-.banner-item i {
-    color: red;
-    /* This gives the icon its red color */
-    font-size: 18px;
-    border: none;
-    /* Removes any unwanted borders */
-    outline: none;
-    /* Removes focus outlines */
-    box-shadow: none;
-    /* Just in case a shadow is causing the effect */
-}
-
-.banner-item span {
-    /* color: #000000; */
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 5px;
-    letter-spacing: 0.5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.banner-item i {
-    color: red;
-    font-size: 18px;
-    margin-left: 5px;
-}
-
-
-#countdown-timer{
-    color: #121212
-}
-.countdown-labels {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 5px;
-}
-
-.countdown-labels span {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #ff2b06;
-}
-
-.banner-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 16px;
-}
-
-/* NAVBAR FIX */
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background:#121212;
-    z-index: 1000;
-}
-
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.logo {
-    width: 180px;
-    /* Custom width */
-    height: 60px;
-    /* Custom height */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-.nav-links li a:hover {
-    color: #ff2b06;
-}
-.nav-link.active {
-    color: red;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid red; /* Optional underline */
+    background-color: var(--dark-bg);
   }
   
-
-.other-sections {
-    position: relative;
-    width: 100vw;
-    /* Full viewport width */
-    background-color: rgba(255, 255, 255, 0.1);
-    text-align: center;
-    padding: 40px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 0;
-    /* Ensures no default margin messes up */
-}
-
-.other-sections::before {
-    content: "";
-    position: absolute;
+  /* Header and Navigation */
+  header {
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark-bg);
+    z-index: 1000;
+  }
+  
+  nav {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
     height: 100%;
-    background: url('images/group.svg') no-repeat center;
-    background-size: 80%;
-    background-position: 300px 24.5%;
-
-    transform: scaleX(-1);
-    /* Mirror horizontally */
-
-    z-index: 0;
-    opacity: 0.5;
-}
-
-/* Content inside this section */
-.other-sections>* {
-    position: relative;
-    z-index: 2;
-}
-
-.other-sections::after {
-    content: "";
-    position: fixed;
-    /* 👈 Fixed to viewport */
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(187, 21, 28, 0.5), transparent 70%);
-    transform: translate(-50%, -50%);
-    filter: blur(382.8px);
-    z-index: 1;
-    /* Between SVG and content */
-    pointer-events: none;
-    /* Prevent interaction issues */
-}
-
-
-/* HERO SECTION */
-.hero {
-    background-image: url('images/home_1.svg');
-    background-color: #121212;
-    background-size: cover;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 15px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--tedx-red);
+  }
+  
+  .nav-link.active {
+    color: var(--tedx-red);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid var(--tedx-red);
+  }
+  
+  .menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('images/Group 174.svg');
+    background-color: var(--dark-bg);
+    background-size: auto;
     background-repeat: no-repeat;
-    background-attachment: scroll; 
     background-position: center center;
-
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
+    justify-content: flex-end;
+    padding-bottom: 220px;
     text-align: center;
-    margin-top: 0;
     position: relative;
-}
-
-.content {
+    /* margin-top: 60px; */
+  }
+  
+  .content {
     text-align: center;
     max-width: 600px;
-}
-
-/* TEXT STYLING */
-h1 {
-    font-size: 42px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.subtext {
-    font-size: 14px;
-    margin-bottom: 15px;
-    color: #ccc;
-}
-
-.description {
-    /* font-weight: bolder; */
-    font-size: 28px;
-    color: #ddd;
-}
-
-
-/* BOOK NOW BUTTON FIX */
-.btn1 {
-    display: inline-block;
-    transition: transform 0.3s ease, background 0.3s ease;
-    margin-top: 25px;
-    /* Increased from 130px to move it down */
-    padding: 20px 34px;
-    /* Increased padding for a bigger button */
-    background: red;
-    color: white;
-    text-decoration: none;
-    font-size: 26px;
-    /* Slightly larger text */
-    border-radius: 25px;
-    transition: 0.3s;
-    position: relative;
-    top: 65px;
-    /* Moves it down */
-}
-
-.btn1:hover {
-    background: darkred;
-    transform: scale(1.1);
-}
-
-.hero-logo {
-    width: 300px;
-    /* Increased width */
+    padding: 0 20px;
+  }
+  
+  .hero-logo {
+    width: 350px;
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
     margin: 0 auto 8px;
-    /* Center and add spacing */
-}
-
-
-/* MEDIA QUERIES */
-/* For screens smaller than 1024px (Tablets) */
-@media (max-width: 1024px) {
-    body {
-        background-size: cover;
-    }
-
-    .btn {
-        top: 10px;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    .description {
-        font-size: 16px;
-    }
-}
-
-/* For screens smaller than 768px (Large Phones & Small Tablets) */
-@media (max-width: 768px) {
-    body {
-        background-size: contain;
-        background-position: top center;
-    }
-
-    .btn {
-        top: 15px;
-        padding: 15px 24px;
-        font-size: 24px;
-    }
-
-    .hero-logo {
-        height: 80px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    .description {
-        font-size: 14px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        /* Stack nav links */
-        align-items: center;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 20px;
-    }
-}
-
-@media (min-width: 454px) and (max-width: 479px) {
-    .btn {
-        top: -18px;
-        /* Adjust this to control vertical shift */
-    }
-}
-
-/* For screens smaller than 480px (Mobile Phones) */
-@media (max-width: 480px) {
-    body {
-        background-size: cover;
-        background-position: center;
-        text-align: center;
-        justify-content: flex-start;
-        /* Adjust layout for mobile */
-        overflow-y: auto;
-        /* Ensures scrolling works on mobile */
-    }
-
-    .btn {
-        top: -3px;
-        padding: 10px 20px;
-        font-size: 20px;
-    }
-
-    .hero-logo {
-        height: 60px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    .description {
-        font-size: 12px;
-    }
-
-    .content {
-        max-width: 90%;
-    }
-
-    .nav-links {
-        display: none;
-        /* Hide nav links if needed */
-    }
-}
-
-.menu-btn {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: rgba(0, 0, 0, 0.9);
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-}
-
-/* General Section Styling */
-.ted-info,
-.tedx-info,
-.tedx-mitwpu,
-.theme-section {
-    /* background: url('images/home_2.png') no-repeat center center/cover; */
-    max-width: 900px;
-    margin: 0px auto;
-    text-align: center;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.ted-info:hover,
-.tedx-info:hover,
-.tedx-mitwpu:hover,
-.theme-section:hover {
-    transform: scale(1.02);
-    z-index: 10;
-}
-
-.ted-info h2,
-.tedx-info h2,
-.tedx-mitwpu h2,
-.theme-section h2 {
-    font-size: 34px;
-    margin-bottom: 20px;
-    color: #ff2b06;
-}
-
-.ted-info p,
-.tedx-info p,
-.tedx-mitwpu p,
-.theme-section p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #eee;
-}
-
-/* List Styling for TEDx Special Features */
-.tedx-info ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.tedx-info ul li {
-    font-size: 18px;
-    color: #ddd;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    transition: background 0.3s;
-}
-
-.tedx-info ul li:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.tedx-info ul li strong {
-    color: #ff2b06;
-}
-
-/* Past Event Section */
-.past-event {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 50px;
-    background: #111;
-    border-left: 6px solid #ff2b06;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(255, 43, 6, 0.6);
-    text-align: left;
-    color: #eee;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-#typewriter {
-    font-size: 3.75rem;
-    /* You can adjust the size as needed */
-}
-
-.past-event:hover {
-    transform: translateY(-5px);
-    background: #1a1a1a;
-}
-
-.past-event h2 {
-    font-size: 36px;
-    color: #ff2b06;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.past-event p {
-    font-size: 18px;
-    line-height: 1.7;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.past-event h3 {
+  }
+  
+  h1 {
+    font-size: 58px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
     font-size: 28px;
-    color: #ff2b06;
+    color: #ddd;
     margin-bottom: 20px;
-    text-align: center;
-}
-
-.past-event .speaker {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* Ensures equal spacing */
-    gap: 30px;
-    /* Increased gap for better spacing */
-    margin-bottom: 40px;
-    transition: transform 0.3s;
-}
-
-.past-event .speaker:hover {
-    transform: scale(1.05);
-}
-
-.past-event .speaker:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.speaker img {
-    width: 120px;
-    /* Slightly larger images */
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ff2b06;
-}
-
-.speaker .speaker-info {
-    flex: 1;
+  }
+  
+  .btn1 {
+    text-decoration: none;
+    margin-top: 20px;
     font-size: 18px;
-    color: #ddd;
-    line-height: 1.7;
-    text-align: left;
-    /* Ensures left alignment */
-    max-width: 600px;
-}
-
-.speaker .speaker-info strong {
-    display: block;
-    font-size: 18px;
-    color: #ff2b06;
-    margin-bottom: 8px;
-}
-
-.past-event .speaker:nth-child(even) {
-    flex-direction: row-reverse;
-    text-align: right;
-}
-
-.past-event .speaker-info {
-    flex: 1;
-    font-size: 17px;
-    color: #ddd;
-    line-height: 1.4;
-    /* Reduced to make text more compact */
-    text-align: left;
-    max-width: 550px;
-    margin: 5px 20px;
-    /* Remove excess spacing */
-}
-
-.past-event .speaker-info strong {
-    display: block;
-    font-size: 18px;
-    color: #ff2b06;
-    margin-bottom: 5px;
-    /* Keep speaker name close to text */
-    text-align: left;
-}
-
-.past-event .speaker p {
-    margin: 3px 0;
-    /* Reduce gap between lines */
-    text-align: left;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-
-    .ted-info,
-    .tedx-info,
-    .tedx-mitwpu,
-    .theme-section,
-    .past-event {
-        padding: 25px;
-        margin: 30px auto;
-    }
-
-    .ted-info h2,
-    .tedx-info h2,
-    .tedx-mitwpu h2,
-    .theme-section h2,
-    .past-event h2 {
-        font-size: 30px;
-    }
-
-    .past-event .speaker {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .past-event .speaker:nth-child(even) {
-        flex-direction: column;
-    }
-
-    .speaker img {
-        width: 90px;
-        height: 90px;
-    }
-}
-
-.hero .content {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1.5s ease-out forwards;
-    font-size: 2rem;
-    /* 👈 Increase this value as needed */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* .hero {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-} */
-
-.speaker img {
-    transition: transform 0.3s ease-in-out;
-}
-
-.speaker:hover img {
-    transform: scale(1.1);
-}
-
-.team-crew {
-    text-align: center;
-    padding: 50px 20px;
-    /* background: rgba(0, 0, 0, 0.9); */
-    /* Dark theme */
+    background: var(--tedx-red);
     color: white;
-}
-
-.team-crew h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.team-crew p {
-    font-size: 18px;
-    color: #ddd;
-    max-width: 800px;
-    margin: 0 auto 40px;
-}
-
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.team-member {
-    width: 250px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-    transform: scale(1.05);
-}
-
-.team-member img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.team-member h3 {
-    margin: 10px 0 5px;
-    font-size: 20px;
-    color: #ff4141;
-    /* TEDx red color */
-}
-
-.team-member p {
-    font-size: 16px;
-    color: #ccc;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .team-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-member {
-        width: 80%;
-    }
-}
-
-.logo-link {
-    display: inline-block;
-    /* Ensures it's not hidden */
-}
-
-
-/* Footer Styles */
-footer {
-    margin: 0px;
-    padding: 2px;
-    
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background: #1a1a1a;
-    color: #fff;
-    padding: 15px 0;
-    /* Reduced padding to make it thinner */
-    font-size: 16px;
-}
-
-/* Adjusted Space Between "Meet the Team" and Footer */
-.team-crew {
-    margin-bottom: 80px;
-    /* Slightly more space before the footer */
-}
-
-.footer-container {
-   
-    width: 85%;
-    margin: 0px;
-    padding: 6px;
-    
-    
-}
-
-.footer-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* top-aligned items */
-    flex-wrap: wrap;
-}
-
-
-/* Left Column (Logo & Description) */
-.footer-col {
-    flex: 1;
-    min-width: 200px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.logo-col {
-    text-align: left;
-}
-
-.footer-logo {
-    width: 150px;
-    /* Slightly smaller logo */
-    height: auto;
-    margin-bottom: 8px;
-    /* Less space below logo */
-}
-
-.footer-desc {
-    font-size: 13px;
-    /* Slightly smaller text */
-    color: #bbb;
-    max-width: 250px;
-}
-
-/* Middle Column (Navigation Links) */
-.links-col {
-    flex: 2;                   /* Give more width to this column */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    flex-wrap: nowrap;         /* Prevent wrapping */
-}
-
-.footer-links li {
-    display: inline-block;
-    white-space: nowrap;      
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    white-space: nowrap;      
-}
-
-
-.footer-links a:hover {
-    color: #f44336;
-}
-.instagram-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;     
-    justify-content: center;
-    gap: 4px;
-    margin-top: 4px;
-}
-
-
-
-.instagram-text {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.instagram-link {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff; /* In case fallback text shows */
-}
-
-.instagram-link .instagram-logo {
-    width: 24px;            
-    height: 24px;
-    margin-top: 5px;        
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.instagram-link:hover .instagram-logo {
-    transform: scale(1.1);
-}
-.footer-links a:hover {
-    color: #f44336;
-}
-
-/* Right Column (Google Map) */
-.map-col {
-    text-align: right;
-}
-
-.map-col iframe {
-    width: 400px;
-    /* Slightly reduced map size */
-    height: 250px;
-    border-radius: 8px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo-col,
-    .links-col,
-    .map-col {
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .map-col iframe {
-        width: 100%;
-        height: 220px;
-    }
-}
-
-.tedx-container {
-    margin: 0px;
-    padding: 0px;
-    background-image: url(images/group.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-attachment: scroll;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 40px;
-    /* padding: 60px 80px; */
-    background-color: #000;
-    
-  }
-  
-  .left-box,
-  .right-box {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-  }
-  
-  .left-box {
-    flex: 1;
-    width: 150px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* reduce vertical space between card and button */
-    align-items: flex-end; /* aligns the button to the right */
-    
-    backdrop-filter: blur(1.1125rem); 
-  }
-  
-  .right-box {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .card {
-    color: #fff;
-    padding: 24px 28px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(255, 69, 0, 0.15);
-    flex: 1;
-    margin-bottom: 0; /* optional reset */
-    background: rgba(233, 233, 233, 0.03);
-    border-radius: 1.75rem;
-    padding: 3rem;
-    backdrop-filter: blur(1.1125rem);
-    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-    
-  }
-  
-  
-  .card h2 {
-    color: #ff4500;
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .btn-container {
-    
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 0;         /* reset if needed */
-    padding-top: 0;        /* optional: tighten spacing */
-    transform: translateY(-85px);
-    
-  }  
-  
- .btn {
-    background-color: #ff4500;
+    border-radius: 25px;
     border: none;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 8px;;
-    font-size: 16px;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
-    transition: background-color 0.3s;
-    
-   
-    
+    display: inline-block;
+    width: 10rem;
+    height: 60%;
+    letter-spacing: 1.5%;
   }
   
-  .btn:hover {
-    background-color: #e03e00;
+  .btn1:hover {
+    background: darkred;
+    transform: scale(1.05);
   }
-  .speakers-container {
+  .btn1-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  /* Banner */
+  .translucent-banner {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
-    
-    gap: 5rem;
-    margin: 2rem 0;
-    
-    
-  }
-  
-  .speaker-card {
-    display: flex;
-    gap: 5rem;
+    justify-content: center;
     align-items: center;
-    /* padding-top: 20%; */
-    
-  }
-  
-  .speaker-card.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .speaker-info {
-    flex: 1;
-    background: rgba(233, 233, 233, 0.03);
-    border-radius: 1.75rem;
-    padding: 3rem;
-    backdrop-filter: blur(1.1125rem);
-    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-  }
-  
-  .speaker-name {
-    color: #ff2b06;
-    font-family: "Montserrat-SemiBold", sans-serif;
-    font-size: 2rem;
-    line-height: 1.5;
-    letter-spacing: 0.1875rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .speaker-bio {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    letter-spacing: 0.0625rem;
-  }
-  
-  .speaker-bio li {
-    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     position: relative;
-    padding-left: 2rem;
   }
   
-  /* .speaker-bio li:before {
-    content: "•";
+  .banner-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .banner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+    border: none;
+    font-weight: 500;
+    justify-content: center;
+    color: #e03e00;
+    padding: 10px;
+  }
+  
+  .separator {
+    width: 2px;
+    background-color: #ff4b4b;
+    border-radius: 1px;
+    align-self: stretch;
+  }
+  
+  .banner-item span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  #countdown-timer {
+    color: #121212;
+  }
+  
+  .countdown-labels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .countdown-labels span {
+    font-size: 0.8rem;
+    font-weight: 700;
     color: #ff2b06;
-    position: absolute;
-    left: 0;
-    font-size: 1.5rem;
-  }
-   */
-  .speaker-image {
-    flex: 1;
-    max-width: 36rem;
-    background: rgba(233, 233, 233, 0.03);
-    border-radius: 1.9375rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(1.1125rem);
-  }
-
-  .speaker-image1 {
-    flex: 1;
-    max-width: 36rem;
-    background: rgba(233, 233, 233, 0.03);
-    border-radius: 1.9375rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(1.1125rem);
-    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
   }
   
-  .speaker-image img {
-    border-radius: 1rem;
-    max-height: 32rem;
-  }
+  /* Video Section */
   .video-placeholder {
     width: 100%;
-    margin: 0px;
-    padding: 60px 20px;
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-   
-
-    
   }
   
   .video-container {
@@ -1192,7 +255,6 @@ footer {
     background-color: #121212;
     border-radius: 12px;
     box-shadow: 0 4px 20px #121212;
-    
   }
   
   .video-container img {
@@ -1221,57 +283,778 @@ footer {
     transition: background 0.3s ease;
   }
   
-.theme-card{
-    width:55%;
-    color: #fff;
-    padding: 24px 28px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(255, 69, 0, 0.15);
+  /* TEDx Container */
+  .tedx-container {
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    background-image: url(images/group.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    background-color: #000;
+  }
+  
+  .left-box, .right-box {
     flex: 1;
-    margin-bottom: 0; /* optional reset */
-    background: rgba(233, 233, 233, 0.03);
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+  }
+  
+  .card {
+    color: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    flex: 1;
+    background: var(--card-bg);
     border-radius: 1.75rem;
-    padding: 3rem;
     backdrop-filter: blur(1.1125rem);
     box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
                 -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-    
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: justify;
   }
-.theme-box{
+  
+  .card h2 {
+    color: #ff4500;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 20px; */
+  }
+  
+  .btn {
+    background-color: #ff4500;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .btn2-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:1px;
+    position: relative;
+    top: 0;
+  }
+  
+  .btn:hover {
+    background-color: #e03e00;
+  }
+  
+  /* Theme Section */
+  .theme-box {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    
-}
-  .theme{
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .theme-card {
+    width: 100%;
+    max-width: 800px;
+    color: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--card-bg);
+    border-radius: 1.75rem;
+    backdrop-filter: blur(1.1125rem);
+    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: justify;
+  }
+  
+  .theme {
     display: flex;
     flex-direction: column;
     color: #bbb;
     font-size: 1.6rem;
     margin-bottom: 12px;
     gap: 7px;
-    margin: 0px auto;
+    margin: 0 auto;
   }
-  .theme div{
-
+  
+  .theme div {
     color: #ff4500;
   }
-  .theme-card p{
+  
+  .theme-card p {
     margin-top: 10px;
     font-size: 1rem;
     line-height: 1.6;
   }
-  .btn-container{
+  
+  /* Speakers Section */
+  .speakers-container {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
+    /* margin: 2rem 0; */
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .speaker-card {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .speaker-card.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .speaker-info {
+    flex: 1;
+    max-width: 1000px;
+    background: var(--card-bg);
+    border-radius: 1.75rem;
+    padding: 2rem;
+    backdrop-filter: blur(1.1125rem);
+    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+  }
+  
+  .speaker-name {
+    color: var(--tedx-red);
+    font-size: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .speaker-bio {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+    list-style-type: none;
+  }
+  
+  .speaker-bio li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .speaker-bio li:before {
+    content: "•";
+    color: var(--tedx-red);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+  }
+  
+  .speaker-image {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    background: var(--card-bg);
+    border-radius: 1.9375rem;
+    padding: 1.5rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 80px;
-
+    backdrop-filter: blur(1.1125rem);
   }
-.btn1{
-    padding: 12px 28px;
-    width: 10vw;
-    height: 6.5vh;
+  
+  .speaker-image img {
+    border-radius: 1rem;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Footer */
+  footer {
+    margin: 0;
+    width: 100%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+  }
+  
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6px;
+  }
+  
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-col {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+  }
+  
+  .logo-col {
+    text-align: left;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  
+  .footer-desc {
+    font-size: 13px;
+    color: #bbb;
+    max-width: 250px;
+  }
+  
+  .links-col {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .footer-links li {
+    display: inline-block;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .footer-links a:hover {
+    color: #f44336;
+  }
+  
+  .instagram-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  
+  .instagram-text {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .instagram-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .instagram-link .instagram-logo {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .instagram-link:hover .instagram-logo {
+    transform: scale(1.1);
+  }
+  
+  .map-col {
+    text-align: center;
+  }
+  
+  .map-col iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  
+  /* Animations */
+  .hero .content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .banner-content {
+      flex-wrap: wrap;
+    }
     
+    .separator {
+      height: 2px;
+      width: 80%;
+    }
+    
+    .speaker-card {
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    h1 {
+      font-size: 32px;
+    }
+    
+    .description {
+      font-size: 20px;
+    }
+    
+    .tedx-container {
+      gap: 20px;
+    }
+    
+    .card, .theme-card {
+      padding: 20px;
+    }
+    
+    .speaker-name {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      padding: 10px 15px;
+    }
+    
+    .logo {
+      width: 120px;
+    }
+    
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 70%;
+      background-color: var(--dark-bg);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      z-index: 999;
+    }
+    
+    .nav-links.active {
+      right: 0;
+    }
+    
+    .nav-links li {
+      margin: 15px 0;
+    }
+    
+    .menu-btn {
+      display: block;
+    }
+    
+    .hero {
+      height: 80vh;
+      padding-bottom: 50px;
+    }
+    
+    .hero-logo {
+      width: 200px;
+    }
+    
+    h1 {
+      font-size: 28px;
+    }
+    
+    .description {
+      font-size: 18px;
+    }
+    
+    .btn1 {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    
+    .banner-content {
+      gap: 10px;
+    }
+    
+    .banner-item {
+      font-size: 0.9rem;
+    }
+    
+    .banner-item span {
+      font-size: 1.1rem;
+    }
+    
+    .video-placeholder {
+      padding: 30px 15px;
+    }
+    
+    .play-button {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+    }
+    
+    .left-box, .right-box {
+      width: 100%;
+    }
+    
+    .speaker-info, .speaker-image {
+      min-width: 100%;
+    }
+    
+    .speaker-card.reverse {
+      flex-direction: column;
+    }
+    
+    .speaker-card {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 8px 10px;
+    }
+    
+    .logo {
+      width: 100px;
+    }
+    
+    .hero {
+      height: 70vh;
+    }
+    
+    .hero-logo {
+      width: 150px;
+    }
+    
+    h1 {
+      font-size: 24px;
+    }
+    
+    .description {
+      font-size: 16px;
+    }
+    
+    .btn1 {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+    
+    .translucent-banner {
+      padding: 15px;
+    }
+    
+    .banner-item {
+      width: 100%;
+      padding: 5px;
+    }
+    
+    .separator {
+      width: 80%;
+      height: 1px;
+      margin: 5px 0;
+    }
+    
+    .card h2, .theme-card h2 {
+      font-size: 1.3rem;
+    }
+    
+    .card p, .theme-card p {
+      font-size: 0.9rem;
+    }
+    
+    .speaker-info {
+      padding: 1rem;
+    }
+    
+    .speaker-name {
+      font-size: 1.1rem;
+    }
+    
+    .speaker-bio {
+      font-size: 0.9rem;
+    }
+    
+    .speaker-image {
+      padding: 1rem;
+    }
+    
+    .play-button {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+    
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .footer-links li {
+      margin: 5px 0;
+    }
+  }
+  
+  /* JS Toggle for Mobile Menu */
+  .nav-links.show {
+    right: 0;
+  }
+  /* Add this at the end of your CSS file (index.css) */
+
+@media (max-width: 768px) {
+    /* Reset the hero background for mobile */
+    .hero {
+      background-image: none;
+      background-color: transparent;
+    }
+    
+    /* Make the tedx-container background apply to the entire body on mobile */
+    body {
+      background-image: url(images/group.svg);
+      background-size: cover;
+      background-position: left;
+      background-attachment: scroll;
+    }
+    
+    /* Make the tedx-container transparent to let the body background show through */
+    .tedx-container {
+      background-image: none;
+      background-color: transparent;
+    }
+    
+    /* Ensure content is visible against the background */
+    .card, .theme-card, .speaker-info, .speaker-image {
+      background: rgba(18, 18, 18, 0.7);
+      backdrop-filter: blur(5px);
+    }
+    
+    /* Add a semi-transparent overlay to the hero section for better text visibility */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(18, 18, 18, 0.6);
+      z-index: -1;
+    }
+  }
+  /* Add this to your existing CSS file (index.css) */
+
+@media (max-width: 768px) {
+    /* Adjust header to take less space */
+    header {
+      padding: 8px 15px;
+      position: absolute; /* Change from fixed to absolute */
+    }
+    
+    /* Reduce top margin for hero section */
+    .hero {
+      margin-top: 0;
+      height: auto;
+      min-height: 60vh;
+      padding-top: 60px;
+      justify-content: center; /* Center content vertically */
+    }
+    
+    /* Adjust the TEDx logo at the top */
+    .nav-left .logo {
+      width: 100px;
+    }
+    
+    /* Reduce empty space in hero content */
+    .hero .content {
+      padding-top: 0;
+    }
+    
+    /* Adjust hero logo size */
+    .hero-logo {
+      width: 180px;
+      margin-bottom: 15px;
+    }
+    
+    /* Make the translucent banner more compact */
+    .translucent-banner {
+      padding: 12px;
+      margin-top: 10px;
+    }
+    
+    /* Center align the main event information */
+    .banner-content {
+      padding: 0;
+    }
+    
+    /* Make the first section after hero more compact */
+    .tedx-container {
+      padding-top: 10px;
+    }
+    
+    /* Reduce spacing between sections */
+    .video-placeholder {
+      padding: 20px 15px;
+    }
+    
+    /* Reduce gap between speaker cards */
+    .speakers-container {
+      gap: 1.5rem;
+      margin: 1rem 0;
+    }
+  }
+  
+  /* Additional adjustments for very small screens */
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 50vh;
+      padding-top: 50px;
+    }
+    
+    .hero-logo {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+    
+    h1 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+    
+    .description {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+  /* Add this to your existing CSS file (index.css) */
+
+/* Adjust the theme box positioning */
+.theme-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left instead of center */
+    margin-top: 40px;
+    padding-left: 40px; /* Add left padding */
+  }
+  
+  .theme-card {
+    width: 100%;
+    max-width: 650px; /* Reduce max-width for better left alignment */
+    margin-left: 0; /* Ensure no auto margin on the left */
+    margin-right: auto; /* Keep right margin auto */
+    padding: 30px; /* Increase padding inside the card */
+  }
+  
+  /* Make sure the theme heading is also left-aligned */
+  .theme {
+    align-items: flex-start; /* Align theme title to the left */
+    text-align: left; /* Ensure text alignment is left */
+    margin-left: 0; /* Remove any left margin */
+  }
+  
+  /* Make the content inside the theme card left-aligned */
+  .theme-card p {
+    text-align: left; /* Left-align the paragraphs */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .theme-box {
+      padding-left: 20px; /* Less padding on smaller screens */
+    }
+    
+    .theme-card {
+      padding: 20px; /* Less padding inside the card on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .theme-box {
+      padding-left: 15px; /* Even less padding on very small screens */
+    }
+  }
+  /* Add this to your CSS file to ensure proper video display */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #121212;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
 }

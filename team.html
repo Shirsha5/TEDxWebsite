@@ -41,10 +41,9 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         font-family: "Barlow-Regular", sans-serif;
         color: white;
+        overflow-x: hidden; /* Fix for horizontal scrolling */
       }
 
       /* Header/Navbar Styles */
@@ -93,9 +92,8 @@
         font-size: 18px;
       }
       .nav-links li a:hover {
-    color: #ff2b06;
-
-  }
+        color: #ff2b06;
+      }
       .nav-link.active {
         color: red;
         font-weight: bold;
@@ -116,15 +114,18 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        width: 100%;
       }
 
       .main-content {
         flex: 1;
+        width: 100%;
       }
 
       /* Team Section Styles */
       .team-section {
-        padding: 4rem 2rem;
+        padding: 4rem 1rem; /* Reduced horizontal padding */
+        width: 100%;
         max-width: var(--max-width);
         margin: 0 auto;
         background: url("images/our team.svg") scroll no-repeat top left; /* Background image */
@@ -143,22 +144,15 @@
         position: relative;
       }
 
+      /* Updated team grid for better responsiveness */
       .team-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
         margin-top: 3rem;
+        width: 100%;
       }
-
-      /* Container for the last two cards to center them */
-      .last-two-cards {
-        display: flex;
-        justify-content: center;
-        grid-column: 1 / -1;
-        gap: 2rem;
-        margin-top: -2rem; /* Compensate for the grid gap */
-      }
-
+      
       .team-card {
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(10px);
@@ -168,7 +162,7 @@
         transition: var(--transition);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        width: 300px; /* Fixed width for consistent centering */
+        width: 100%; /* Changed to 100% for full width in container */
       }
 
       .team-card:hover {
@@ -178,8 +172,8 @@
       }
 
       .member-image {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
         object-fit: cover;
         margin: 0 auto 1.5rem;
@@ -206,10 +200,13 @@
         font-weight: 500;
       }
 
-      /* Footer Styles */
+     
 
-      /* Responsive Design */
       @media (max-width: 768px) {
+        header {
+          padding: 15px 20px;
+        }
+        
         .menu-btn {
           display: block;
         }
@@ -218,12 +215,11 @@
           display: none;
           flex-direction: column;
           position: absolute;
-          top: 60px;
-          right: 20px;
+          top: 80px;
+          left: 0;
           background: rgba(0, 0, 0, 0.9);
-          width: 200px;
+          width: 100%;
           padding: 10px;
-          border-radius: 5px;
           align-items: center;
         }
 
@@ -235,54 +231,62 @@
           margin: 10px 0;
         }
 
-        .team-grid {
-          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        }
-
         .team-title {
           font-size: 3rem;
-        }
-
-        .last-two-cards {
-          flex-direction: column;
-          align-items: center;
-          gap: 2rem;
-        }
-
-        .footer-row {
-          flex-direction: column;
           text-align: center;
         }
-
-        .logo-col,
-        .links-col,
-        .map-col {
+        
+        .team-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1.5rem;
+        }
+        
+        .footer-row {
+          flex-direction: column;
+        }
+        
+        .footer-col {
+          width: 100%;
           text-align: center;
           margin-bottom: 15px;
         }
-
-        .footer-links {
-          flex-direction: column;
-          gap: 10px;
+        
+        .logo-col .footer-desc {
+          max-width: 100%;
+          margin: 0 auto;
         }
-
+        
         .map-col iframe {
-          width: 100%;
-          height: 220px;
+          max-width: 100%;
+          height: 200px;
         }
       }
 
       @media (max-width: 576px) {
+        .team-section {
+          padding: 3rem 0.5rem;
+        }
+        
         .team-title {
           font-size: 2.5rem;
         }
 
         .team-grid {
           grid-template-columns: 1fr;
+          gap: 1.5rem;
         }
-
-        .team-card {
-          width: 100%;
+        
+        .member-image {
+          width: 150px;
+          height: 150px;
+        }
+        
+        .footer-links {
+          gap: 15px;
+        }
+        
+        .footer-links a {
+          font-size: 15px;
         }
       }
 
@@ -455,47 +459,43 @@
               <h2 class="member-name">Name: XYZ</h2>
               <p class="member-role">Role</p>
             </article>
+            
+            <!-- Team Member 10 -->
+            <article class="team-card animate delay-1">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
 
-            <br />
-
-            <!-- Container for the last two cards to center them -->
-            <div class="last-two-cards">
-              <!-- Team Member 10 -->
-              <article class="team-card animate delay-1">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
-                  alt="Team Member"
-                  class="member-image"
-                />
-                <div class="card-divider"></div>
-                <h2 class="member-name">Name: XYZ</h2>
-                <p class="member-role">Role</p>
-              </article>
-
-              <!-- Team Member 11 -->
-              <article class="team-card animate delay-2">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
-                  alt="Team Member"
-                  class="member-image"
-                />
-                <div class="card-divider"></div>
-                <h2 class="member-name">Name: XYZ</h2>
-                <p class="member-role">Role</p>
-              </article>
-            </div>
+            <!-- Team Member 11 -->
+            <article class="team-card animate delay-2">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
+                alt="Team Member"
+                class="member-image"
+              />
+              <div class="card-divider"></div>
+              <h2 class="member-name">Name: XYZ</h2>
+              <p class="member-role">Role</p>
+            </article>
           </div>
         </section>
       </main>
-    </div>
-
+      
+      <!-- Footer -->
+      
     <script>
-      // Mobile menu toggle
       fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.body.insertAdjacentHTML("beforeend", data);
-        });
+            .then(response => response.text())
+            .then(data => {
+            });
+                document.body.insertAdjacentHTML("beforeend", data);
+      // Mobile menu toggle
       const menuBtn = document.querySelector(".menu-btn");
       const navLinks = document.querySelector(".nav-links");
 
@@ -522,6 +522,8 @@
       animateElements.forEach((element) => {
         observer.observe(element);
       });
+      
+      // Set active nav link
       const links = document.querySelectorAll(".nav-link");
       const currentPage = location.pathname.split("/").pop();
 

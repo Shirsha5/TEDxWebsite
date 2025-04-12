@@ -40,9 +40,9 @@
             <img src="images/IMG_2748.PNG" alt="TEDxMITWPU Logo" class="logo hero-logo">
             <h1 id="typewriter"></h1>
             <p class="description">The invisible threads that shape us</p>
-            <div class="btn-container">
+            <div class="btn-container btn1-container">
 
-              <a href="ticket/register.html" class="btn btn1">Book now</a>
+              <a href="ticket/register.html" class="btn btn1">BOOK NOW</a>
             </div>
         </div>
     </section>
@@ -81,12 +81,28 @@
             </div>
         </div>
     
-    <section class="video-placeholder">
-        <div class="video-container">
-            <img src="images/video-thumbnail.jpg" alt="Video Placeholder" />
-            <button class="play-button">▶</button>
-        </div>
-    </section>
+        <section class="video-placeholder">
+          <div class="video-container">
+              <!-- Option 1: YouTube Embed -->
+              <!-- <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                  title="TEDxMITWPU Video" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+              </iframe> -->
+              
+              <!-- Option 2: HTML5 Video Player (Uncomment this and comment out the YouTube embed above if using your own video file) -->
+              
+              <video width="100%" height="100%" controls poster="images/video-thumbnail.jpg">
+                  <source src="videos/video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+             
+          </div>
+      </section>
           
         <div class="left-box">
           <div class="card">
@@ -99,8 +115,8 @@
             </p>
           </div>
           <!-- Know more button moved outside the card -->
-          <div class="btn-container">
-              <button class="btn btn2"onclick="window.location.href='aboutus.html'">Know more</button>
+          <div class="btn-container btn2-container">
+              <button class="btn btn2"onclick="window.location.href='aboutus.html'">Know More</button>
             </div>
         </div>
       
@@ -315,7 +331,25 @@
             link.classList.add("active");
           }
         });
-
+        const menuBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+      
+      menuBtn.addEventListener("click", function() {
+        if (navLinks.style.display === "flex") {
+          navLinks.style.display = "none";
+        } else {
+          navLinks.style.display = "flex";
+        }
+      });
+      
+      // Handle window resize to reset mobile menu state
+      window.addEventListener("resize", function() {
+        if (window.innerWidth > 768) {
+          navLinks.style.display = "flex";
+        } else {
+          navLinks.style.display = "none";
+        }
+      });
     </script>
 
 
