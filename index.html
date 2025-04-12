@@ -349,6 +349,31 @@
           navLinks.style.display = "none";
         }
       });
+
+         fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.body.insertAdjacentHTML("beforeend", data);
+        });
+        const links = document.querySelectorAll('.nav-link');
+        const currentPage = location.pathname.split("/").pop();
+
+        links.forEach(link => {
+          if(link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+        const menuBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+      
+      menuBtn.addEventListener("click", function() {
+        if (navLinks.style.display === "flex") {
+          navLinks.style.display = "none";
+        } else {
+          navLinks.style.display = "flex";
+        }
+      });
+      
     </script>
 
 
