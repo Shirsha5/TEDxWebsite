@@ -447,7 +447,7 @@
   
   .speaker-name {
     color: var(--tedx-red);
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.3;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
@@ -457,7 +457,6 @@
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.05rem;
-    list-style-type: none;
   }
   
   .speaker-bio p{
