@@ -120,11 +120,11 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: calc(50% - 780px);
+  margin-left: calc(50% - 575px);
   /* 50% center - half width + extra right */
-  top: calc(50% - 100px);
+  margin-top: auto;
   /* Adjust this value as needed */
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }
 
 .hero-logo {
@@ -154,6 +154,8 @@ h1 {
   color: white;
   border-radius: 15px;
   border: none;
+  position:relative;
+  top: 90px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
   display: flex;
