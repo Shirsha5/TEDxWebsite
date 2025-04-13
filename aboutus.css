@@ -161,7 +161,7 @@ footer {
     font-size: 16px;
 }
 
-/* Adjusted Space Between "Meet the Team" and Footer */
+/* Adjusted Space Between "Meet the Team" and    */
 .team-crew {
     margin-bottom: 80px;
     /* Slightly more space before the footer */
@@ -186,7 +186,7 @@ footer {
 
 /* Left Column (Logo & Description) */
 .footer-col {
-    flex: 1;
+    flex: flex;
     min-width: 200px;
     padding: 10px;
     box-sizing: border-box;

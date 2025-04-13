@@ -1,927 +1,1004 @@
 /* Base Styles and Variables */
 :root {
-    --tedx-red: #ff2b06;
-    --dark-bg: #121212;
-    --card-bg: rgba(233, 233, 233, 0.03);
+  --tedx-red: #ff2b06;
+  --dark-bg: #121212;
+  --card-bg: rgba(233, 233, 233, 0.03);
+}
+
+* {
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  background-color: var(--dark-bg);
+}
+
+/* Header and Navigation */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--dark-bg);
+  z-index: 1000;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--tedx-red);
+}
+
+.nav-link.active {
+  color: var(--tedx-red);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid var(--tedx-red);
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('images/Group 174.svg');
+  background-color: var(--dark-bg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 304px;
+  text-align: center;
+  position: relative;
+  /* margin-top: 60px; */
+}
+
+.content {
+  text-align: center;
+  max-width: 600px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: calc(50% - 780px);
+  /* 50% center - half width + extra right */
+  top: calc(50% - 100px);
+  /* Adjust this value as needed */
+  transform: translateY(-50%);
+}
+
+.hero-logo {
+  width: 350px;
+  height: auto;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+h1 {
+  font-size: 58px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 28px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.btn1 {
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 22px;
+  background: var(--tedx-red);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  /* Changed from inline-block */
+  justify-content: center;
+  /* Horizontally center */
+  align-items: center;
+  /* Vertically center */
+  width: 10rem;
+  height: 4rem;
+  /* Changed from 30% to fixed height for better control */
+  letter-spacing: 1.5%;
+  /* Changed from 1.5% to a valid unit */
+}
+
+
+.btn1:hover {
+  background: darkred;
+  transform: scale(1.05);
+}
+
+.btn1-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Banner */
+.translucent-banner {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.banner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
+  border: none;
+  font-weight: 500;
+  justify-content: center;
+  color: #e03e00;
+  padding: 10px;
+}
+
+.separator {
+  width: 2px;
+  background-color: #ff4b4b;
+  border-radius: 1px;
+  align-self: stretch;
+}
+
+.banner-item span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#countdown-timer {
+  color: #121212;
+}
+
+.countdown-labels {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.countdown-labels span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ff2b06;
+}
+
+/* Video Section */
+.video-placeholder {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #121212;
+}
+
+.video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  background: #121212;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+/* TEDx Container */
+.tedx-container {
+  width: 100%;
+  margin: 0;
+  padding: 20px; /* add some padding for smaller screens */
+  background-image: url(images/group.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  background-color: #000;
+  box-sizing: border-box; /* ensures padding doesn't overflow width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .tedx-container {
+    background-position: center top;
+    background-size: contain; /* or 'cover' depending on look you want */
+    gap: 30px;
   }
-  
-  * {
-    font-family: "Roboto", sans-serif !important;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-size: cover;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
+}
+
+@media (max-width: 768px) {
+  .tedx-container {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    background-color: var(--dark-bg);
+    background-size: contain;
+    gap: 20px;
   }
-  
-  /* Header and Navigation */
-  header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--dark-bg);
-    z-index: 1000;
-  }
-  
-  nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-left {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .logo {
-    width: 150px;
-    height: auto;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-left: 15px;
-  }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-  }
-  
-  .nav-links li a:hover {
-    color: var(--tedx-red);
-  }
-  
-  .nav-link.active {
-    color: var(--tedx-red);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid var(--tedx-red);
-  }
-  
-  .menu-btn {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    z-index: 1001;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background-image: url('images/Group 174.svg');
-    background-color: var(--dark-bg);
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 220px;
-    text-align: center;
-    position: relative;
-    /* margin-top: 60px; */
-  }
-  
-  .content {
-    text-align: center;
-    max-width: 600px;
-    padding: 0 20px;
-  }
-  
-  .hero-logo {
-    width: 350px;
-    height: auto;
-    display: block;
-    margin: 0 auto 8px;
-  }
-  
-  h1 {
-    font-size: 58px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .description {
-    font-size: 28px;
-    color: #ddd;
-    margin-bottom: 20px;
-  }
-  
-  .btn1 {
-    text-decoration: none;
-    margin-top: 20px;
-    font-size: 18px;
-    background: var(--tedx-red);
-    color: white;
-    border-radius: 25px;
-    border: none;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-    display: inline-block;
-    width: 10rem;
-    height: 60%;
-    letter-spacing: 1.5%;
-  }
-  
-  .btn1:hover {
-    background: darkred;
-    transform: scale(1.05);
-  }
-  .btn1-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  /* Banner */
-  .translucent-banner {
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: 20px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    position: relative;
-  }
-  
-  .banner-content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
-    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .tedx-container {
+    padding: 10px;
     gap: 15px;
   }
-  
-  .banner-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.1rem;
-    border: none;
-    font-weight: 500;
-    justify-content: center;
-    color: #e03e00;
-    padding: 10px;
-  }
-  
-  .separator {
-    width: 2px;
-    background-color: #ff4b4b;
-    border-radius: 1px;
-    align-self: stretch;
-  }
-  
-  .banner-item span {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-top: 5px;
-    letter-spacing: 0.5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  #countdown-timer {
-    color: #121212;
-  }
-  
-  .countdown-labels {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 5px;
-  }
-  
-  .countdown-labels span {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #ff2b06;
-  }
-  
-  /* Video Section */
-  .video-placeholder {
-    width: 100%;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background-color: #121212;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px #121212;
-  }
-  
-  .video-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    color: white;
-    background: #121212;
-    border: none;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
-  }
-  
-  /* TEDx Container */
-  .tedx-container {
-    width: 100%;
-    margin: 0;
-    padding: 0px;
-    background-image: url(images/group.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 40px;
-    background-color: #000;
-  }
-  
-  .left-box, .right-box {
-    flex: 1;
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 24px;
-  }
-  
-  .card {
-    color: #fff;
-    padding: 24px;
-    border-radius: 16px;
-    flex: 1;
-    background: var(--card-bg);
-    border-radius: 1.75rem;
-    backdrop-filter: blur(1.1125rem);
-    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-    width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-    text-align: justify;
-  }
-  
-  .card h2 {
-    color: #ff4500;
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-  }
-  
-  .card p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
-  .btn-container {
-    display: flex;
-    justify-content: center;
-    /* margin-top: 20px; */
-  }
-  
-  .btn {
-    background-color: #ff4500;
-    border: none;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .btn2-container{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding:1px;
-    position: relative;
-    top: 0;
-  }
-  
-  .btn:hover {
-    background-color: #e03e00;
-  }
-  
-  /* Theme Section */
-  .theme-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-  }
-  
-  .theme-card {
-    width: 100%;
-    max-width: 800px;
-    color: #fff;
-    padding: 24px;
-    border-radius: 16px;
-    background: var(--card-bg);
-    border-radius: 1.75rem;
-    backdrop-filter: blur(1.1125rem);
-    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-    text-align: justify;
-  }
-  
-  .theme {
-    display: flex;
-    flex-direction: column;
-    color: #bbb;
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-    gap: 7px;
-    margin: 0 auto;
-  }
-  
-  .theme div {
-    color: #ff4500;
-  }
-  
-  .theme-card p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
-  /* Speakers Section */
-  .speakers-container {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    /* margin: 2rem 0; */
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  .speaker-card {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .speaker-card.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .speaker-info {
-    flex: 1;
-    max-width: 1000px;
-    background: var(--card-bg);
-    border-radius: 1.75rem;
-    padding: 2rem;
-    backdrop-filter: blur(1.1125rem);
-    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
-                -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
-  }
-  
-  .speaker-name {
-    color: var(--tedx-red);
-    font-size: 2rem;
-    line-height: 1.3;
-    letter-spacing: 0.1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .speaker-bio {
-    font-size: 1rem;
-    line-height: 1.5;
-    letter-spacing: 0.05rem;
-  }
-  
-  .speaker-bio p{
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-  }
-  
-  .speaker-image {
-    flex: 1;
-    min-width: 280px;
-    max-width: 400px;
-    background: var(--card-bg);
-    border-radius: 1.9375rem;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(1.1125rem);
-  }
-  
-  .speaker-image img {
-    border-radius: 1rem;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  
-  /* Animations */
-  .hero .content {
+}
+
+
+.left-box,
+.right-box {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+}
+
+.card {
+  color: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: 1.75rem;
+  backdrop-filter: blur(1.1125rem);
+  box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+    -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: justify;
+}
+
+.card h2 {
+  color: #ff4500;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 20px; */
+}
+
+.btn {
+  background-color: #ff4500;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn2-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1px;
+  position: relative;
+  top: 0;
+}
+
+.btn:hover {
+  background-color: #e03e00;
+}
+
+/* Theme Section */
+.theme-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.theme-card {
+  width: 100%;
+  max-width: 800px;
+  color: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--card-bg);
+  border-radius: 1.75rem;
+  backdrop-filter: blur(1.1125rem);
+  box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+    -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: justify;
+}
+
+.theme {
+  display: flex;
+  flex-direction: column;
+  color: #bbb;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  gap: 7px;
+  margin: 0 auto;
+}
+
+.theme div {
+  color: #ff4500;
+}
+
+.theme-card p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Speakers Section */
+.speakers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /* margin: 2rem 0; */
+  width: 100%;
+  padding: 0 20px;
+}
+
+.speaker-card {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.speaker-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.speaker-info {
+  flex: 1;
+  max-width: 1000px;
+  background: var(--card-bg);
+  border-radius: 1.75rem;
+  padding: 2rem;
+  backdrop-filter: blur(1.1125rem);
+  box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+    -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+}
+
+.speaker-name {
+  color: var(--tedx-red);
+  font-size: 2rem;
+  line-height: 1.3;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.speaker-bio {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+}
+
+.speaker-bio p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.speaker-image {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  background: var(--card-bg);
+  border-radius: 1.9375rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(1.1125rem);
+}
+
+.speaker-image img {
+  border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Animations */
+.hero .content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeIn 1.5s ease-out forwards;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Media Queries */
-  @media (max-width: 1200px) {
-    .banner-content {
-      flex-wrap: wrap;
-    }
-    
-    .separator {
-      height: 2px;
-      width: 80%;
-    }
-    
-    .speaker-card {
-      gap: 1.5rem;
-    }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .banner-content {
+    flex-wrap: wrap;
   }
-  
-  @media (max-width: 992px) {
-    h1 {
-      font-size: 32px;
-    }
-    
-    .description {
-      font-size: 20px;
-    }
-    
-    .tedx-container {
-      gap: 20px;
-    }
-    
-    .card, .theme-card {
-      padding: 20px;
-    }
-    
-    .speaker-name {
-      font-size: 1.3rem;
-    }
+
+  .separator {
+    height: 2px;
+    width: 80%;
   }
-  
-  @media (max-width: 768px) {
-    header {
-      padding: 10px 15px;
-    }
-    
-    .logo {
-      width: 120px;
-    }
-    
-    .nav-links {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      height: 100vh;
-      width: 70%;
-      background-color: var(--dark-bg);
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: 0.5s;
-      z-index: 999;
-    }
-    
-    .nav-links.active {
-      right: 0;
-    }
-    
-    .nav-links li {
-      margin: 15px 0;
-    }
-    
-    .menu-btn {
-      display: block;
-    }
-    
-    .hero {
-      height: 80vh;
-      padding-bottom: 50px;
-    }
-    
-    .hero-logo {
-      width: 200px;
-    }
-    
-    h1 {
-      font-size: 28px;
-    }
-    
-    .description {
-      font-size: 18px;
-    }
-    
-    .btn1 {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-    
-    .banner-content {
-      gap: 10px;
-    }
-    
-    .banner-item {
-      font-size: 0.9rem;
-    }
-    
-    .banner-item span {
-      font-size: 1.1rem;
-    }
-    
-    .video-placeholder {
-      padding: 30px 15px;
-    }
-    
-    .play-button {
-      width: 60px;
-      height: 60px;
-      font-size: 24px;
-    }
-    
-    .left-box, .right-box {
-      width: 100%;
-    }
-    
-    .speaker-info, .speaker-image {
-      min-width: 100%;
-    }
-    
-    .speaker-card.reverse {
-      flex-direction: column;
-    }
-    
-    .speaker-card {
-      flex-direction: column;
-    }
-    
-  
-    .btn2-container {
-      position: relative;
-      top: bottom;
-      
-    }
-  
-    .btn2-container .btn {
-      width: 80%; /* Or adjust to preferred size */
-      text-align: center;
-    }
+
+  .speaker-card {
+    gap: 1.5rem;
   }
-  
-  @media (max-width: 480px) {
-    header {
-      padding: 8px 10px;
-    }
-    
-    .logo {
-      width: 100px;
-    }
-    
-    .hero {
-      height: 70vh;
-    }
-    
-    .hero-logo {
-      width: 150px;
-    }
-    
-    h1 {
-      font-size: 24px;
-    }
-    
-    .description {
-      font-size: 16px;
-    }
-    
-    .btn1 {
-      padding: 8px 16px;
-      font-size: 14px;
-    }
-    
-    .translucent-banner {
-      padding: 15px;
-    }
-    
-    .banner-item {
-      width: 100%;
-      padding: 5px;
-    }
-    
-    .separator {
-      width: 80%;
-      height: 1px;
-      margin: 5px 0;
-    }
-    
-    .card h2, .theme-card h2 {
-      font-size: 1.3rem;
-    }
-    
-    .card p, .theme-card p {
-      font-size: 0.9rem;
-    }
-    
-    .speaker-info {
-      padding: 1rem;
-    }
-    
-    .speaker-name {
-      font-size: 1.1rem;
-    }
-    
-    .speaker-bio {
-      font-size: 0.9rem;
-    }
-    
-    .speaker-image {
-      padding: 1rem;
-    }
-    
-    .play-button {
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
-    }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 32px;
   }
-  
-  /* JS Toggle for Mobile Menu */
-  .nav-links.show {
+
+  .description {
+    font-size: 20px;
+  }
+
+  .tedx-container {
+    gap: 20px;
+  }
+
+  .card,
+  .theme-card {
+    padding: 20px;
+  }
+
+  .speaker-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background-color: var(--dark-bg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 999;
+  }
+
+  .nav-links.active {
     right: 0;
   }
-  /* Add this at the end of your CSS file (index.css) */
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero {
+    height: 80vh;
+    padding-bottom: 50px;
+  }
+
+  .hero-logo {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .btn1 {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .banner-content {
+    gap: 10px;
+  }
+
+  .banner-item {
+    font-size: 0.9rem;
+  }
+
+  .banner-item span {
+    font-size: 1.1rem;
+  }
+
+  .video-placeholder {
+    padding: 30px 15px;
+  }
+
+  .play-button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .left-box,
+  .right-box {
+    width: 100%;
+  }
+
+  .speaker-info,
+  .speaker-image {
+    min-width: 100%;
+  }
+
+  .speaker-card.reverse {
+    flex-direction: column;
+  }
+
+  .speaker-card {
+    flex-direction: column;
+  }
+
+
+  .btn2-container {
+    position: relative;
+    top: bottom;
+
+  }
+
+  .btn2-container .btn {
+    width: 80%;
+    /* Or adjust to preferred size */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 8px 10px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-logo {
+    width: 150px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .btn1 {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .translucent-banner {
+    padding: 15px;
+  }
+
+  .banner-item {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .separator {
+    width: 80%;
+    height: 1px;
+    margin: 5px 0;
+  }
+
+  .card h2,
+  .theme-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card p,
+  .theme-card p {
+    font-size: 0.9rem;
+  }
+
+  .speaker-info {
+    padding: 1rem;
+  }
+
+  .speaker-name {
+    font-size: 1.1rem;
+  }
+
+  .speaker-bio {
+    font-size: 0.9rem;
+  }
+
+  .speaker-image {
+    padding: 1rem;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+/* JS Toggle for Mobile Menu */
+.nav-links.show {
+  right: 0;
+}
+
+/* Add this at the end of your CSS file (index.css) */
 
 @media (max-width: 768px) {
-    /* Reset the hero background for mobile */
-    .hero {
-      background-image: none;
-      background-color: transparent;
-    }
-    
-    /* Make the tedx-container background apply to the entire body on mobile */
-    body {
-      background-image: url(images/group.svg);
-      background-size: cover;
-      background-position: left;
-      background-attachment: scroll;
-    }
-    
-    /* Make the tedx-container transparent to let the body background show through */
-    .tedx-container {
-      background-image: none;
-      background-color: transparent;
-    }
-    
-    /* Ensure content is visible against the background */
-    .card, .theme-card, .speaker-info, .speaker-image {
-      background: rgba(18, 18, 18, 0.7);
-      backdrop-filter: blur(5px);
-    }
-    
-    /* Add a semi-transparent overlay to the hero section for better text visibility */
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(18, 18, 18, 0.6);
-      z-index: -1;
-    }
+
+  /* Reset the hero background for mobile */
+  .hero {
+    background-image: none;
+    background-color: transparent;
   }
-  /* Add this to your existing CSS file (index.css) */
+
+  /* Make the tedx-container background apply to the entire body on mobile */
+  body {
+    background-image: url(images/group.svg);
+    background-size: cover;
+    background-position: left;
+    background-attachment: scroll;
+  }
+
+  /* Make the tedx-container transparent to let the body background show through */
+  .tedx-container {
+    background-image: none;
+    background-color: transparent;
+  }
+
+  /* Ensure content is visible against the background */
+  .card,
+  .theme-card,
+  .speaker-info,
+  .speaker-image {
+    background: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(5px);
+  }
+
+  /* Add a semi-transparent overlay to the hero section for better text visibility */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.6);
+    z-index: -1;
+  }
+}
+
+/* Add this to your existing CSS file (index.css) */
 
 @media (max-width: 768px) {
-    /* Adjust header to take less space */
-    header {
-      padding: 8px 15px;
-      position: absolute; /* Change from fixed to absolute */
-    }
-    
-    /* Reduce top margin for hero section */
-    .hero {
-      margin-top: 0;
-      height: auto;
-      min-height: 60vh;
-      padding-top: 60px;
-      justify-content: center; /* Center content vertically */
-    }
-    
-    /* Adjust the TEDx logo at the top */
-    .nav-left .logo {
-      width: 100px;
-    }
-    
-    /* Reduce empty space in hero content */
-    .hero .content {
-      padding-top: 0;
-    }
-    
-    /* Adjust hero logo size */
-    .hero-logo {
-      width: 180px;
-      margin-bottom: 15px;
-    }
-    
-    /* Make the translucent banner more compact */
-    .translucent-banner {
-      padding: 12px;
-      margin-top: 10px;
-    }
-    
-    /* Center align the main event information */
-    .banner-content {
-      padding: 0;
-    }
-    
-    /* Make the first section after hero more compact */
-    .tedx-container {
-      padding-top: 10px;
-    }
-    
-    /* Reduce spacing between sections */
-    .video-placeholder {
-      padding: 20px 15px;
-    }
-    
-    /* Reduce gap between speaker cards */
-    .speakers-container {
-      gap: 1.5rem;
-      margin: 1rem 0;
-    }
+
+  /* Adjust header to take less space */
+  header {
+    padding: 8px 15px;
+    position: absolute;
+    /* Change from fixed to absolute */
   }
-  
-  /* Additional adjustments for very small screens */
-  @media (max-width: 480px) {
-    .hero {
-      min-height: 50vh;
-      padding-top: 50px;
-    }
-    
-    .hero-logo {
-      width: 150px;
-      margin-bottom: 10px;
-    }
-    
-    h1 {
-      font-size: 22px;
-      margin-bottom: 5px;
-    }
-    
-    .description {
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
+
+  /* Reduce top margin for hero section */
+  .hero {
+    margin-top: 0;
+    height: auto;
+    min-height: 60vh;
+    padding-top: 60px;
+    justify-content: center;
+    /* Center content vertically */
   }
-  /* Add this to your existing CSS file (index.css) */
+
+  /* Adjust the TEDx logo at the top */
+  .nav-left .logo {
+    width: 100px;
+  }
+
+  /* Reduce empty space in hero content */
+  .hero .content {
+    padding-top: 0;
+  }
+
+  /* Adjust hero logo size */
+  .hero-logo {
+    width: 180px;
+    margin-bottom: 15px;
+  }
+
+  /* Make the translucent banner more compact */
+  .translucent-banner {
+    padding: 12px;
+    margin-top: 10px;
+  }
+
+  /* Center align the main event information */
+  .banner-content {
+    padding: 0;
+  }
+
+  /* Make the first section after hero more compact */
+  .tedx-container {
+    padding-top: 10px;
+  }
+
+  /* Reduce spacing between sections */
+  .video-placeholder {
+    padding: 20px 15px;
+  }
+
+  /* Reduce gap between speaker cards */
+  .speakers-container {
+    gap: 1.5rem;
+    margin: 1rem 0;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 50vh;
+    padding-top: 50px;
+  }
+
+  .hero-logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Add this to your existing CSS file (index.css) */
 
 /* Adjust the theme box positioning */
 .theme-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align to the left instead of center */
-    margin-top: 40px;
-    padding-left: 40px; /* Add left padding */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align to the left instead of center */
+  margin-top: 40px;
+  padding-left: 40px;
+  /* Add left padding */
+}
+
+.theme-card {
+  width: 100%;
+  max-width: 650px;
+  /* Reduce max-width for better left alignment */
+  margin-left: 0;
+  /* Ensure no auto margin on the left */
+  margin-right: auto;
+  /* Keep right margin auto */
+  padding: 30px;
+  /* Increase padding inside the card */
+}
+
+/* Make sure the theme heading is also left-aligned */
+.theme {
+  align-items: flex-start;
+  /* Align theme title to the left */
+  text-align: left;
+  /* Ensure text alignment is left */
+  margin-left: 0;
+  /* Remove any left margin */
+}
+
+/* Make the content inside the theme card left-aligned */
+.theme-card p {
+  text-align: left;
+  /* Left-align the paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .theme-box {
+    padding-left: 20px;
+    /* Less padding on smaller screens */
   }
-  
+
   .theme-card {
-    width: 100%;
-    max-width: 650px; /* Reduce max-width for better left alignment */
-    margin-left: 0; /* Ensure no auto margin on the left */
-    margin-right: auto; /* Keep right margin auto */
-    padding: 30px; /* Increase padding inside the card */
+    padding: 20px;
+    /* Less padding inside the card on mobile */
   }
-  
-  /* Make sure the theme heading is also left-aligned */
-  .theme {
-    align-items: flex-start; /* Align theme title to the left */
-    text-align: left; /* Ensure text alignment is left */
-    margin-left: 0; /* Remove any left margin */
+}
+
+@media (max-width: 480px) {
+  .theme-box {
+    padding-left: 15px;
+    /* Even less padding on very small screens */
   }
-  
-  /* Make the content inside the theme card left-aligned */
-  .theme-card p {
-    text-align: left; /* Left-align the paragraphs */
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .theme-box {
-      padding-left: 20px; /* Less padding on smaller screens */
-    }
-    
-    .theme-card {
-      padding: 20px; /* Less padding inside the card on mobile */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .theme-box {
-      padding-left: 15px; /* Even less padding on very small screens */
-    }
-  }
-  /* Add this to your CSS file to ensure proper video display */
+}
+
+/* Add this to your CSS file to ensure proper video display */
 .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background-color: #121212;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .video-container iframe,
 .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
 }
 
 /* By default, show desktop button and hide mobile button */
@@ -933,135 +1010,23 @@
 .mobile-btn {
   display: none;
 }
- 
-footer {
-  margin: 0px;
-  padding: 2px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  background: #1a1a1a;
-  color: #fff;
-  padding: 15px 0;
-  font-size: 16px;
-}
+
 
 .team-crew {
   margin-bottom: 80px;
 }
 
-.footer-container {
-  width: 100%;
-  margin: 0px;
-  padding: 6px;
-  
-}
-
-.footer-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.footer-col {
-  flex: flex;
-  min-width: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-}
 
 .logo-col {
   text-align: left;
 }
 
-.footer-logo {
-  width: 150px;
-  height: auto;
-  margin-bottom: 8px;
-}
-
-.footer-desc {
-  font-size: 13px;
-  color: #bbb;
-  max-width: 250px;
-}
 
 .links-col {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-  flex-wrap: nowrap;
-  margin-left: 300px;
-}
-
-.footer-links li {
-  display: inline-block;
-  white-space: nowrap;
-}
-
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
-  transition: color 0.3s ease;
-  white-space: nowrap;
-}
-
-.footer-links a:hover {
-  color: #f44336;
-}
-
-.instagram-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4px;
-}
-
-.instagram-text {
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.instagram-icons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-
-.instagram-link {
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
-}
-
-.instagram-logo {
-  width: 24px;
-  height: 24px;
-  margin-top: 5px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.instagram-link:hover .instagram-logo {
-  transform: scale(1.1);
 }
 
 
@@ -1083,43 +1048,33 @@ footer {
     font-size: 15px;
     padding: 10px 0;
   }
+
   .left-box,
   .right-box {
-    margin: 0 auto; /* Center the boxes on mobile */
-    padding: 8px; /* consistent gap between cards inside the boxes */
+    margin: 0 auto;
+    /* Center the boxes on mobile */
+    padding: 8px;
+    /* consistent gap between cards inside the boxes */
   }
 
 
   .card {
-    margin: 0 
+    margin: 0
   }
 }
+
 @media (max-width: 768px) {
-  .logo-col,.instagram-col{
-    position: relative;
-    left:50px;
-  }
-  
-  .footer-links {
-    padding-top: 4px;
-    position: relative;
-    right:50%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 14px; /* Spacing between grid items */
-    justify-items: start; /* Align links to the left */
-  }
 
-  
-
-  .footer-links a {
-    /* justify-items: flex-start; */
-    font-size: 14px; /* Adjust font size for smaller screens */
+  .logo-col{
+    position: relative;
+    left: 50px;
   }
 }
-.speakers-container{
+
+.speakers-container {
   padding-bottom: 12px;
 }
+
 header {
   width: 100%;
   position: fixed;
@@ -1159,19 +1114,24 @@ nav {
 .nav-links li {
   margin-left: 20px;
 }
+
 .nav-links li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
 }
+
 .nav-links li a:hover {
   color: #ff2b06;
 }
+
 .nav-link.active {
   color: red;
   font-weight: bold;
-  border-bottom: 2px solid red; /* Optional underline */
+  border-bottom: 2px solid red;
+  /* Optional underline */
 }
+
 .menu-btn {
   display: none;
   font-size: 1.5rem;
@@ -1179,3 +1139,116 @@ nav {
   color: white;
   z-index: 1100;
 }
+
+
+      /* Footer Styles */
+      footer {
+        width: 100%;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 15px 0;
+        font-size: 16px;
+        margin-top: auto;
+      }
+
+      .footer-container {
+        width: 85%;
+        margin: auto;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-col {
+        flex: 1;
+        padding: 5px;
+      }
+
+      .logo-col {
+        text-align: left;
+      }
+
+      .footer-logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 8px;
+      }
+
+      .footer-desc {
+        font-size: 13px;
+        color: #bbb;
+        max-width: 250px;
+      }
+
+      .links-col {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 25px;
+      }
+
+      .footer-links li {
+        display: inline;
+      }
+
+      .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: #f44336;
+      }
+
+      .map-col {
+        text-align: right;
+      }
+
+      .map-col iframe {
+        width: 400px;
+        height: 250px;
+        border-radius: 8px;
+      }
+
+      
+
+      @media (max-width: 768px) {
+        .logo-col,.instagram-col{
+          position: relative;
+          left:50px;
+          }
+          
+        .footer-links {
+          padding-top: 4px;
+          position: relative;
+          right:50%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+          gap: 14px; /* Spacing between grid items */
+          justify-items: start; /* Align links to the left */
+        }
+      
+        
+      
+        .footer-links a {
+          /* justify-items: flex-start; */
+          font-size: 14px; /* Adjust font size for smaller screens */
+        }
+      }
+      
