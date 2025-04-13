@@ -13,7 +13,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
+<script>
+  let text = "Threads of Identity"; // The text to be typed
+let index = 0; // Start at the first letter
 
+function typeWriter() {
+    if (index < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(index);
+        index++; // Move to the next character
+        setTimeout(typeWriter, 100); // Wait 100ms before typing next letter
+    }
+}
+
+window.onload = function () {
+    typeWriter(); // Start typing when the page loads
+};
+</script>
 
 </head>
 
@@ -41,7 +56,9 @@
 
     <div class="content">
       <img src="images/IMG_2748.PNG" alt="TEDxMITWPU Logo" class="logo hero-logo">
-      <h1 id="typewriter"></h1>
+      <div class="hero-text">
+        <h1 id="typewriter"></h1>
+      </div>
       <p class="description">The invisible threads that shape us</p>
       <!-- <div class="btn1-container"> -->
       <a href="ticket/register.html" class="btn1"><b>BOOK NOW</b></a>
