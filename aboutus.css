@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #1a1a1a;
     background-image: url('images/About us .svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -28,7 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #121212;
+    background: #1a1a1a;
     z-index: 1000;
   }
 
@@ -684,7 +684,7 @@ footer {
     
     /* Footer responsive */
     footer {
-        width: 100%;
+        width: 87%;
         padding: 15px;
         box-sizing: border-box;
     }
@@ -768,7 +768,7 @@ footer {
     padding: 2px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 87%;
     background: #1a1a1a;
     color: #fff;
     padding: 15px 0;
