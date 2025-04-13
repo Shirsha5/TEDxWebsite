@@ -333,7 +333,7 @@
   }
   
   .card p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
   }
   
@@ -408,7 +408,7 @@
   
   .theme-card p {
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
   }
   
@@ -460,17 +460,8 @@
     list-style-type: none;
   }
   
-  .speaker-bio li {
-    margin-bottom: 0.8rem;
-    position: relative;
-    padding-left: 1.5rem;
-  }
-  
-  .speaker-bio li:before {
-    content: "•";
-    color: var(--tedx-red);
-    position: absolute;
-    left: 0;
+  .speaker-bio p{
+    margin: 0.5rem 0;
     font-size: 1.2rem;
   }
   
