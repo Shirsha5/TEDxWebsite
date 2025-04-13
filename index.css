@@ -187,7 +187,19 @@ h1 {
   align-items: center;
   padding: 0 20px;
 }
-
+@media(min-width:1088px){
+  .btn1{
+    top:78px;
+    right:25px;
+  }
+  
+}
+@media (min-width:1920px){
+  .btn1{
+    top:78px;
+    right:25px;
+  }
+}
 /* Banner */
 .translucent-banner {
   width: 100%;
@@ -1349,8 +1361,14 @@ footer {
   }
 }
 .hero-logo {
-  width: 200px;
+  width: 300px;
   height: auto;
   display: block;
   margin: 0 auto 8px;
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 200px;
+  }
 }
