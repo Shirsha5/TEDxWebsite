@@ -1252,3 +1252,58 @@ nav {
         }
       }
       
+  /* Fix for mobile header and hero content alignment */
+@media (max-width: 768px) {
+  /* Fix header alignment */
+  header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .nav-left {
+    margin-left: 0;
+  }
+  
+  /* Center hero content */
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  
+  .hero .content {
+    position: static;
+    transform: none;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-logo {
+    margin: 0 auto 15px;
+  }
+  
+  h1, .description {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Center the booking button */
+  .btn1 {
+    margin: 20px auto 0;
+  }
+  
+}
