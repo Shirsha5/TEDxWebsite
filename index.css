@@ -1378,3 +1378,43 @@ footer {
 #typewriter{
   font-size: 65px;
 }
+
+/*btn1 media*/
+  @media (max-width: 600px) {
+    .btn1 {
+      width: 100%;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .btn1 {
+      width: 90%;
+      font-size: 0.85rem;
+      padding: 10px 16px;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    .btn1 {
+      width: 70%;
+      font-size: 0.95rem;
+      padding: 12px 20px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .btn1 {
+      width: 50%;
+      font-size: 1rem;
+      padding: 14px 24px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .btn1 {
+      width: 10rem; /* your default */
+      font-size: 1.1rem;
+    }
+  }
