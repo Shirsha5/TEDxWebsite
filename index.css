@@ -96,9 +96,9 @@ nav {
 
 /* Hero Section */
 .hero {
-  background-image: url('images/Group 174.svg');
+  background-image: url('images/home_1.jpg');
   background-color: var(--dark-bg);
-  background-size: auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
