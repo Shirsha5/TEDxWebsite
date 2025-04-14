@@ -1199,6 +1199,78 @@ footer {
     }
   }
 
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Fix the footer links margin for better centering */
+.footer-links {
+    margin-left: 0;
+    justify-content: center;
+}
+
+/* Make sure mobile adjustments maintain full width */
+@media screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        margin-right: 50%;
+        flex-direction: column;
+    }
+    
+    .footer-container {
+        width: 100%;
+        
+    }
+    
+    .logo-col, .instagram-col {
+        position: relative;
+        left: 0;
+        text-align: center;
+
+    }
+    
+    .footer-links {
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+        margin-left: 70px;
+    }
+    /* .logo-col{
+      position: relative;
+      top: 30px;
+    }
+    .instagram-col{
+      position: relative;
+      top: 20px;
+      right: 30px;
+    } */
+    .copyright {
+        position: relative;
+        left:45px;
+        text-align: center;
+    }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
       /* Header/Navbar Styles */
       header {
