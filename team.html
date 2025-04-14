@@ -1,50 +1,795 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TEDxMITWPU - Our Team</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Barlow:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      :root {
-        --primary: #ff2b06;
-        --secondary: #19191a;
-        --light: #ffffff;
-        --dark: #131314;
-        --gray: #e7e7e7;
-        --header-bg: #282828;
-        --card-bg: rgba(233, 233, 233, 0.03);
-        --max-width: 1200px;
-        --section-padding: 4rem 2rem;
-        --card-radius: 2rem;
-        --transition: all 0.3s ease;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEDxMITWPU - Our Team</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Barlow:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #ff2b06;
+      --secondary: #19191a;
+      --light: #ffffff;
+      --dark: #131314;
+      --gray: #e7e7e7;
+      --header-bg: #282828;
+      --card-bg: rgba(233, 233, 233, 0.03);
+      --max-width: 1200px;
+      --section-padding: 4rem 2rem;
+      --card-radius: 2rem;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      /* Fallback color */
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: "Barlow-Regular", sans-serif;
+      color: white;
+      overflow-x: hidden;
+      /* Fix for horizontal scrolling */
+    }
+
+    /* Header/Navbar Styles */
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1a1a1a;
+      z-index: 1000;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .logo {
+      width: 180px;
+      height: 60px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .nav-links li a:hover {
+      color: #ff2b06;
+    }
+
+    .nav-link.active {
+      color: red;
+      font-weight: bold;
+      border-bottom: 2px solid red;
+      /* Optional underline */
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+      z-index: 1100;
+    }
+
+    /* Main Content Styles */
+    .page-container {
+      padding-top: 90px;
+      /* To account for fixed header */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .main-content {
+      flex: 1;
+      width: 100%;
+    }
+
+    /* Team Section Styles */
+    .team-section {
+      padding: 4rem 1rem;
+      /* Reduced horizontal padding */
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: url("images/our team.svg") scroll no-repeat top left;
+      /* Background image */
+      background-size: contain;
+      /* Ensures the image covers the section */
+      position: relative;
+      /* Ensure proper positioning */
+    }
+
+    .team-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 4rem;
+      text-align: left;
+      margin-bottom: 3rem;
+      color: var(--light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+    }
+
+    /* Updated team grid for better responsiveness */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    .team-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: var(--card-radius);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      /* Changed to 100% for full width in container */
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .member-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      border: 3px solid var(--primary);
+    }
+
+    .card-divider {
+      height: 2px;
+      background: var(--primary);
+      margin: 1rem auto;
+      width: 80%;
+    }
+
+    .member-name {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      color: var(--light);
+      margin-bottom: 0.5rem;
+    }
+
+    .member-role {
+      font-size: 1rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
       }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+      .menu-btn {
+        display: block;
       }
 
-      body {
-        background-color: #1a1a1a; /* Fallback color */
-        min-height: 100vh;
-        width: 100%;
-        display: flex;
+      .nav-links {
+        display: none;
         flex-direction: column;
-        font-family: "Barlow-Regular", sans-serif;
-        color: white;
-        overflow-x: hidden; /* Fix for horizontal scrolling */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 10px;
+        align-items: center;
       }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .team-title {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+
+
+
+      .map-col iframe {
+        max-width: 100%;
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .team-section {
+        padding: 3rem 0.5rem;
+      }
+
+      .team-title {
+        font-size: 2.5rem;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .member-image {
+        width: 150px;
+        height: 150px;
+      }
+
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-4 {
+      animation-delay: 0.8s;
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #121212;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+
+
+      .logo-col {
+        text-align: center;
+      }
+
+
+      .links-col {
+        order: 3;
+      }
+
+
+      .team-crew {
+        margin-bottom: 80px;
+      }
+
+
+      .logo-col {
+        text-align: left;
+      }
+
+
+      .links-col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo-col {
+        position: relative;
+        left: 50px;
+      }
+
+    }
+
+
+
+    /* Footer Styles */
+    footer {
+      width: 100%;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 15px 0;
+      font-size: 16px;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      width: 85%;
+      margin: auto;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      flex: 1;
+      padding: 5px;
+    }
+
+    .logo-col {
+      text-align: left;
+    }
+
+    .footer-logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      color: #bbb;
+      max-width: 250px;
+    }
+
+    .links-col {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 25px;
+    }
+
+    .footer-links li {
+      display: inline;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #f44336;
+    }
+
+    .map-col {
+      text-align: right;
+    }
+
+    .map-col iframe {
+      width: 400px;
+      height: 250px;
+      border-radius: 8px;
+    }
+
+
+
+
+    /* Footer responsive styles */
+    @media (max-width: 992px) {
+      .footer-row {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .footer-col {
+        text-align: center;
+        width: 100%;
+      }
+
+      .logo-col {
+        text-align: center;
+      }
+
+      .footer-desc {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .map-col {
+        text-align: center;
+      }
+
+      .map-col iframe {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    footer {
+      margin: 0px;
+      padding: 2px;
+      display: flex;
+      justify-content: space-between;
+      width: 87%;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 15px 0;
+      font-size: 16px;
+    }
+
+    .team-crew {
+      margin-bottom: 80px;
+    }
+
+    .footer-container {
+      width: 80%;
+      margin: 0px;
+      padding: 6px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      flex: flex;
+      min-width: 200px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .logo-col {
+      text-align: left;
+    }
+
+    .footer-logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      color: #bbb;
+      max-width: 250px;
+    }
+
+    .links-col {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      flex-wrap: nowrap;
+      margin-left: 300px;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .footer-links a:hover {
+      color: #f44336;
+    }
+
+    .instagram-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4px;
+    }
+
+    .instagram-text {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .instagram-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .instagram-link {
+      text-decoration: none;
+      display: inline-block;
+      color: #fff;
+    }
+
+    .instagram-logo {
+      width: 24px;
+      height: 24px;
+      margin-top: 5px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .instagram-link:hover .instagram-logo {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+
+      .logo-col,
+      .instagram-col {
+        position: relative;
+        left: 50px;
+      }
+
+      .footer-links {
+        padding-top: 4px;
+        position: relative;
+        right: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on mobile */
+        gap: 14px;
+        /* Spacing between grid items */
+        justify-items: start;
+        /* Align links to the left */
+      }
+
+
+
+      .footer-links a {
+        /* justify-items: flex-start; */
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
+      }
+    }
+          
+@media screen and (max-width: 768px) {
+    .about-heading {
+        font-size: 2.5rem;
+        margin-top: 80px;
+    }
+    
+    .intro-info {
+        padding: 2rem;
+    }
+    
+    .intro-name {
+        font-size: 1.5rem;
+    }
+    
+    /* Navbar responsive */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #121212;
+        padding: 20px 0;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+  }
+
 
       /* Header/Navbar Styles */
       header {
@@ -108,100 +853,6 @@
         z-index: 1100;
       }
 
-      /* Main Content Styles */
-      .page-container {
-        padding-top: 90px; /* To account for fixed header */
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .main-content {
-        flex: 1;
-        width: 100%;
-      }
-
-      /* Team Section Styles */
-      .team-section {
-        padding: 4rem 1rem; /* Reduced horizontal padding */
-        width: 100%;
-        max-width: var(--max-width);
-        margin: 0 auto;
-        background: url("images/our team.svg") scroll no-repeat top left; /* Background image */
-        background-size: contain; /* Ensures the image covers the section */
-        position: relative; /* Ensure proper positioning */
-      }
-
-      .team-title {
-        font-family: "Montserrat", sans-serif;
-        font-size: 4rem;
-        text-align: left;
-        margin-bottom: 3rem;
-        color: var(--light);
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        position: relative;
-      }
-
-      /* Updated team grid for better responsiveness */
-      .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-        width: 100%;
-      }
-      
-      .team-card {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border-radius: var(--card-radius);
-        padding: 2rem;
-        text-align: center;
-        transition: var(--transition);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        width: 100%; /* Changed to 100% for full width in container */
-      }
-
-      .team-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .member-image {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 0 auto 1.5rem;
-        border: 3px solid var(--primary);
-      }
-
-      .card-divider {
-        height: 2px;
-        background: var(--primary);
-        margin: 1rem auto;
-        width: 80%;
-      }
-
-      .member-name {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.5rem;
-        color: var(--light);
-        margin-bottom: 0.5rem;
-      }
-
-      .member-role {
-        font-size: 1rem;
-        color: var(--gray);
-        font-weight: 500;
-      }
-
-     
-
       @media (max-width: 768px) {
         header {
           padding: 15px 20px;
@@ -230,670 +881,304 @@
         .nav-links li {
           margin: 10px 0;
         }
-
-        .team-title {
-          font-size: 3rem;
-          text-align: center;
-        }
-        
-        .team-grid {
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 1.5rem;
-        }
-        
-       
-        
-        
-        .map-col iframe {
-          max-width: 100%;
-          height: 200px;
-        }
       }
-
-      @media (max-width: 576px) {
-        .team-section {
-          padding: 3rem 0.5rem;
-        }
-        
-        .team-title {
-          font-size: 2.5rem;
-        }
-
-        .team-grid {
-          grid-template-columns: 1fr;
-          gap: 1.5rem;
-        }
-        
-        .member-image {
-          width: 150px;
-          height: 150px;
-        }
-        
-      }
-
-      /* Animation */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate {
-        animation: fadeIn 0.8s ease forwards;
-      }
-
-      .delay-1 {
-        animation-delay: 0.2s;
-      }
-      .delay-2 {
-        animation-delay: 0.4s;
-      }
-      .delay-3 {
-        animation-delay: 0.6s;
-      }
-      .delay-4 {
-        animation-delay: 0.8s;
-      }
-      @media screen and (max-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #121212;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  .nav-left {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between; /* Makes logo on left, button on right */
-  }
-
-  .menu-btn {
-    display: block;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #121212;
-    padding-bottom: 20px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  .nav-links li a {
-    color: white;
-    padding: 10px 0;
-    text-decoration: none;
-    position: relative;
-  }
-
-  .nav-links li a.active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: red; /* underline color */
-  }
-}
-@media screen and (max-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #121212;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  .nav-left {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between; /* Makes logo on left, button on right */
-  }
-
-  .menu-btn {
-    display: block;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #1a1a1a;
-    padding-bottom: 20px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  .nav-links li a {
-    color: white;
-    padding: 10px 0;
-    text-decoration: none;
-    position: relative;
-  }
-
-  .nav-links li a.active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: red; /* underline color */
-  }
-
-    
-    .logo-col {
-        text-align: center;
-    }
-
-    
-    .links-col {
-        order: 3;
-    }
-
-
-    .team-crew {
-        margin-bottom: 80px;
-    }
-
-
-    .logo-col {
-        text-align: left;
-    }
-
-
-    .links-col {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-  .logo-col{
-    position: relative;
-    left:50px;
-  }
-
-}
-
-
-
-      /* Footer Styles */
-      footer {
-        width: 100%;
-        background: #1a1a1a;
-        color: #fff;
-        padding: 15px 0;
-        font-size: 16px;
-        margin-top: auto;
-      }
-
-      .footer-container {
-        width: 85%;
-        margin: auto;
-      }
-
-      .footer-row {
+      
+    @media screen and (max-width: 768px) {
+      header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
       }
 
-      .footer-col {
-        flex: 1;
-        padding: 5px;
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
       }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #121212;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+
+
+      .logo-col {
+        text-align: center;
+      }
+
+
+      .links-col {
+        order: 3;
+      }
+
+
+      .team-crew {
+        margin-bottom: 80px;
+      }
+
 
       .logo-col {
         text-align: left;
       }
 
-      .footer-logo {
-        width: 150px;
-        height: auto;
-        margin-bottom: 8px;
-      }
-
-      .footer-desc {
-        font-size: 13px;
-        color: #bbb;
-        max-width: 250px;
-      }
 
       .links-col {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-      }
-
-      .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        gap: 25px;
-      }
-
-      .footer-links li {
-        display: inline;
-      }
-
-      .footer-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: 600;
-        transition: color 0.3s ease;
-      }
-
-      .footer-links a:hover {
-        color: #f44336;
-      }
-
-      .map-col {
-        text-align: right;
-      }
-
-      .map-col iframe {
-        width: 400px;
-        height: 250px;
-        border-radius: 8px;
-      }
-
-      
-
-      
-/* Footer responsive styles */
-@media (max-width: 992px) {
-  .footer-row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .footer-col {
-    text-align: center;
-    width: 100%;
-  }
-  
-  .logo-col {
-    text-align: center;
-  }
-  
-  .footer-desc {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  
-  .map-col {
-    text-align: center;
-  }
-  
-  .map-col iframe {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-footer {
-        margin: 0px;
-        padding: 2px;
-        display: flex;
-        justify-content: space-between;
-        width: 87%;
-        background: #1a1a1a;
-        color: #fff;
-        padding: 15px 0;
-        font-size: 16px;
-    }
-
-    .team-crew {
-        margin-bottom: 80px;
-    }
-
-    .footer-container {
-        width: 80%;
-        margin: 0px;
-        padding: 6px;
-    }
-
-    .footer-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .footer-col {
-        flex: flex;
-        min-width: 200px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .logo-col {
-        text-align: left;
-    }
-
-    .footer-logo {
-        width: 150px;
-        height: auto;
-        margin-bottom: 8px;
-    }
-
-    .footer-desc {
-        font-size: 13px;
-        color: #bbb;
-        max-width: 250px;
-    }
-
-    .links-col {
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      .logo-col {
+        position: relative;
+        left: 50px;
+      }
+
     }
+  </style>
+</head>
 
-    .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-        flex-wrap: nowrap;
-        margin-left: 300px;
-    }
-
-    .footer-links li {
-        display: inline-block;
-        white-space: nowrap;
-    }
-
-    .footer-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: 600;
-        transition: color 0.3s ease;
-        white-space: nowrap;
-    }
-
-    .footer-links a:hover {
-        color: #f44336;
-    }
-
-    .instagram-col {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 4px;
-    }
-
-    .instagram-text {
-        font-size: 16px;
-        color: #fff;
-        margin-bottom: 10px;
-    }
-
-    .instagram-icons {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .instagram-link {
-        text-decoration: none;
-        display: inline-block;
-        color: #fff;
-    }
-
-    .instagram-logo {
-        width: 24px;
-        height: 24px;
-        margin-top: 5px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .instagram-link:hover .instagram-logo {
-        transform: scale(1.1);
-    }
-@media (max-width: 768px) {
-  .logo-col,.instagram-col{
-    position: relative;
-    left:50px;
-    }
-    
-  .footer-links {
-    padding-top: 4px;
-    position: relative;
-    right:50%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 14px; /* Spacing between grid items */
-    justify-items: start; /* Align links to the left */
-  }
-
-  
-
-  .footer-links a {
-    /* justify-items: flex-start; */
-    font-size: 14px; /* Adjust font size for smaller screens */
-  }
-}
-
-    </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <nav>
-          <div class="nav-left">
-              <a href="index.html" class="logo-link">
-                  <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
-              </a>
-          </div>
-          <ul class="nav-links">
-              <li><a href="index.html" class="nav-link">Home</a></li>
-              <li><a href="aboutus.html"class="nav-link">About Us</a></li>
-              <li><a href="team.html"class="nav-link">Team</a></li>
-              <li><a href="pastevent.html"class="nav-link">Past Events</a></li>
-              <li><a href="contact.html"class="nav-link">Contact Us</a></li>
-              <li><a href="guidelines.html"class="nav-link">Guidelines</a></li>
-              <li><a href="brochure.pdf"class="nav-link">Brochure</a></li>
-          </ul>
-          <div class="menu-btn">☰</div>
-      </nav>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="logo-link">
+          <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="guidelines.html" class="nav-link">Guidelines</a></li>
+        <li><a href="brochure.pdf" class="nav-link">Brochure</a></li>
+      </ul>
+      <div class="menu-btn">☰</div>
+    </nav>
   </header>
 
-    <!-- Main Content -->
-    <div class="page-container">
-      <main class="main-content">
-        <section class="team-section">
-          <h1 class="team-title animate">Our Team</h1>
-          <div class="team-grid">
-            <!-- Team Member 1 -->
-            <article class="team-card animate delay-1">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+  <!-- Main Content -->
+  <div class="page-container">
+    <main class="main-content">
+      <section class="team-section">
+        <h1 class="team-title animate">Our Team</h1>
+        <div class="team-grid">
+          <!-- Team Member 1 -->
+          <article class="team-card animate delay-1">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 2 -->
-            <article class="team-card animate delay-2">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+          <!-- Team Member 2 -->
+          <article class="team-card animate delay-2">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 3 -->
-            <article class="team-card animate delay-3">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+          <!-- Team Member 3 -->
+          <article class="team-card animate delay-3">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 4 -->
-            <article class="team-card animate delay-1">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+          <!-- Team Member 4 -->
+          <article class="team-card animate delay-1">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 5 -->
-            <article class="team-card animate delay-2">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+          <!-- Team Member 5 -->
+          <article class="team-card animate delay-2">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 6 -->
-            <article class="team-card animate delay-3">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+          <!-- Team Member 6 -->
+          <article class="team-card animate delay-3">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 7 -->
-            <article class="team-card animate delay-1">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+          <!-- Team Member 7 -->
+          <article class="team-card animate delay-1">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 8 -->
-            <article class="team-card animate delay-2">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+          <!-- Team Member 8 -->
+          <article class="team-card animate delay-2">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57ad0028e05cc7fdc0d40236f690e113d8a9a850"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 9 -->
-            <article class="team-card animate delay-3">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-            
-            <!-- Team Member 10 -->
-            <article class="team-card animate delay-1">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
+          <!-- Team Member 9 -->
+          <article class="team-card animate delay-3">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
 
-            <!-- Team Member 11 -->
-            <article class="team-card animate delay-2">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
-                alt="Team Member"
-                class="member-image"
-              />
-              <div class="card-divider"></div>
-              <h2 class="member-name">Name: XYZ</h2>
-              <p class="member-role">Role</p>
-            </article>
-          </div>
-        </section>
-      </main>
-      
-      <!-- Footer -->
-      
+          <!-- Team Member 10 -->
+          <article class="team-card animate delay-1">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
+
+          <!-- Team Member 11 -->
+          <article class="team-card animate delay-2">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e763a871a1ace3af1d1ec9b639612cb8b06e7eef"
+              alt="Team Member" class="member-image" />
+            <div class="card-divider"></div>
+            <h2 class="member-name">Name: XYZ</h2>
+            <p class="member-role">Role</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
     <script>
       fetch("footer.html")
         .then((response) => response.text())
@@ -901,7 +1186,7 @@ footer {
           document.body.insertAdjacentHTML("beforeend", data);
         });
       // Mobile menu toggle
-      
+
 
       // Animation on scroll
       const animateElements = document.querySelectorAll(".animate");
@@ -922,33 +1207,34 @@ footer {
       animateElements.forEach((element) => {
         observer.observe(element);
       });
-      
+
       // Set active nav link
       const links = document.querySelectorAll('.nav-link');
-        const currentPage = location.pathname.split("/").pop();
+      const currentPage = location.pathname.split("/").pop();
 
-        links.forEach(link => {
-          if(link.getAttribute("href") === currentPage) {
-            link.classList.add("active");
-          }
-        });
-        
-        
-  const menuBtn = document.querySelector(".menu-btn");
-  const navLinks = document.querySelector(".nav-links");
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
 
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-      navLinks.classList.remove("active");
-      navLinks.style.display = "flex";
-    } else {
-      navLinks.style.display = "";
-    }
-  });
+      const menuBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          navLinks.classList.remove("active");
+          navLinks.style.display = "flex";
+        } else {
+          navLinks.style.display = "";
+        }
+      });
     </script>
-  </body>
+</body>
+
 </html>
