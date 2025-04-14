@@ -8,13 +8,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="aboutus.css" />
+    <!-- <link rel="stylesheet" href="aboutus.css" /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
       body {
+        width: 100%;
         font-family: "Roboto", sans-serif;
         color: #ffffff;
         margin: 0;
@@ -150,12 +151,14 @@
         margin: 0px;
         padding: 2px;
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
         width: 87%;
         background: #1a1a1a;
         color: #fff;
         padding: 15px 0;
         font-size: 16px;
+        text-align: center;
+        
       }
 
       .team-crew {
@@ -585,8 +588,157 @@
         position: relative;
         left: 50px;
       }
+      .footer-links a{
+        position: relative;
+        right: 220px;
+      }
+      .footer-links{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+      }
+      .logo-col img{
+        position: relative;
+        left: 50px;
+      }
+      .footer-desc{
+        position: relative;
+        left: 10px;
+      }
 
     }
+    footer{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .footer-links{
+        position: relative;
+        right: -50%;
+    }
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+
+
+      .logo-col {
+        text-align: center;
+      }
+
+
+      .links-col {
+        order: 3;
+      }
+
+
+      .team-crew {
+        margin-bottom: 80px;
+      }
+
+
+      .logo-col {
+        text-align: left;
+      }
+      .footer-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        left: 110px;
+        
+      }
+
+      /* .links-col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }*/
+      .footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .footer-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .logo-col {
+        position: relative;
+        left: 50px;
+      }
+      
+      
+    }
+    
     </style>
   </head>
 
