@@ -296,6 +296,102 @@
           font-size: 14px; /* Adjust font size for smaller screens */
         }
       }
+      @media screen and (max-width: 768px) {
+    /* Make image appear before text in mobile view for all cards */
+    .intro-card {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    
+    .intro-card.reverse {
+        flex-direction: column-reverse;
+    }
+    
+    /* Footer links in single column instead of grid */
+    .footer-links {
+        padding-top: 4px;
+        position: relative;
+        right: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        justify-items: start;
+    }
+    
+    .footer-links li {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Fix footer width and centering */
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Fix the footer links margin for better centering */
+.footer-links {
+    margin-left: 180px;
+    justify-content: center;
+}
+
+/* Make sure mobile adjustments maintain full width */
+@media screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+    }
+    
+    .footer-container {
+        width: 95%;
+    }
+    
+    .logo-col, .instagram-col {
+        position: relative;
+        left: 0;
+        text-align: center;
+    }
+    
+    .footer-links {
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+        margin-right: 50%;
+    }
+    .copyright {
+        position: relative;
+        right: 33px;
+    }
+}
+
+
     </style>
   </head>
 

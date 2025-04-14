@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Add this meta tag inside the <head> section of your HTML file -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>TEDxMITWPU | Past Edition</title>
     <style>
       /* Reset and Base Styles */
@@ -109,9 +112,8 @@
         font-size: 18px;
       }
       .nav-links li a:hover {
-    color: #ff2b06;
-
-  }
+        color: #ff2b06;
+      }
       .nav-link.active {
         color: red;
         font-weight: bold;
@@ -125,8 +127,6 @@
         color: white;
         z-index: 1100;
       }
-
-      
 
       /* Hero Section */
       .hero-section {
@@ -376,8 +376,6 @@
         border-radius: 8px;
       }
 
-      
-
       /* Decorative Elements */
       .decorative-vector {
         position: absolute;
@@ -396,293 +394,299 @@
       }
       /* Add these responsive styles to your existing CSS */
 
-/* Add these responsive styles to your existing CSS to fix laptop size issues and mobile gap */
+      /* Add these responsive styles to your existing CSS to fix laptop size issues and mobile gap */
 
-/* Base styles to make content more appropriately sized on standard laptops */
-@media screen and (min-width: 1024px) {
-  .main-container {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 3.5rem;
-  }
-  
-  .hero-description {
-    font-size: 1.25rem;
-  }
-  
-  .section-title {
-    font-size: 4rem;
-  }
-  
-  .speaker-name {
-    font-size: 1.75rem;
-  }
-  
-  .speaker-bio {
-    font-size: 1.25rem;
-  }
-  
-  .speaker-card {
-    gap: 3rem;
-  }
-}
+      /* Base styles to make content more appropriately sized on standard laptops */
+      @media screen and (min-width: 1024px) {
+        .main-container {
+          max-width: 90%;
+          margin: 0 auto;
+        }
 
-/* Tablet styles */
-@media (max-width: 992px) {
-  .main-container {
-    width: 100%;
-    padding: 0 1.5rem;
-    overflow-x: hidden; /* Fix for right side gap */
-  }
-  
-  body {
-    overflow-x: hidden; /* Fix for right side gap */
-    width: 100%;
-  }
-  
-  header {
-    padding: 15px 30px;
-    width: 100%;
-  }
-  
-  .logo {
-    width: 150px;
-    height: 50px;
-  }
-  
-  .nav-links li {
-    margin-left: 15px;
-  }
-  
-  .nav-links li a {
-    font-size: 16px;
-  }
-  
-  .hero-section {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 3rem;
-  }
-  
-  .hero-description {
-    font-size: 1.25rem;
-  }
-  
-  .speaker-card {
-    gap: 2rem;
-    width: 100%;
-  }
-  
-  .speaker-name {
-    font-size: 1.75rem;
-  }
-  
-  .speaker-bio {
-    font-size: 1.25rem;
-  }
-  
-  .section-title {
-    font-size: 3.5rem;
-    margin: 4rem 0 2rem;
-  }
-}
+        .hero-title {
+          font-size: 3rem;
+        }
 
-/* Mobile landscape styles */
-@media (max-width: 768px) {
-  html, body {
-    overflow-x: hidden;
-    position: relative;
-    width: 100%;
-  }
-  
-  header {
-    padding: 12px 20px;
-  }
-  
-  .menu-btn {
-    display: block;
-  }
-  
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 70%;
-    background: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: var(--transition);
-    padding: 2rem;
-    z-index: 1001;
-  }
-  
-  .nav-links.active {
-    right: 0;
-  }
-  
-  .nav-links li {
-    margin: 1.5rem 0;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .nav-links li a {
-    font-size: 1.25rem;
-  }
-  
-  .hero-title {
-    font-size: 2.25rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 2.5rem;
-  }
-  
-  .hero-description {
-    font-size: 1.125rem;
-  }
-  
-  .speaker-card {
-    flex-direction: column-reverse !important;
-    gap: 1.5rem;
-  }
-  
-  .speaker-card.reverse {
-    flex-direction: column-reverse !important;
-  }
-  
-  .speaker-image, .speaker-image1 {
-    max-width: 100%;
-  }
-  
-  .section-title {
-    font-size: 2.75rem;
-    text-align: center;
-    margin: 3rem 0 2rem;
-  }
-  
-  .hero-content, .speaker-info {
-    padding: 1.75rem;
-  }
-  
-  .speaker-name {
-    font-size: 1.5rem;
-  }
-  
-  .speaker-bio {
-    font-size: 1.125rem;
-  }
-}
+        .hero-subtitle {
+          font-size: 3.5rem;
+        }
 
-/* Mobile portrait styles */
-@media (max-width: 576px) {
-  body {
-    background-size: contain;
-  }
-  
-  .main-container {
-    padding: 0 1rem;
-  }
-  
-  header {
-    padding: 10px 15px;
-  }
-  
-  .logo {
-    width: 120px;
-    height: 40px;
-  }
-  
-  .hero-title {
-    font-size: 1.75rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 2rem;
-  }
-  
-  .hero-description {
-    font-size: 1rem;
-  }
-  
-  .section-title {
-    font-size: 2.25rem;
-  }
-  
-  .hero-content, .speaker-info {
-    padding: 1.5rem;
-    border-radius: 1.5rem;
-  }
-  
-  .hero-image, .speaker-image, .speaker-image1 {
-    padding: 1rem;
-    border-radius: 1.5rem;
-  }
-  
-  .speaker-name {
-    font-size: 1.25rem;
-  }
-  
-  .speaker-bio {
-    font-size: 1rem;
-  }
-  
-  .speaker-bio li {
-    padding-left: 1.5rem;
-  }
-  
-  .decorative-vector {
-    display: none; /* Hide vectors on small screens to improve performance */
-  }
-}
+        .hero-description {
+          font-size: 1.25rem;
+        }
 
-/* Footer responsive styles */
-@media (max-width: 992px) {
-  .footer-row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .footer-col {
-    text-align: center;
-    width: 100%;
-  }
-  
-  .logo-col {
-    text-align: center;
-  }
-  
-  .footer-desc {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  
-  .map-col {
-    text-align: center;
-  }
-  
-  .map-col iframe {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-footer {
+        .section-title {
+          font-size: 4rem;
+        }
+
+        .speaker-name {
+          font-size: 1.75rem;
+        }
+
+        .speaker-bio {
+          font-size: 1.25rem;
+        }
+
+        .speaker-card {
+          gap: 3rem;
+        }
+      }
+
+      /* Tablet styles */
+      @media (max-width: 992px) {
+        .main-container {
+          width: 100%;
+          padding: 0 1.5rem;
+          overflow-x: hidden; /* Fix for right side gap */
+        }
+
+        body {
+          overflow-x: hidden; /* Fix for right side gap */
+          width: 100%;
+        }
+
+        header {
+          padding: 15px 30px;
+          width: 100%;
+        }
+
+        .logo {
+          width: 150px;
+          height: 50px;
+        }
+
+        .nav-links li {
+          margin-left: 15px;
+        }
+
+        .nav-links li a {
+          font-size: 16px;
+        }
+
+        .hero-section {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 3rem;
+        }
+
+        .hero-description {
+          font-size: 1.25rem;
+        }
+
+        .speaker-card {
+          gap: 2rem;
+          width: 100%;
+        }
+
+        .speaker-name {
+          font-size: 1.75rem;
+        }
+
+        .speaker-bio {
+          font-size: 1.25rem;
+        }
+
+        .section-title {
+          font-size: 3.5rem;
+          margin: 4rem 0 2rem;
+        }
+      }
+
+      /* Mobile landscape styles */
+      @media (max-width: 768px) {
+        html,
+        body {
+          overflow-x: hidden;
+          position: relative;
+          width: 100%;
+        }
+
+        header {
+          padding: 12px 20px;
+        }
+
+        .menu-btn {
+          display: block;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          height: 100vh;
+          width: 70%;
+          background: rgba(0, 0, 0, 0.9);
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: var(--transition);
+          padding: 2rem;
+          z-index: 1001;
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .nav-links li {
+          margin: 1.5rem 0;
+          width: 100%;
+          text-align: center;
+        }
+
+        .nav-links li a {
+          font-size: 1.25rem;
+        }
+
+        .hero-title {
+          font-size: 2.25rem;
+        }
+
+        .hero-subtitle {
+          font-size: 2.5rem;
+        }
+
+        .hero-description {
+          font-size: 1.125rem;
+        }
+
+        .speaker-card {
+          flex-direction: column-reverse !important;
+          gap: 1.5rem;
+        }
+
+        .speaker-card.reverse {
+          flex-direction: column-reverse !important;
+        }
+
+        .speaker-image,
+        .speaker-image1 {
+          max-width: 100%;
+        }
+
+        .section-title {
+          font-size: 2.75rem;
+          text-align: center;
+          margin: 3rem 0 2rem;
+        }
+
+        .hero-content,
+        .speaker-info {
+          padding: 1.75rem;
+        }
+
+        .speaker-name {
+          font-size: 1.5rem;
+        }
+
+        .speaker-bio {
+          font-size: 1.125rem;
+        }
+      }
+
+      /* Mobile portrait styles */
+      @media (max-width: 576px) {
+        body {
+          background-size: contain;
+        }
+
+        .main-container {
+          padding: 0 1rem;
+        }
+
+        header {
+          padding: 10px 15px;
+        }
+
+        .logo {
+          width: 120px;
+          height: 40px;
+        }
+
+        .hero-title {
+          font-size: 1.75rem;
+        }
+
+        .hero-subtitle {
+          font-size: 2rem;
+        }
+
+        .hero-description {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 2.25rem;
+        }
+
+        .hero-content,
+        .speaker-info {
+          padding: 1.5rem;
+          border-radius: 1.5rem;
+        }
+
+        .hero-image,
+        .speaker-image,
+        .speaker-image1 {
+          padding: 1rem;
+          border-radius: 1.5rem;
+        }
+
+        .speaker-name {
+          font-size: 1.25rem;
+        }
+
+        .speaker-bio {
+          font-size: 1rem;
+        }
+
+        .speaker-bio li {
+          padding-left: 1.5rem;
+        }
+
+        .decorative-vector {
+          display: none; /* Hide vectors on small screens to improve performance */
+        }
+      }
+
+      /* Footer responsive styles */
+      @media (max-width: 992px) {
+        .footer-row {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .footer-col {
+          text-align: center;
+          width: 100%;
+        }
+
+        .logo-col {
+          text-align: center;
+        }
+
+        .footer-desc {
+          max-width: 100%;
+          margin: 0 auto;
+        }
+
+        .map-col {
+          text-align: center;
+        }
+
+        .map-col iframe {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+      footer {
         margin: 0px;
         padding: 2px;
         display: flex;
@@ -692,56 +696,56 @@ footer {
         color: #fff;
         padding: 15px 0;
         font-size: 16px;
-    }
+      }
 
-    .team-crew {
+      .team-crew {
         margin-bottom: 80px;
-    }
+      }
 
-    .footer-container {
+      .footer-container {
         width: 80%;
         margin: 0px;
         padding: 6px;
-    }
+      }
 
-    .footer-row {
+      .footer-row {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
-    }
+      }
 
-    .footer-col {
+      .footer-col {
         flex: flex;
         min-width: 200px;
         padding: 10px;
         box-sizing: border-box;
-    }
+      }
 
-    .logo-col {
+      .logo-col {
         text-align: left;
-    }
+      }
 
-    .footer-logo {
+      .footer-logo {
         width: 150px;
         height: auto;
         margin-bottom: 8px;
-    }
+      }
 
-    .footer-desc {
+      .footer-desc {
         font-size: 13px;
         color: #bbb;
         max-width: 250px;
-    }
+      }
 
-    .links-col {
+      .links-col {
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+      }
 
-    .footer-links {
+      .footer-links {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -750,92 +754,183 @@ footer {
         gap: 25px;
         flex-wrap: nowrap;
         margin-left: 300px;
-    }
+      }
 
-    .footer-links li {
+      .footer-links li {
         display: inline-block;
         white-space: nowrap;
-    }
+      }
 
-    .footer-links a {
+      .footer-links a {
         color: #fff;
         text-decoration: none;
         font-size: 17px;
         font-weight: 600;
         transition: color 0.3s ease;
         white-space: nowrap;
-    }
+      }
 
-    .footer-links a:hover {
+      .footer-links a:hover {
         color: #f44336;
-    }
+      }
 
-    .instagram-col {
+      .instagram-col {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 4px;
-    }
+      }
 
-    .instagram-text {
+      .instagram-text {
         font-size: 16px;
         color: #fff;
         margin-bottom: 10px;
-    }
+      }
 
-    .instagram-icons {
+      .instagram-icons {
         display: flex;
         gap: 10px;
         align-items: center;
         justify-content: center;
-    }
+      }
 
-    .instagram-link {
+      .instagram-link {
         text-decoration: none;
         display: inline-block;
         color: #fff;
-    }
+      }
 
-    .instagram-logo {
+      .instagram-logo {
         width: 24px;
         height: 24px;
         margin-top: 5px;
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
+      }
 
-    .instagram-link:hover .instagram-logo {
+      .instagram-link:hover .instagram-logo {
         transform: scale(1.1);
-    }
-@media (max-width: 768px) {
-  .logo-col,.instagram-col{
-    position: relative;
-    left:50px;
-  }
-  
-  .footer-links {
-    padding-top: 4px;
-    position: relative;
-    right:50%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 14px; /* Spacing between grid items */
-    justify-items: start; /* Align links to the left */
-  }
+      }
+      @media (max-width: 768px) {
+        .logo-col,
+        .instagram-col {
+          position: relative;
+          left: 50px;
+        }
 
-  
+        .footer-links {
+          padding-top: 4px;
+          position: relative;
+          right: 50%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+          gap: 14px; /* Spacing between grid items */
+          justify-items: start; /* Align links to the left */
+        }
 
-  .footer-links a {
-    /* justify-items: flex-start; */
-    font-size: 14px; /* Adjust font size for smaller screens */
-  }
-}
+        .footer-links a {
+          /* justify-items: flex-start; */
+          font-size: 14px; /* Adjust font size for smaller screens */
+        }
+      }
 
+      @media screen and (max-width: 768px) {
+        /* Make image appear before text in mobile view for all cards */
+        .intro-card {
+          flex-direction: column-reverse;
+          gap: 2rem;
+        }
 
-      
+        .intro-card.reverse {
+          flex-direction: column-reverse;
+        }
 
+        /* Footer links in single column instead of grid */
+        .footer-links {
+          padding-top: 4px;
+          position: relative;
+          right: 50%;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          justify-items: start;
+        }
+
+        .footer-links li {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      /* Fix footer width and centering */
+      footer {
+        width: 100%;
+        margin: 0;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: #1a1a1a;
+        color: #fff;
+        font-size: 16px;
+      }
+
+      .footer-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      /* Fix the footer links margin for better centering */
+      .footer-links {
+        margin-left: 180px;
+        justify-content: center;
+      }
+
+      /* Make sure mobile adjustments maintain full width */
+      @media screen and (max-width: 768px) {
+        footer {
+          width: 100%;
+        }
+
+        .footer-container {
+          width: 95%;
+        }
+
+        .logo-col,
+        .instagram-col {
+          position: relative;
+          left: 0;
+          text-align: center;
+        }
+
+        .footer-links {
+          right: 0;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          align-items: center;
+          margin-right: 50%;
+        }
+        .copyright {
+          position: relative;
+          right: 33px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1113,7 +1208,7 @@ footer {
     </div>
 
     <!-- Footer -->
-   
+
     <!-- Decorative Vectors -->
     <img class="decorative-vector vector-1" src="vector0.svg" alt="" />
     <img class="decorative-vector vector-2" src="vector1.svg" alt="" />
@@ -1144,24 +1239,24 @@ footer {
       // const links = document.querySelectorAll('.nav-link');
       //   const currentPage = location.pathname.split("/").pop();
 
-        links.forEach(link => {
-          if(link.getAttribute("href") === currentPage) {
-            link.classList.add("active");
-          }
-        });
+      links.forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
       //   const menuBtn = document.querySelector(".menu-btn");
       // const navLinks = document.querySelector(".nav-links");
-      
-      menuBtn.addEventListener("click", function() {
+
+      menuBtn.addEventListener("click", function () {
         if (navLinks.style.display === "flex") {
           navLinks.style.display = "none";
         } else {
           navLinks.style.display = "flex";
         }
       });
-      
+
       // Handle window resize to reset mobile menu state
-      window.addEventListener("resize", function() {
+      window.addEventListener("resize", function () {
         if (window.innerWidth > 768) {
           navLinks.style.display = "flex";
         } else {
