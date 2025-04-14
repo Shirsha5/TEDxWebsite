@@ -1714,3 +1714,210 @@ footer {
     }
 
   }
+  footer {
+    background-color: #1a1a1a;
+    padding: 30px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .footer-container {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-col {
+    flex: 1;
+    margin: 15px;
+    min-width: 200px;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+    position: relative;
+    left: -200px;
+  }
+  
+  .footer-desc {
+    color: #bbb;
+    font-size: 14px;
+    position: relative;
+    left: -200px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    right: -40px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-links a:hover {
+    color: var(--tedx-red);
+  }
+  .instagram-col{
+    position: relative;
+    left: -200px;
+
+  }
+  
+  .instagram-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-logo{
+      left: 60px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .instagram-col{
+     
+      left: 50px;
+    }
+    .footer-desc{
+      left: -30px;
+    }
+    .copyrigth{
+      margin-left: 50px;
+    }
+  }
+  
+  .speakers-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5rem;
+    margin: 2rem 0;
+  }
+
+  .speaker-card {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .speaker-card.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .speaker-info {
+    flex: 1;
+    background: rgba(233, 233, 233, 0.03);
+    border-radius: 1.75rem;
+    padding: 3rem;
+    backdrop-filter: blur(1.1125rem);
+    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+      -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+  }
+
+  .speaker-name {
+    color: #ff2b06;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.1875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .speaker-bio {
+    font-size: 1.75rem;
+    line-height: 1.7;
+    letter-spacing: 0.0625rem;
+  }
+
+  .speaker-bio li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .speaker-bio li:before {
+    content: "•";
+    color: #ff2b06;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+  }
+
+  .speaker-image {
+    flex: 1;
+    max-width: 36rem;
+    background: rgba(233, 233, 233, 0.03);
+    border-radius: 1.9375rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1.1125rem);
+  }
+
+  .speaker-image1 {
+    flex: 1;
+    max-width: 36rem;
+    background: rgba(233, 233, 233, 0.03);
+    border-radius: 1.9375rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1.1125rem);
+    box-shadow: 0.125rem 0.125rem 0.0625rem 0 rgba(229, 229, 233, 0.25),
+      -0.125rem -0.125rem 0.0625rem 0 rgba(228, 226, 226, 0.25);
+  }
+
+  .speaker-image img {
+    border-radius: 1rem;
+    max-height: 32rem;
+  }
+  @media (max-width: 768px) {
+    .speaker-card,
+    .speaker-card.reverse {
+      flex-direction: column-reverse; /* Stack vertically */
+    }
+  
+    .speaker-image,
+    .speaker-info {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .speaker-info {
+      padding: 1.5rem;
+    }
+  
+    .speaker-image img {
+      max-width: 90%;
+      height: auto;
+    }
+  }
+  
