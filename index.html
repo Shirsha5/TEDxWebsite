@@ -13,22 +13,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-<script>
-  let text = "Threads of Identity"; // The text to be typed
-let index = 0; // Start at the first letter
+  <script>
+    let text = "Threads of Identity"; // The text to be typed
+    let index = 0; // Start at the first letter
 
-function typeWriter() {
-    if (index < text.length) {
+    function typeWriter() {
+      if (index < text.length) {
         document.getElementById("typewriter").innerHTML += text.charAt(index);
         index++; // Move to the next character
         setTimeout(typeWriter, 100); // Wait 100ms before typing next letter
+      }
     }
-}
 
-window.onload = function () {
-    typeWriter(); // Start typing when the page loads
-};
-</script>
+    window.onload = function () {
+      typeWriter(); // Start typing when the page loads
+    };
+  </script>
 
 </head>
 
@@ -74,7 +74,7 @@ window.onload = function () {
         </div>
         <div class="separator"></div>
         <div class="banner-item">
-          <span id="countdown-timer"><b>00 : 00 : 00 : 00</b></span>
+          <span id="countdown-timer" style="color: white;"><b>00 : 00 : 00 : 00</b></span>
           <div class="countdown-labels">
             <span>DAYS</span>
             <span>HRS</span>
@@ -246,7 +246,7 @@ window.onload = function () {
         <div class="speaker-info">
           <h3 class="speaker-name">TO BE REVEALED SOON</h3>
           <ul class="speaker-bio">
-            
+
           </ul>
         </div>
         <div class="speaker-image">
@@ -259,7 +259,7 @@ window.onload = function () {
         <div class="speaker-info">
           <h3 class="speaker-name">TO BE REVEALED SOON</h3>
           <ul class="speaker-bio">
-           
+
           </ul>
         </div>
         <div class="speaker-image">
@@ -272,7 +272,7 @@ window.onload = function () {
         <div class="speaker-info">
           <h3 class="speaker-name">TO BE REVEALED SOON</h3>
           <ul class="speaker-bio">
-            
+
           </ul>
         </div>
         <div class="speaker-image">
@@ -285,7 +285,7 @@ window.onload = function () {
         <div class="speaker-info">
           <h3 class="speaker-name">TO BE REVEALED SOON</h3>
           <ul class="speaker-bio">
-            
+
           </ul>
         </div>
         <div class="speaker-image">
@@ -295,8 +295,6 @@ window.onload = function () {
     </div>
   </section>
   <style>
-    
-
     /* Mobile View */
     @media (max-width: 768px) {
       .nav-links {
@@ -320,279 +318,380 @@ window.onload = function () {
       }
     }
 
-    
 
-      /* Footer Styles */
-      footer {
-        width: 92%;
-        background: #1a1a1a;
-        color: #fff;
-        padding: 15px 0;
-        font-size: 16px;
-        margin-top: auto;
-      }
-
-      .footer-container {
-        width: 60%;
-        margin: auto;
-      }
-
-      .footer-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .footer-col {
-        flex: 1;
-        padding: 5px;
-      }
-
-      .logo-col {
-        text-align: left;
-      }
-
-      .footer-logo {
-        width: 150px;
-        height: auto;
-        margin-bottom: 8px;
-      }
-
-      .footer-desc {
-        font-size: 13px;
-        color: #bbb;
-        max-width: 250px;
-      }
-
-      .links-col {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-      }
-
-      .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        gap: 25px;
-      }
-
-      .footer-links li {
-        display: inline;
-      }
-
-      .footer-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: 600;
-        transition: color 0.3s ease;
-      }
-
-      .footer-links a:hover {
-        color: #f44336;
-      }
-
-      .map-col {
-        text-align: right;
-      }
-
-      .map-col iframe {
-        width: 400px;
-        height: 250px;
-        border-radius: 8px;
-      }
-
-      
-
-      
-/* Footer responsive styles */
-@media (max-width: 992px) {
-  .footer-row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .footer-col {
-    text-align: center;
-    width: 100%;
-  }
-  
-  .logo-col {
-    text-align: center;
-  }
-  
-  .footer-desc {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  
-  .map-col {
-    text-align: center;
-  }
-  
-  .map-col iframe {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-footer {
-        margin: 0px;
-        padding: 2px;
-        display: flex;
-        justify-content: space-between;
-        width: 87%;
-        background: #1a1a1a;
-        color: #fff;
-        padding: 15px 0;
-        font-size: 16px;
-    }
-
-    .team-crew {
-        margin-bottom: 80px;
+    /* Footer Styles */
+    footer {
+      width: 92%;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 15px 0;
+      font-size: 16px;
+      margin-top: auto;
     }
 
     .footer-container {
-        width: 80%;
-        margin: 0px;
-        padding: 6px;
+      width: 60%;
+      margin: auto;
     }
 
     .footer-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    /* * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .tedx-container {
+      width: 100vw;
+      background-color: black;
+      padding: 20px;
+      background-image: url(images/group.svg); /* Use a valid image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      /* outline: 3px solid red; Debug border to see full width */
+    } */
+
+    @media (max-width: 1298px) {
+      .tedx-container {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 20px 10px;
+      }
+    }
     .footer-col {
-        flex: flex;
-        min-width: 200px;
-        padding: 10px;
-        box-sizing: border-box;
+      flex: 1;
+      padding: 5px;
     }
 
     .logo-col {
-        text-align: left;
+      text-align: left;
     }
 
     .footer-logo {
-        width: 150px;
-        height: auto;
-        margin-bottom: 8px;
+      width: 150px;
+      height: auto;
+      margin-bottom: 8px;
     }
 
     .footer-desc {
-        font-size: 13px;
-        color: #bbb;
-        max-width: 250px;
+      font-size: 13px;
+      color: #bbb;
+      max-width: 250px;
     }
 
     .links-col {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
     }
 
     .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-        flex-wrap: nowrap;
-        margin-left: 300px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 25px;
     }
 
     .footer-links li {
-        display: inline-block;
-        white-space: nowrap;
+      display: inline;
     }
 
     .footer-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: 600;
-        transition: color 0.3s ease;
-        white-space: nowrap;
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     .footer-links a:hover {
-        color: #f44336;
+      color: #f44336;
+    }
+
+    .map-col {
+      text-align: right;
+    }
+
+    .map-col iframe {
+      width: 400px;
+      height: 250px;
+      border-radius: 8px;
+    }
+
+
+
+
+    /* Footer responsive styles */
+    @media (max-width: 999px) {
+      .footer-row {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .footer-col {
+        text-align: center;
+        width: 100%;
+      }
+
+      .logo-col {
+        text-align: center;
+      }
+
+      .footer-desc {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .map-col {
+        text-align: center;
+      }
+
+      .map-col iframe {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    footer {
+      margin: 0px;
+      padding: 2px;
+      display: flex;
+      justify-content: space-between;
+      width: 87%;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 15px 0;
+      font-size: 16px;
+    }
+
+    .team-crew {
+      margin-bottom: 80px;
+    }
+
+    .footer-container {
+      width: 80%;
+      margin: 0px;
+      padding: 6px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      flex: flex;
+      min-width: 200px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .logo-col {
+      text-align: left;
+    }
+/*  */
+    .footer-logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      color: #bbb;
+      max-width: 250px;
+    }
+
+    .links-col {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      flex-wrap: nowrap;
+      margin-left: 300px;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .footer-links a:hover {
+      color: #f44336;
+    }
+
+    .instagram-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4px;
+    }
+
+    .instagram-text {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .instagram-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .instagram-link {
+      text-decoration: none;
+      display: inline-block;
+      color: #fff;
+    }
+
+    .instagram-logo {
+      width: 24px;
+      height: 24px;
+      margin-top: 5px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .instagram-link:hover .instagram-logo {
+      transform: scale(1.1);
+    }
+    @media (max-width: 1316px) {
+    .logo-col {
+        text-align: center;
+        margin-left: 175px;
+    }
+}
+
+/* For screens smaller than 1316px */
+@media (max-width: 1316px) {
+    .footer-row {
+        flex-direction: column;         /* Aligning items vertically */
+        justify-content: center;        /* Centering the items vertically */
+        align-items: center;            /* Centering the items horizontally */
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 30px;
+        /* width: 100%;                    Make columns full-width */
+    }
+
+    .links-col {
+        flex: 0 0 100%;                 /* Make the links column smaller */
+    }
+    
+    .instagram-icons a {
+        margin: 0 8px;
+    }
+}
+/* For screens smaller than 1316px */
+@media (max-width: 1316px) {
+    .footer-row {
+      margin-left: -60px;
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;      /* Center the footer columns horizontally */
+        text-align: center;
     }
 
     .instagram-col {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 4px;
+        flex-direction: column;   /* Stack the content vertically */
+        align-items: center;      /* Center the content horizontally */
+        margin-bottom: 20px;   
+        
+        margin-left: 200px;   /* Add some space below */
     }
 
     .instagram-text {
+        margin-bottom: 15px;
         font-size: 16px;
-        color: #fff;
-        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
     }
+
 
     .instagram-icons {
         display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
+        justify-content: center;  /* Center the icons */
     }
 
-    .instagram-link {
-        text-decoration: none;
-        display: inline-block;
-        color: #fff;
+    .instagram-icons a {
+        margin: 0 10px;           /* Space between icons */
     }
+}
 
-    .instagram-logo {
-        width: 24px;
-        height: 24px;
-        margin-top: 5px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .instagram-link:hover .instagram-logo {
-        transform: scale(1.1);
-    }
+/* For screens smaller than 768px */
 @media (max-width: 768px) {
-  .logo-col,.instagram-col{
-    position: relative;
-    left:50px;
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    
-  .footer-links {
-    padding-top: 4px;
-    position: relative;
-    right:50%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 14px; /* Spacing between grid items */
-    justify-items: start; /* Align links to the left */
-    overflow: hidden; /* Prevent overflow */
-    width: 100%; /* Make sure it takes up full width */
-  }
 
-  .footer-container {
-    padding: 10px 20px; /* Adjust padding for mobile view */
-  }
+    .footer-col {
+        margin-bottom: 30px;
+    }
 
-  .footer-links a {
-    /* justify-items: flex-start; */
-    font-size: 14px; /* Adjust font size for smaller screens */
-  }
+    .instagram-icons a {
+        margin: 0 8px;
+    }
+}
+@media (max-width: 1210px) {
+    .footer-col {
+        margin-left: 10px; /* or any value that fits your layout */
+    }
+    .instagram-col{
+        margin-left: 220px; /* or any value that fits your layout */
+    }
 }
 
   </style>
