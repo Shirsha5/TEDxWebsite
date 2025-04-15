@@ -1,0 +1,2131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEDxMITWPU - Threads of Identity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index1.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=calendar_month" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <script>
+    let text = "Threads of Identity"; // The text to be typed
+    let index = 0; // Start at the first letter
+
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(index);
+        index++; // Move to the next character
+        setTimeout(typeWriter, 100); // Wait 100ms before typing next letter
+      }
+    }
+
+    window.onload = function () {
+      typeWriter(); // Start typing when the page loads
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="logo-link">
+          <img src="images/tedxlogowhite.png" alt="TEDxMITWPU Logo" class="logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="guidelines.html" class="nav-link">Guidelines</a></li>
+        <li><a href="brochure.pdf" class="nav-link">Brochure</a></li>
+      </ul>
+      <div class="menu-btn">☰</div>
+    </nav>
+  </header>
+  <section class="hero">
+    <svg class="threads-bg" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg">
+        <path class="flow-thread t1" d="M0,400 C360,300 720,500 1080,400 C1260,350 1440,380 1440,380" />
+        <path class="flow-thread t2" d="M0,500 C300,450 900,550 1440,500" />
+        <path class="flow-thread t3" d="M0,300 C500,200 940,420 1440,360" />
+      </svg>
+      <svg class="threads-top" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg">
+        <path class="flow-thread t4" d="M0,100 C300,200 900,0 1440,100" />
+        <path class="flow-thread t5" d="M0,200 C500,100 940,220 1440,160" />
+      </svg>
+    <div class="content">
+      <img src="images/IMG_2748.PNG" alt="TEDxMITWPU Logo" class="hero-logo">
+      <div class="hero-text">
+        <h1 id="typewriter"></h1>
+      </div>
+      <p class="description">The invisible threads that shape us</p>
+      <!-- <div class="btn1-container"> -->
+      <a href="https://formbuilder.ccavenue.com/live/ccavenue/mit-university" class="btn1"><b>BOOK NOW</b></a>
+      <!-- </div> -->
+    </div>
+  </section>
+
+  <section class="tedx-container">
+    <div class="translucent-banner">
+      <div class="banner-content">
+        <div class="banner-item">
+          <span>26/04/2025</span>
+        </div>
+        <div class="separator"></div>
+        <div class="banner-item">
+          <span id="countdown-timer" style="color: white;"><b>00 : 00 : 00 : 00</b></span>
+          <div class="countdown-labels">
+            <span>DAYS</span>
+            <span>HRS</span>
+            <span>MINS</span>
+            <span>SECS</span>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="banner-item location">
+          <span>
+            <a href="https://www.google.com/maps/place/MIT+World+Peace+University+(MIT-WPU)/@18.5177559,73.8151112,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bfb9e53a05f9:0x2be5e8da02be693e!8m2!3d18.5177559!4d73.8151112!16s%2Fm%2F04d_4lg?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank" style="text-decoration: none; color: inherit;">
+              MIT WPU, Pune
+              <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Map Icon"
+                style="width: 22px; height: 22x; position: relative; top: 3px;">
+
+            </a>
+          </span>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <section class="video-placeholder">
+      <div class="video-container">
+        <!-- Option 1: YouTube Embed -->
+        <!-- <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                  title="TEDxMITWPU Video" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+              </iframe> -->
+
+        <!-- Option 2: HTML5 Video Player (Uncomment this and comment out the YouTube embed above if using your own video file) -->
+
+        <video width="100%" height="100%" controls poster="images/video-thumbnail.jpg">
+          <source src="videos/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+    </section>
+
+    <div class="left-box">
+      <div class="card">
+        <h2>What is TED ?</h2>
+        <p>
+          TED moves us – driving innovation, sparking curiosity, and reshaping perspectives.
+          It’s more than a platform; it’s a movement where ideas ignite change. A global
+          community, TED welcomes all who seek to understand and inspire. Leading with "Ideas
+          Change Everything"
+        </p>
+      </div>
+      <!-- Know more button moved outside the card -->
+      <div class="btn-container btn2-container desktop-btn">
+        <button class="btn btn2" onclick="window.location.href='aboutus.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="right-box">
+      <div class="card">
+        <h2>What is TEDx ?</h2>
+        <p>
+          TEDx events bring TED’s spirit to local communities, blending world-changing ideas with
+          meaningful conversations. Independently organised but TED-inspired
+        </p>
+      </div>
+      <div class="card">
+        <h2>What is TEDxMITWPU ?</h2>
+        <p>
+          MIT World Peace University envisions a world shaped by tradition, innovation, and peace.
+          TEDx fosters change through ideas that inspire, transform and change
+        </p>
+      </div>
+      <div class="btn-container btn2-container mobile-btn">
+        <button class="btn btn2" onclick="window.location.href='aboutus.html'">Know More</button>
+      </div>
+    </div>
+    </div>
+    <div class="theme-box">
+      <div class="theme-card">
+        <h2 class="theme">THEME <div>Threads Of Identity</div>
+        </h2>
+        <p>
+          Like a horizon over the sea, identity expands and transforms with
+          time. TEDxMITWPU seeks to uncover hidden facets of selfhood, forging
+          new connections and discoveries.
+        </p>
+        <p>
+          Balancing our many selves is never easy, yet it is through this very
+          act that we embark on a profound journey of self-discovery.
+        </p>
+        <p>
+          Identity may never be fully defined—but isn't that the beauty of
+          unravelling it?
+        </p>
+      </div>
+    </div>
+    <div class="speakers-container">
+      <h1 style="padding-left: 22px;padding-top: 10px;margin-top: 8px;">SPEAKERS</h1>
+      <!-- Speaker 1 -->
+      <div class="speaker-card">
+        <div class="speaker-info">
+          <h3 class="speaker-name">Samaakshi Jha (Digital Creator)</h3>
+          <ul class="speaker-bio">
+            <p>A digital creator from Raipur, Samaakshi is known for her expressive reels and relatable content. She
+              blends humor with social commentary, connecting with Gen Z audiences.
+            </p>
+            <p>Iconic Moment: Viral reels about student life and social issues.
+            </p>
+            <p>TEDx Vibe Match: Her work reflects how digital platforms shape identity, turning everyday stories into
+              threads that define who we are in a hyper-connected world.
+            </p>
+          </ul>
+        </div>
+        <div class="speaker-image">
+          <img src="images/Samaakshi.png" alt="Ashish Chanchlani">
+        </div>
+      </div>
+
+      <!-- Speaker 2 -->
+      <div class="speaker-card reverse">
+        <div class="speaker-info">
+          <h3 class="speaker-name"> Capt. Dharamveer Singh
+            (Motivational speaker & Ret. Army Officer)</h3>
+          <ul class="speaker-bio">
+            <p>A retired army officer and motivational speaker, Capt. Dharamveer served over 17 years in the Indian
+              Army. He is now an entrepreneur, and shares life lessons rooted in discipline and purpose.
+            </p>
+            <p>Iconic Moment: First to report the 1971 Longewala attack; also known for TEDx talks.
+            </p>
+            <p>TEDx Vibe Match: His life mirrors the evolution of identity through service, duty, and reinvention—making
+              his story a powerful thread in the fabric of national and personal transformation.
+            </p>
+          </ul>
+        </div>
+        <div class="speaker-image">
+          <img src="images/captain dharamveer.png" alt="Guar Gopal Das">
+        </div>
+      </div>
+
+      <!-- Speaker 3 -->
+      <div class="speaker-card">
+        <div class="speaker-info">
+          <h3 class="speaker-name">Angkit Joshi
+            (Creator & Speaker)</h3>
+          <ul class="speaker-bio">
+            <p>An emerging creator and speaker, Angkit is known for introspective content exploring emotions,
+              self-worth, and societal roles. He connects deeply with youth through spoken word and poetry.
+            </p>
+            <p>Iconic Moment: Widely shared videos on self-love and emotional vulnerability.
+            </p>
+            <p>TEDx Vibe Match: Angkit’s voice weaves the quiet, often-unseen threads of inner identity—encouraging
+              reflection, healing, and self-acceptance in a fast-paced world.</p>
+          </ul>
+        </div>
+        <div class="speaker-image">
+          <img src="images/angkit joshi.png" alt="Ashish Choudhary">
+        </div>
+      </div>
+
+      <!-- Speaker 4 -->
+      <div class="speaker-card reverse">
+        <div class="speaker-info">
+          <h3 class="speaker-name">TO BE REVEALED SOON</h3>
+          <ul class="speaker-bio">
+
+          </ul>
+        </div>
+        <div class="speaker-image">
+          <img src="images/Group 139.svg" alt="Dr Vijender Singh Chauhan">
+        </div>
+      </div>
+
+      <!-- Speaker 5 -->
+      <div class="speaker-card">
+        <div class="speaker-info">
+          <h3 class="speaker-name">TO BE REVEALED SOON</h3>
+          <ul class="speaker-bio">
+
+          </ul>
+        </div>
+        <div class="speaker-image">
+          <img src="images/Group 139.svg" alt="Pratishtha Thakur Haritwal">
+        </div>
+      </div>
+
+      <!-- Speaker 6 -->
+      <div class="speaker-card reverse">
+        <div class="speaker-info">
+          <h3 class="speaker-name">TO BE REVEALED SOON</h3>
+          <ul class="speaker-bio">
+
+          </ul>
+        </div>
+        <div class="speaker-image">
+          <img src="images/Group 139.svg" alt="Malik Gilani">
+        </div>
+      </div>
+
+      <!-- Speaker 7 -->
+      <div class="speaker-card">
+        <div class="speaker-info">
+          <h3 class="speaker-name">TO BE REVEALED SOON</h3>
+          <ul class="speaker-bio">
+
+          </ul>
+        </div>
+        <div class="speaker-image">
+          <img src="images/Group 139.svg" alt="Ratan Lal Dangi">
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    /* Mobile View */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    html, body {
+      /* width: 100%; */
+      /* height: 100%; */
+      overflow-x: hidden;
+    }
+/* 
+
+    Footer Styles
+    footer {
+      width: 92%;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 15px 0;
+      font-size: 16px;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      width: 60%;
+      margin: auto;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    } */
+    /* * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .tedx-container {
+      width: 100vw;
+      background-color: black;
+      padding: 20px;
+      background-image: url(images/group.svg); Use a valid image path
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      outline: 3px solid red; Debug border to see full width
+    } */
+
+    @media (max-width: 1298px) {
+      .tedx-container {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 20px 10px;
+      }
+    }
+    .footer-col {
+      flex: 1;
+      padding: 5px;
+    }
+
+    .logo-col {
+      text-align: left;
+    }
+
+    .footer-logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      color: #bbb;
+      max-width: 250px;
+    }
+
+    .links-col {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 25px;
+    }
+
+    .footer-links li {
+      display: inline;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #f44336;
+    }
+
+    .map-col {
+      text-align: right;
+    }
+
+    .map-col iframe {
+      width: 400px;
+      height: 250px;
+      border-radius: 8px;
+    }
+
+
+
+
+    /* Footer responsive styles */
+    @media (max-width: 999px) {
+      .footer-row {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .footer-col {
+        text-align: center;
+        width: 100%;
+      }
+
+      .logo-col {
+        text-align: center;
+      }
+
+      .footer-desc {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .map-col {
+        text-align: center;
+      }
+
+      .map-col iframe {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    footer {
+      margin: 0px;
+      padding: 2px;
+      display: flex;
+      justify-content: space-between;
+      width: 87%;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 15px 0;
+      font-size: 16px;
+    }
+
+    .team-crew {
+      margin-bottom: 80px;
+    }
+
+    .footer-container {
+      width: 80%;
+      margin: 0px;
+      padding: 6px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      flex: flex;
+      min-width: 200px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .logo-col {
+      text-align: left;
+    }
+/*  */
+    .footer-logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      color: #bbb;
+      max-width: 250px;
+    }
+
+    .links-col {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      flex-wrap: nowrap;
+      margin-left: 300px;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .footer-links a:hover {
+      color: #f44336;
+    }
+
+    .instagram-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4px;
+    }
+
+    .instagram-text {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .instagram-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .instagram-link {
+      text-decoration: none;
+      display: inline-block;
+      color: #fff;
+    }
+
+    .instagram-logo {
+      width: 24px;
+      height: 24px;
+      margin-top: 5px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .instagram-link:hover .instagram-logo {
+      transform: scale(1.1);
+    }
+    @media (max-width: 1316px) {
+    .logo-col {
+        text-align: center;
+        margin-left: 300px;
+    }
+}
+
+/* For screens smaller than 1316px */
+@media (max-width: 1316px) {
+    .footer-row {
+        flex-direction: column;         /* Aligning items vertically */
+        justify-content: center;        /* Centering the items vertically */
+        align-items: center;            /* Centering the items horizontally */
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 30px;
+        /* width: 100%;                    Make columns full-width */
+    }
+
+    .links-col {
+        flex: 0 0 100%;                 /* Make the links column smaller */
+    }
+    
+    .instagram-icons a {
+        margin: 0 8px;
+    }
+}
+/* For screens smaller than 1316px */
+@media (max-width: 1316px) {
+    .footer-row {
+      margin-left: -60px;
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;      /* Center the footer columns horizontally */
+        text-align: center;
+    }
+
+    .instagram-col {
+        display: flex;
+        flex-direction: column;   /* Stack the content vertically */
+        align-items: center;      /* Center the content horizontally */
+        margin-bottom: 20px;   
+        
+        margin-left: 330px;   /* Add some space below */
+    }
+
+    .instagram-text {
+        margin-bottom: 15px;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .instagram-icons {
+        display: flex;
+        justify-content: center;  /* Center the icons */
+    }
+
+    .instagram-icons a {
+        margin: 0 10px;           /* Space between icons */
+    }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 30px;
+    }
+
+    .instagram-icons a {
+        margin: 0 8px;
+    }
+}
+@media (max-width: 1210px) {
+    .footer-col {
+        margin-left: 10px; /* or any value that fits your layout */
+    }
+    .instagram-col{
+        margin-left: 220px; /* or any value that fits your layout */
+    }
+    .logo-col {
+        margin-left: 220px; /* or any value that fits your layout */
+    }
+}
+@media (max-width: 1060px) {
+  .footer-col {
+        margin-left: -60px; /* or any value that fits your layout */
+    }
+    .instagram-col{
+        margin-left: 170px; /* or any value that fits your layout */
+    }
+    .logo-col {
+        margin-left: 150px; /* or any value that fits your layout */
+    }
+}
+@media (max-width: 850px) {
+  .footer-col {
+        margin-left: 125px; /* or any value that fits your layout */
+    }
+    .instagram-col{
+        margin-left: 160px; /* or any value that fits your layout */
+    }
+    .logo-col {
+        margin-left: 150px; /* or any value that fits your layout */
+    }
+}
+
+
+/* FOOTER */
+footer {
+    margin: 0px;
+    padding: 2px;
+    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px 0;
+    /* Reduced padding to make it thinner */
+    font-size: 16px;
+}
+
+/* Adjusted Space Between "Meet the Team" and    */
+.team-crew {
+    margin-bottom: 80px;
+    /* Slightly more space before the footer */
+}
+
+.footer-container {
+   
+    width: 85%;
+    margin: 0px;
+    padding: 6px;
+    
+    
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* top-aligned items */
+    flex-wrap: wrap;
+}
+
+
+/* Left Column (Logo & Description) */
+.footer-col {
+    flex: flex;
+    min-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.logo-col {
+    text-align: left;
+}
+
+.footer-logo {
+    width: 150px;
+    /* Slightly smaller logo */
+    height: auto;
+    margin-bottom: 8px;
+    /* Less space below logo */
+}
+
+.footer-desc {
+    font-size: 13px;
+    /* Slightly smaller text */
+    color: #bbb;
+    max-width: 250px;
+}
+
+/* Middle Column (Navigation Links) */
+.links-col {
+    flex: 2;                   /* Give more width to this column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: nowrap;         /* Prevent wrapping */
+}
+
+.footer-links li {
+    display: inline-block;
+    white-space: nowrap;      
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    white-space: nowrap;      
+}
+
+
+.footer-links a:hover {
+    color: #f44336;
+}
+.instagram-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px 0;
+    /* Reduced padding to make it thinner */
+    font-size: 16px;
+}
+
+/* Adjusted Space Between "Meet the Team" and Footer */
+.team-crew {
+    margin-bottom: 80px;
+    /* Slightly more space before the footer */
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Left Column (Logo & Description) */
+.footer-col {
+    flex: 1;
+    padding: 5px;
+    /* Reduced padding for a thinner look */
+}
+
+.logo-col {
+    text-align: left;
+}
+
+.footer-logo {
+    width: 150px;
+    /* Slightly smaller logo */
+    height: auto;
+    margin-bottom: 8px;
+    /* Less space below logo */
+}
+
+.footer-desc {
+    font-size: 13px;
+    /* Slightly smaller text */
+    color: #bbb;
+    max-width: 250px;
+}
+
+/* Middle Column (Navigation Links) */
+.links-col {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    /* Adjusted spacing */
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    /* Adjusted font size */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f44336;
+}
+
+@media screen and (max-width: 768px) {
+    /* Footer responsive */
+    .footer-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .logo-col {
+        text-align: center;
+    }
+    
+    .footer-desc {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .links-col {
+        order: 3;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Footer responsive */
+    footer {
+        width: 87%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .footer-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-col {
+        width: 100%;
+        text-align: center;
+        padding: 5px 15px;
+        box-sizing: border-box;
+    }
+    
+    .logo-col {
+        text-align: center;
+    }
+    
+    .footer-desc {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .links-col {
+        order: 3;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+footer {
+    margin: 0px;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 16px;
+}
+
+.team-crew {
+    margin-bottom: 80px;
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0px;
+    padding: 6px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: flex;
+    min-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.logo-col {
+    text-align: left;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.footer-desc {
+    font-size: 13px;
+    color: #bbb;
+    max-width: 250px;
+}
+
+.links-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: nowrap;
+    margin-left: 300px;
+}
+
+.footer-links li {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-links a:hover {
+    color: #f44336;
+}
+
+.instagram-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.instagram-text {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.instagram-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-link {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+
+.instagram-logo {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instagram-link:hover .instagram-logo {
+    transform: scale(1.1);}
+@media (max-width: 768px) {
+    .logo-col,.instagram-col{
+      position: relative;
+      left:50px;
+    }
+    
+    .footer-links {
+      padding-top: 4px;
+      position: relative;
+      right:50%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+      gap: 14px; /* Spacing between grid items */
+      justify-items: start; /* Align links to the left */
+    }
+  
+    
+  
+    .footer-links a {
+      /* justify-items: flex-start; */
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  @media (max-width: 850px) {
+    .footer-links {
+        margin-left: 100px; /* or any smaller value that looks good */
+    }
+}
+@media (max-width: 800px) {
+    .footer-links {
+        margin: 0 auto; /* centers the whole list */
+        justify-content: center; /* centers items in the flex container */
+        /* margin-left: 88px; */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-heading {
+        font-size: 2.5rem;
+        margin-top: 80px;
+    }
+    
+    .intro-info {
+        padding: 2rem;
+    }
+    
+    .intro-name {
+        font-size: 1.5rem;
+    }
+    
+    /* Navbar responsive */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #121212;
+        padding: 20px 0;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+  }
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Fix the footer links margin for better centering */
+.footer-links {
+    margin-left: 0;
+    justify-content: center;
+}
+
+/* Make sure mobile adjustments maintain full width */
+@media screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        margin-right: 50%;
+        flex-direction: column;
+    }
+    
+    .footer-container {
+        width: 100%;
+        
+    }
+    
+    .logo-col, .instagram-col {
+        position: relative;
+        left: 0;
+        text-align: center;
+
+    }
+    
+    .footer-links {
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+        margin-left: 70px;
+    }
+    /* .logo-col{
+      position: relative;
+      top: 30px;
+    }
+    .instagram-col{
+      position: relative;
+      top: 20px;
+      right: 30px;
+    } */
+    .copyright {
+        position: relative;
+        left:45px;
+        text-align: center;
+    }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+      /* Header/Navbar Styles */
+      header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1a1a1a;
+        z-index: 1000;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .logo {
+        width: 180px;
+        height: 60px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+      .nav-links li {
+        margin-left: 20px;
+      }
+
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .nav-links li a:hover {
+        color: #ff2b06;
+      }
+      .nav-link.active {
+        color: red;
+        font-weight: bold;
+        border-bottom: 2px solid red; /* Optional underline */
+      }
+
+      .menu-btn {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+        z-index: 1100;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          padding: 15px 20px;
+        }
+        
+        .menu-btn {
+          display: block;
+        }
+
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          background: rgba(0, 0, 0, 0.9);
+          width: 100%;
+          padding: 10px;
+          align-items: center;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links li {
+          margin: 10px 0;
+        }
+      }
+      
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #121212;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+
+
+      .logo-col {
+        text-align: center;
+      }
+
+
+      .links-col {
+        order: 3;
+      }
+
+
+      .team-crew {
+        margin-bottom: 80px;
+      }
+
+
+      .logo-col {
+        text-align: left;
+      }
+
+
+      .links-col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo-col {
+        position: relative;
+        left: 50px;
+      }
+
+    }
+      
+    @media screen and (max-width: 768px) {
+    .about-heading {
+        font-size: 2.5rem;
+        margin-top: 80px;
+    }
+    
+    .intro-info {
+        padding: 2rem;
+    }
+    
+    .intro-name {
+        font-size: 1.5rem;
+    }
+    
+    /* Navbar responsive */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #121212;
+        padding: 20px 0;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+  }
+
+
+      /* Header/Navbar Styles */
+      header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1a1a1a;
+        z-index: 1000;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .logo {
+        width: 180px;
+        height: 60px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+      .nav-links li {
+        margin-left: 20px;
+      }
+
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .nav-links li a:hover {
+        color: #ff2b06;
+      }
+      .nav-link.active {
+        color: red;
+        font-weight: bold;
+        border-bottom: 2px solid red; /* Optional underline */
+      }
+
+      .menu-btn {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+        z-index: 1100;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          padding: 15px 20px;
+        }
+        
+        .menu-btn {
+          display: block;
+        }
+
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          background: rgba(0, 0, 0, 0.9);
+          width: 100%;
+          padding: 10px;
+          align-items: center;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links li {
+          margin: 10px 0;
+        }
+      }
+      
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #121212;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+
+
+      .logo-col {
+        text-align: center;
+      }
+
+
+      .links-col {
+        order: 3;
+      }
+
+
+      .team-crew {
+        margin-bottom: 80px;
+      }
+
+
+      .logo-col {
+        text-align: left;
+      }
+
+
+      .links-col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo-col {
+        position: relative;
+        left: 50px;
+      }
+
+    }
+    
+    /* Header/Navbar Styles */
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1a1a1a;
+      z-index: 1000;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .logo {
+      width: 180px;
+      height: 60px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .nav-links li a:hover {
+      color: #ff2b06;
+    }
+
+    .nav-link.active {
+      color: red;
+      font-weight: bold;
+      border-bottom: 2px solid red;
+      /* Optional underline */
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .team-title {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+
+
+
+      .map-col iframe {
+        max-width: 100%;
+        height: 200px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #121212;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #121212;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        /* Makes logo on left, button on right */
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding-bottom: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        color: white;
+        padding: 10px 0;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links li a.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        /* underline color */
+      }
+    }
+  </style>
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.body.insertAdjacentHTML("beforeend", data);
+      });
+  </script>
+
+  <script src="index.js"></script>
+  <script>
+    function updateCountdown() {
+      const eventDate = new Date("2025-04-26T00:00:00");
+      const now = new Date();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown-timer").innerText = "00 : 00 : 00 : 00";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown-timer").innerText =
+        `${String(days).padStart(2, '0')} : ${String(hrs).padStart(2, '0')} : ${String(mins).padStart(2, '0')} : ${String(secs).padStart(2, '0')}`;
+    }
+
+    // Initial call and update every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+    const links = document.querySelectorAll('.nav-link');
+    const currentPage = location.pathname.split("/").pop();
+
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+
+    menuBtn.addEventListener("click", function () {
+      if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+      } else {
+        navLinks.style.display = "flex";
+      }
+    });
+
+    // Handle window resize to reset mobile menu state
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 768) {
+        navLinks.style.display = "flex";
+      } else {
+        navLinks.style.display = "none";
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
