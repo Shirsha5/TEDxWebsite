@@ -895,7 +895,7 @@ footer {
 @media (max-width: 992px) {
   .footer-row {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.2rem;
   }
   
   .footer-col {
@@ -1015,6 +1015,9 @@ footer {
         align-items: center;
         justify-content: center;
         margin-top: 4px;
+        position: relative;
+        top: -15px;
+        left: -10%;
     }
 
     .instagram-text {
@@ -1113,7 +1116,7 @@ footer {
 footer {
     width: 100%;
     margin: 0;
-    padding: 15px 0;
+    /* padding: 15px 0; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1428,7 +1431,7 @@ footer {
         padding: 10px 0;
         text-decoration: none;
         position: relative;
-        right: 20%;
+        right: 34%;
       }
 
       .nav-links li a.active::after {
@@ -1508,18 +1511,36 @@ footer {
   header{
     width: 100vw;
   }
+  .instagram-col{
+    position: relative;
+    top: -20px;
+    left: -4%;
+  }
+  .footer-col img{
+    position: relative;
+    left: 30%;
+  }
+  .copyright{
+    position: relative;
+    left: -2%;
+    /* bottom: 20px; */
+    font-size: 14px;
+    color: white;
+  }
 
     }
-    .instagram-col{
-      position: relative;
-      top: -20px;
-    }
+    
     .nav-links{
       margin-right: 60px;
     }
+    
     @media (min-width:769px) {
     .footer-logo img{
         margin-left: -3rem !important;
+    }
+    .footer-container{
+      gap: 0px !important;
+      padding: 0px !important;
     }
   
 }

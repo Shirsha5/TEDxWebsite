@@ -1817,6 +1817,7 @@
       margin-bottom: 10px;
       position: relative;
       left: -200px;
+      top: -10px;
     }
     
     .footer-desc {
@@ -1848,7 +1849,8 @@
     }
     .instagram-col{
       position: relative;
-      left: -200px;
+      left: -20%;
+      top: 2px;
   
     }
     
@@ -2006,7 +2008,7 @@
         position: relative;
         bottom: 30%;
         left: 0;
-        margin-left: 0;
+        margin-left: 16px;
     }
     @media screen and (max-width: 768px) {
       .copyright{
