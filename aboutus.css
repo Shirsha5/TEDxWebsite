@@ -260,7 +260,7 @@ footer {
 
 .instagram-text {
     font-size: 17px;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: #fff;
     margin-bottom: 10px;
 }
@@ -856,7 +856,9 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4px;
+    margin-top: -0.5%;
+    position: relative;
+    right: 35px;
 }
 
 .instagram-text {
@@ -1304,6 +1306,7 @@ footer {
       /* .logo{
         width:100%;
       } */
+       
     }
     .footer-links{
         position: relative;
