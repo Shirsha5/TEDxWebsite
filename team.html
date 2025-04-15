@@ -487,38 +487,14 @@
       margin-top: auto;
     }
 
-    .footer-container {
-      width: 85%;
-      margin: auto;
-    }
 
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .footer-col {
-      flex: 1;
-      padding: 5px;
-    }
+  
 
     .logo-col {
       text-align: left;
     }
 
-    .footer-logo {
-      width: 150px;
-      height: auto;
-      margin-bottom: 8px;
-    }
-
-    .footer-desc {
-      font-size: 13px;
-      color: #bbb;
-      max-width: 250px;
-    }
+  
 
     .links-col {
       text-align: center;
@@ -526,30 +502,6 @@
       justify-content: center;
       align-items: center;
       flex-grow: 1;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 25px;
-    }
-
-    .footer-links li {
-      display: inline;
-    }
-
-    .footer-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: #f44336;
     }
 
     .map-col {
@@ -567,24 +519,12 @@
 
     /* Footer responsive styles */
     @media (max-width: 992px) {
-      .footer-row {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
 
-      .footer-col {
-        text-align: center;
-        width: 100%;
-      }
 
       .logo-col {
         text-align: center;
       }
 
-      .footer-desc {
-        max-width: 100%;
-        margin: 0 auto;
-      }
 
       .map-col {
         text-align: center;
@@ -612,40 +552,8 @@
       margin-bottom: 80px;
     }
 
-    .footer-container {
-      width: 80%;
-      margin: 0px;
-      padding: 6px;
-    }
-
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .footer-col {
-      flex: flex;
-      min-width: 200px;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
     .logo-col {
       text-align: left;
-    }
-
-    .footer-logo {
-      width: 150px;
-      height: auto;
-      margin-bottom: 8px;
-    }
-
-    .footer-desc {
-      font-size: 13px;
-      color: #bbb;
-      max-width: 250px;
     }
 
     .links-col {
@@ -653,35 +561,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: row;
-      gap: 25px;
-      flex-wrap: nowrap;
-      margin-left: 300px;
-    }
-
-    .footer-links li {
-      display: inline-block;
-      white-space: nowrap;
-    }
-
-    .footer-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .footer-links a:hover {
-      color: #f44336;
     }
 
     .instagram-col {
@@ -732,26 +611,9 @@
         left: 50px;
       }
 
-      .footer-links {
-        padding-top: 4px;
-        position: relative;
-        right: 50%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on mobile */
-        gap: 14px;
+ 
         /* Spacing between grid items */
-        justify-items: start;
-        /* Align links to the left */
-      }
-
-
-
-      .footer-links a {
-        /* justify-items: flex-start; */
-        font-size: 14px;
-        /* Adjust font size for smaller screens */
-      }
+  
     }
           
 @media screen and (max-width: 768px) {
@@ -1042,21 +904,9 @@
         position: relative;
         left: 50px;
       }
-      .footer-links a{
-        position: relative;
-        right: 240px;
-      }
-      .footer-links{
-        display: flex;
-        flex-direction: column;
-      }
       .logo-col img{
         position: relative;
         left: 50px;
-      }
-      .footer-desc{
-        position: relative;
-        left: 10px;
       }
       body{
         width: 100%;
@@ -1096,11 +946,15 @@
     
     .footer-links{
         position: relative;
-        right: -50%;
+        right: -40%;
     }
     .footer-links{
       margin-right: 50px;
     }
+    @media (min-width:769px) {
+    .footer-logo img{
+        margin-left: -3rem !important;
+    } }
   </style>
 </head>
 
@@ -1237,7 +1091,7 @@
     <!-- Footer -->
 
     <script>
-      fetch("footer.html")
+      fetch("new_footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.body.insertAdjacentHTML("beforeend", data);

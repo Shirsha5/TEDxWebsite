@@ -1441,7 +1441,17 @@
         right: -50%;
         margin-right: 50px;
     }
-
+    .footer-links{
+        position: relative;
+        right: -40%;
+    }
+    .footer-links{
+      margin-right: 50px;
+    }
+    @media (min-width:769px) {
+    .footer-logo img{
+        margin-left: -3rem !important;
+    } }
     </style>
   </head>
   <body>
@@ -1725,7 +1735,7 @@
     <img class="decorative-vector vector-2" src="vector1.svg" alt="" />
 
     <script>
-      fetch("footer.html")
+      fetch("new_footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.body.insertAdjacentHTML("beforeend", data);

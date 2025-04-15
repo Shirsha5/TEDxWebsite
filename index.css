@@ -889,7 +889,7 @@ h1 {
 
   /* Adjust the TEDx logo at the top */
   .nav-left .logo {
-    width: 100px;
+    width: 130px;
   }
 
   /* Reduce empty space in hero content */
@@ -1348,7 +1348,7 @@ footer {
 
   /* Center the booking button */
   .btn1 {
-    margin: -100px auto 100px;
+    margin: -80px auto 100px;
   }
 
   .content {
@@ -1844,6 +1844,7 @@ footer {
     font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 2rem;
     line-height: 1.5;
+
     letter-spacing: 0.1875rem;
     margin-bottom: 1.5rem;
   }
