@@ -770,25 +770,35 @@
     .footer-links{
       margin-right: 400px;
     }
-    @media  screen and (max-width: 768px) {
-      .instagram-col{
-        position: relative;
-        top: -10px;
-        left: 43px;
-      }
-      
-    }
     .footer-links{
-        position: relative;
-        right: -20%;
+      position: relative;
+      right: -20%;
     }
     .footer-links{
       margin-right: 50px;
     }
     @media (min-width:769px) {
-    .footer-logo img{
+      .footer-logo img{
         margin-left: -3rem !important;
-    } }
+      } }
+      @media  screen and (max-width: 768px) {
+        .instagram-col{
+          position: relative;
+          top: -10px;
+          left: 43px;
+        }
+        .footer-links{
+          margin-right:20%;
+        }
+       
+        .container{
+          margin-left: 25%;
+        }
+        .logo{
+        width:100%;
+      }
+        
+      }
     </style>
   </head>
 
@@ -805,7 +815,7 @@
           </a>
         </div>
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index1.html" class="nav-link">Home</a></li>
           <li><a href="aboutus.html" class="nav-link">About Us</a></li>
           <li><a href="team.html" class="nav-link">Team</a></li>
           <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
@@ -889,7 +899,7 @@
    
   </body>
   <script>
-    fetch("new_footer.html")
+    fetch("footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.body.insertAdjacentHTML("beforeend", data);

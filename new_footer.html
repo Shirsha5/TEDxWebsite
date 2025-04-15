@@ -39,11 +39,6 @@
       align-items: center;
       gap: 1.5rem;
     }
-@media (max-width:640px){
-    .footer-logo img {
-        margin-left: -62px;
-    }
-}
     @media (min-width: 640px) {
       .footer-top {
         flex-direction: row;
@@ -51,7 +46,8 @@
         align-items: center;
       }
     }
-
+    
+    
     .footer-logo img {
         
       width: auto;
@@ -69,7 +65,7 @@
       list-style: none;
       text-align: center;
     }
-
+    
     .footer-links li a {
       text-decoration: none;
       color: #9ca3af;
@@ -77,12 +73,12 @@
       font-size: 0.9rem;
       transition: color 0.3s ease;
     }
-
+    
     .footer-links li a:hover {
       color: #ffffff;
       text-decoration: underline;
     }
-
+    
     .footer-divider {
       border: none;
       border-top: 1px solid #374151;
@@ -94,19 +90,30 @@
       font-size: 0.875rem;
       color: #9ca3af;
     }
-
+    
     .footer-bottom a {
       color: #9ca3af;
       text-decoration: underline;
     }
-
+    
     .footer-bottom a:hover {
       color: #ffffff;
     }
-  </style>
+    @media (max-width:640px){
+        .footer-logo img {
+            margin-left: 22px;
+        }
+        .footer-links{
+          gap: 10px;
+          position: relative;
+          bottom: 35px;
+          left: 30px;
+        }
+    }
+    </style>
 </head>
 <body>
-
+  
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-top">
@@ -124,9 +131,9 @@
         </ul>
       </div>
       <hr class="footer-divider" />
-      <div class="footer-bottom">
-        © 2025 <a href="https://flowbite.com/">TEDXMITWPU</a>. All Rights Reserved.
-      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 <a href="https://flowbite.com/">TEDXMITWPU</a>. All Rights Reserved.
     </div>
   </footer>
 

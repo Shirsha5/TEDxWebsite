@@ -12,7 +12,7 @@
     <style>
       .footer-links{
         position: relative;
-        right: 20px;
+        /* right: 20px; */
     }
     @media screen and (max-width: 768px) {
         .logo-col img{
@@ -22,11 +22,15 @@
         
         .footer-links{
           position: relative;
-          left: -15px;
+          left: -2%;
         }
         .instagram-col{
           position: relative;
           left: -10px;
+        }
+        .copyright{
+          position: relative;
+          left: 0%;
         }
     }
 
@@ -49,7 +53,7 @@
           </a>
         </div>
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index1.html" class="nav-link">Home</a></li>
           <li><a href="aboutus.html" class="nav-link">About Us</a></li>
           <li><a href="team.html" class="nav-link">Team</a></li>
           <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
@@ -233,7 +237,7 @@
     
 
     <script>
-      fetch("new_footer.html")
+      fetch("footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.body.insertAdjacentHTML("beforeend", data);

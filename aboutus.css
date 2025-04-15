@@ -1295,13 +1295,15 @@ footer {
 
       .logo-col img {
         position: relative;
-        left: 50px;
+        left: 30%;
       }
       .footer-desc{
         position: relative;
         left: 10px;
       }
-
+      .logo{
+        width:100%;
+      }
     }
     .footer-links{
         position: relative;

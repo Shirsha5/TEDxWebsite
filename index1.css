@@ -960,7 +960,7 @@
     }
   
     /* Adjust the TEDx logo at the top */
-    .nav-left .logo {
+    .nav-left  {
       width: 100px;
     }
   
@@ -2008,3 +2008,11 @@
         left: 0;
         margin-left: 0;
     }
+    @media screen and (max-width: 768px) {
+      .copyright{
+          left: 25%;
+      }
+      .logo{
+        width:100%;
+      }
+  }

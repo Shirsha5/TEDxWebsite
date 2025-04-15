@@ -41,7 +41,7 @@
         </a>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index1.html" class="nav-link">Home</a></li>
         <li><a href="aboutus.html" class="nav-link">About Us</a></li>
         <li><a href="team.html" class="nav-link">Team</a></li>
         <li><a href="pastevent.html" class="nav-link">Past Events</a></li>
@@ -2057,6 +2057,7 @@ header {
         background-color: red;
         /* underline color */
       }
+
     }
   </style>
   <script>
@@ -2067,7 +2068,7 @@ header {
       navLinks.classList.toggle('active');
     });
 
-    fetch("new_footer.html")
+    fetch("footer.html")
       .then((response) => response.text())
       .then((data) => {
         document.body.insertAdjacentHTML("beforeend", data);
