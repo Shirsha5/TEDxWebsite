@@ -1303,3 +1303,8 @@ footer {
       }
 
     }
+    .footer-links{
+        position: relative;
+        right: -25%;
+        /* margin-right: 50px; */
+    }

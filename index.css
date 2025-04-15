@@ -1921,4 +1921,12 @@ footer {
     }
   }
   
-  
+  .logo-col{
+    position: relative;
+    left:20px
+  }
+  .footer-links{
+    position: relative;
+    right: -5%;
+    margin-right: 50px;
+  }
