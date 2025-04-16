@@ -962,15 +962,62 @@
         width:100%;
       } */
        body{
-        width: 100vw;
+        width: 100%;
+        overflow-x: hidden;
        }
        header{
-        width: 100vw;
+        width: 100%;
        }
        .instagram-col{
         position: relative;
         left: 35%;
        }
+       html, body {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Remove conflicting widths */
+footer, header, .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.footer-container{
+  position: relative;
+  left:-2%;
+}
+.copyright{
+  /* margin-left: 1%; */
+}
+    }
+    body{
+      overflow-x: hidden;
+    }
+    @media screen and (max-width: 376px) {
+        .footer-links{
+            margin-right: 5%;
+        }
+        .logo-col img{
+            position: relative;
+            left: 25%;
+        }
+        .footer-desc{
+            position: relative;
+            left: 5%;
+        }
+        .instagram-col{
+            position: relative;
+            left: 32%;
+        }
+        header{
+          margin-top: 0;
+        }
     }
       
     

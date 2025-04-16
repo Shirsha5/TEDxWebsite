@@ -2083,4 +2083,14 @@
       background-color: red;
       /* underline color */
     }
+    .copyright{
+      margin-left: 12%;
+    }
+    
+    
+  }
+  @media screen and(max-width: 431px) {
+    .logo-col img{
+      margin-left: 100%;
+    }
   }

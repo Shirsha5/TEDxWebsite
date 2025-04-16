@@ -15,6 +15,7 @@ body {
     color: white;
     min-height: 100vh;
     overflow-x: hidden;
+    padding: 8;
     
 }
 
@@ -1306,12 +1307,26 @@ footer {
       /* .logo{
         width:100%;
       } */
-       
+       .about-heading{
+        margin-top: 20%;
+       }
     }
     .footer-links{
         position: relative;
         right: -25%;
         /* margin-right: 50px; */
+    }
+    @media screen and (max-width: 376px) {
+        .footer-links{
+            margin-right: 55%;
+        }
+        .instagram-col{
+            position: relative;
+            left: 0.5%;
+        }
+        .about-heading{
+            margin-top: 22%;
+        }
     }
 
 

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TEDx MITWPU</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
@@ -21,7 +23,7 @@
         margin: 0;
         padding: 0;
         background-color: #1a1a1a;
-        background-image: url("images/contact.svg");
+        /* background-image: url("images/contact.svg"); */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -801,7 +803,8 @@
         width:100%;
       } */
       body{
-        width: 100vw;
+        width: 100%;
+        overflow-x: hidden;
        }
        header{
         width: 90vw;
@@ -826,7 +829,49 @@
           position: relative;
           left: -20%;
         }
+        .container{
+          max-width: 100%;
+        }
+        html, body {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Remove conflicting widths */
+footer, header, .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.footer-container{
+  position: relative;
+  left:25%;
+}
+.copyright{
+  margin-left: 12%;
+}
+
       }
+      @media screen and (max-width: 376px) {
+        footer{
+          position: relative;
+          left: 12%;
+        }
+        .copyright{
+          position: relative;
+          left: -25%;
+        }
+        .footer-links{
+          position: relative;
+          left: 2%;
+        }
+    }
+      
     </style>
   </head>
 
